@@ -98,10 +98,10 @@ export class RamadanComponent implements OnInit, OnDestroy {
     },
     {
       id: "ai-quran",
-      title_ar: "الذكاء الاصطناعي والقرآن",
+      title_ar: "التقنيات المتقدمة والقرآن",
       subtitle_ar: "تجارب ذكية للفهم والتعلم",
       description_ar:
-        "تفتح تقنيات الذكاء الاصطناعي آفاقًا جديدة في التفاعل مع النص القرآني.\nتضم هذه المجموعة تطبيقات توظّف هذه التقنيات لدعم الفهم والبحث والتعلّم، مقدمة تجربة أكثر تفاعلًا مع القرآن خلال رمضان.",
+        "تفتح التقنيات المتقدمة مثل الذكاء الاصطناعي آفاقًا جديدة في التفاعل مع النص القرآني.\nتضم هذه المجموعة تطبيقات توظّف هذه التقنيات لدعم الفهم والبحث والتعلّم، مقدمة تجربة أكثر تفاعلًا مع القرآن خلال رمضان.",
       title_en: "AI and the Quran",
       subtitle_en: "Smart experiences for understanding and learning",
       description_en:
@@ -214,16 +214,6 @@ export class RamadanComponent implements OnInit, OnDestroy {
             "https://pub-e11717db663c469fb51c65995892b449.r2.dev/14_Quran Mobasher/app_icon.png",
         },
         {
-          id: "14",
-          slug: "7-moddakir",
-          name_ar: "مُدَكر",
-          name_en: "Moddakir",
-          short_description_ar: "تعلم القرآن مع معلم مباشر",
-          short_description_en: "Learn Quran with a live teacher",
-          application_icon:
-            "https://pub-e11717db663c469fb51c65995892b449.r2.dev/7_Moddakir/app_icon.png",
-        },
-        {
           id: "80",
           slug: "taahod",
           name_ar: "تعاهد",
@@ -233,6 +223,16 @@ export class RamadanComponent implements OnInit, OnDestroy {
             "Community for Quran recitation testing and revision",
           application_icon:
             "https://pub-e11717db663c469fb51c65995892b449.r2.dev/app-icons/taahod/icon.webp",
+        },
+        {
+          id: "14",
+          slug: "7-moddakir",
+          name_ar: "مُدَكر",
+          name_en: "Moddakir",
+          short_description_ar: "تعلم القرآن مع معلم مباشر",
+          short_description_en: "Learn Quran with a live teacher",
+          application_icon:
+            "https://pub-e11717db663c469fb51c65995892b449.r2.dev/7_Moddakir/app_icon.png",
         },
       ],
     },
@@ -318,14 +318,14 @@ export class RamadanComponent implements OnInit, OnDestroy {
             "https://pub-e11717db663c469fb51c65995892b449.r2.dev/app-icons/almukhtasar/icon.webp",
         },
         {
-          id: "15",
-          slug: "38-maanoni-da-shiriyar-alqurani",
-          name_ar: "تفسير الهوسا",
-          name_en: "MA'ANONI DA SHIRIYAR ALQUR'ANI",
-          short_description_ar: "تفسير القرآن بلغة الهوسا",
-          short_description_en: "Quran tafsir in the Hausa language",
+          id: "21",
+          slug: "69-translations-of-quran-meanings",
+          name_ar: "موسوعة تراجم معاني القرآن",
+          name_en: "Translations of Quran meanings",
+          short_description_ar: "ترجمات معاني القرآن بـ+80 لغة",
+          short_description_en: "Translations of meanings of Quran in +80 languages",
           application_icon:
-            "https://pub-e11717db663c469fb51c65995892b449.r2.dev/38_MA'ANONI DA SHIRIYAR ALQUR'ANI/app_icon.png",
+            "https://pub-e11717db663c469fb51c65995892b449.r2.dev/69_Translations of Quran meanings/app_icon.png",
         },
       ],
     },
@@ -402,15 +402,15 @@ export class RamadanComponent implements OnInit, OnDestroy {
             "https://pub-e11717db663c469fb51c65995892b449.r2.dev/1_Wahy/app_icon.png",
         },
         {
-          id: "26",
-          slug: "37-interactive-tafsir",
-          name_ar: "التفسير التفاعلي",
-          name_en: "Interactive Tafsir",
-          short_description_ar: "تفاسير القرآن قراءة واستماع",
+          id: "46",
+          slug: "surah",
+          name_ar: "سورة",
+          name_en: "Surah",
+          short_description_ar: "قراءة وتفسير وحفظ القرآن",
           short_description_en:
-            "Reading and listening to Quranic tafsir",
+            "Reading, interpreting, and memorizing Quran",
           application_icon:
-            "https://pub-e11717db663c469fb51c65995892b449.r2.dev/37_Interactive Tafsir/app_icon.png",
+            "https://pub-e11717db663c469fb51c65995892b449.r2.dev/Surah/app_icon.png",
         },
         {
           id: "20",
@@ -480,7 +480,7 @@ export class RamadanComponent implements OnInit, OnDestroy {
     private titleService: Title,
     private metaService: Meta,
     @Inject(PLATFORM_ID) private platformId: Object,
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.currentLang = this.translateService.currentLang as "ar" | "en";
