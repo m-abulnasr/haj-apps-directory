@@ -30,6 +30,7 @@ import {
   catchError,
   filter,
   finalize,
+  take,
   takeUntil,
   switchMap,
   debounceTime,
@@ -88,6 +89,7 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
   selectedCategory: string = "all";
   isDarkMode = false;
   private destroy$ = new Subject<void>();
+  private isInitialLoad = true;
   // Cache for star arrays to prevent NG0100 errors from creating new references on each change detection
   private starArrayCache = new Map<number, { fillPercent: number }[]>();
   activeAiInfoId: string | null = null;
@@ -207,6 +209,7 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
           // Wait for apps to be loaded before filtering
           return this.apiService.apps$.pipe(
             filter((apps) => apps.length > 0),
+            take(1),
             switchMap((apiApps) => {
               // Update apps from the observable directly to avoid race condition
               this.apps = apiApps.map((app) =>
@@ -225,8 +228,13 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
       )
       .subscribe(() => {
         // Scroll to top of page when route changes (browser only)
+        // Skip on initial load to prevent snapping user back to top during loading
         if (isPlatformBrowser(this.platformId)) {
-          window.scrollTo({ top: 0, behavior: "auto" });
+          if (this.isInitialLoad) {
+            this.isInitialLoad = false;
+          } else {
+            window.scrollTo({ top: 0, behavior: "auto" });
+          }
 
           // Scroll selected category into view (horizontally within categories section)
           setTimeout(() => this.scrollSelectedCategoryIntoView(), 100);
@@ -487,6 +495,20 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
       });
   }
 
+  onCategoryChipClick(slug: string): void {
+    this.selectedCategory = slug;
+    if (slug === 'all') {
+      this.isSmartSearchActive = false;
+      this.filteredApps = this.apps;
+    } else {
+      this.filterByCategory(slug);
+    }
+    const route = slug === 'all'
+      ? ['/', this.currentLang]
+      : ['/', this.currentLang, slug];
+    this.router.navigate(route);
+  }
+
   filterByCategory(category: string) {
     this.selectedCategory = category.toLowerCase();
     if (this.isSmartSearchActive && this.searchQuery.trim()) {
@@ -570,7 +592,7 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
   startDragging(e: MouseEvent) {
     this.isDragging = true;
     this.categoriesContainer = (e.target as HTMLElement).closest(
-      ".categories-grid",
+      ".categories-chips",
     ) as HTMLElement;
     if (this.categoriesContainer) {
       this.startX = e.pageX - this.categoriesContainer.scrollLeft;
