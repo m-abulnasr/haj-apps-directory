@@ -60,7 +60,6 @@ export const routes: Routes = [
     data: { title: 'Ramadan 1447' },
     loadComponent: () => import('./pages/ramadan/ramadan.component').then(m => m.RamadanComponent)
   },
-
   // Generic category route (must come AFTER all specific routes)
   {
     path: ':lang/:category',
