@@ -22,7 +22,6 @@ import { filter, Subject, takeUntil } from "rxjs";
 import { LucideAngularModule, Menu, X, Globe, Home, Info, Mail, Users, PlusCircle, ExternalLink, ChevronRight, Search } from 'lucide-angular';
 import { SafeHtmlPipe } from "./pipes/safe-html.pipe";
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
-
 // Icons globally registered in main.ts
 
 @Component({
