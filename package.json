@@ -55,6 +55,7 @@
     "@angular/cli": "^20.3.12",
     "@angular/compiler-cli": "^20.3.15",
     "@playwright/test": "^1.56.1",
+    "baseline-browser-mapping": "^2.10.0",
     "typescript": "5.8"
   }
 }
