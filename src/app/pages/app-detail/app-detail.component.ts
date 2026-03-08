@@ -1,6 +1,7 @@
 import {
   Component,
   OnInit,
+  OnDestroy,
   AfterViewInit,
   ViewChild,
   ElementRef,
@@ -35,6 +36,8 @@ import { Nl2brPipe } from "../../pipes/nl2br.pipe";
 import { OptimizedImageComponent } from "../../components/optimized-image/optimized-image.component";
 import { SeoService } from "../../services/seo.service";
 import { environment } from "../../../environments/environment";
+import { Subject, of } from "rxjs";
+import { takeUntil, switchMap } from "rxjs/operators";
 // register Swiper custom elements
 register();
 
@@ -79,7 +82,7 @@ type AppDetailStatus = 'loading' | 'success' | 'not-found' | 'error';
   styleUrls: ["./app-detail.component.scss"],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppDetailComponent implements OnInit, AfterViewInit {
+export class AppDetailComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild("swiperContainer") swiperContainer: any;
   @ViewChild("relatedCarousel") relatedCarousel!: ElementRef<HTMLDivElement>;
 
@@ -91,6 +94,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
   // Cache for star arrays to prevent NG0100 errors from creating new references on each change detection
   private starArrayCache = new Map<number, { fillPercent: number }[]>();
   private swiperInitAttempts = 0;
+  private destroy$ = new Subject<void>();
 
   swiperParams = {
     slidesPerView: "auto",
@@ -124,27 +128,29 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
   ) {
     this.currentLang = this.translateService.currentLang as "ar" | "en";
     // Subscribe to language changes
-    this.translateService.onLangChange.subscribe((event) => {
-      this.currentLang = event.lang as "en" | "ar";
-      console.log("🌐 DEBUG: Language changed to:", this.currentLang);
-      // Reinitialize swiper when language changes (same pattern as data load)
-      if (this.swiperContainer) {
-        console.log("🔄 DEBUG: Reinitializing Swiper after language change...");
-        this.hideSwiper = false;
-        setTimeout(() => {
-          this.hideSwiper = true;
-          console.log(
-            "🔄 DEBUG: Swiper container reset after language change, initializing...",
-          );
-        }, 50);
-        setTimeout(() => {
-          console.log(
-            "🔄 DEBUG: Final Swiper initialization after language change...",
-          );
-          this.initializeSwiper();
-        }, 100);
-      }
-    });
+    this.translateService.onLangChange
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((event) => {
+        this.currentLang = event.lang as "en" | "ar";
+        console.log("🌐 DEBUG: Language changed to:", this.currentLang);
+        // Reinitialize swiper when language changes (same pattern as data load)
+        if (this.swiperContainer) {
+          console.log("🔄 DEBUG: Reinitializing Swiper after language change...");
+          this.hideSwiper = false;
+          setTimeout(() => {
+            this.hideSwiper = true;
+            console.log(
+              "🔄 DEBUG: Swiper container reset after language change, initializing...",
+            );
+          }, 50);
+          setTimeout(() => {
+            console.log(
+              "🔄 DEBUG: Final Swiper initialization after language change...",
+            );
+            this.initializeSwiper();
+          }, 100);
+        }
+      });
   }
 
   private getBrowserLanguage(): "en" | "ar" {
@@ -163,7 +169,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     }
 
     // Subscribe to route parameter changes (both lang and id)
-    this.route.params.subscribe((params) => {
+    this.route.params.pipe(takeUntil(this.destroy$)).subscribe((params) => {
       const newLang = params["lang"];
       const newId = params["id"];
 
@@ -187,7 +193,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     });
 
     // Handle fragment navigation (e.g., #downloads)
-    this.route.fragment.subscribe((fragment) => {
+    this.route.fragment.pipe(takeUntil(this.destroy$)).subscribe((fragment) => {
       if (fragment === "downloads" && isPlatformBrowser(this.platformId)) {
         // Wait for app data to load and DOM to render
         setTimeout(() => {
@@ -257,6 +263,15 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
         this.initializeSwiper();
       }, 0);
     },
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+
+  private loadAppData(appParam: string) {
+    // Parse the app parameter: format is "slug_id" (e.g., "wahy_46")
+    const lastUnderscoreIndex = appParam.lastIndexOf("_");
+    let appId: string = appParam;
 
     error: (error) => {
       if (error.status === 404) {
@@ -458,6 +473,72 @@ private handleGenericErrorSEO() {
   this.metaService.removeTag("name='googlebot'");
 this.metaService.removeTag("name='bingbot'");
 }
+    this.appService.getAppById(appId).pipe(
+      takeUntil(this.destroy$),
+      switchMap((app) => {
+        if (app) {
+          console.log("✅ DEBUG: App data loaded successfully:", app.Name_En);
+          console.log(
+            "📊 DEBUG: Screenshots count (EN):",
+            app.screenshots_en?.length || 0,
+          );
+          console.log(
+            "📊 DEBUG: Screenshots count (AR):",
+            app.screenshots_ar?.length || 0,
+          );
+          console.log("🌐 DEBUG: Current language:", this.currentLang);
+          console.log(
+            "🖼️ DEBUG: First screenshot URL:",
+            app.screenshots_en?.[0] || "No screenshots",
+          );
+
+          this.app = app;
+          this.cdr.detectChanges(); // Trigger immediate change detection
+          console.log(app.categories);
+
+          // Update SEO data after app is loaded
+          this.updateSeoData();
+          // FIX: Set loading to false immediately since we have the app data
+          // Images will load asynchronously and that's fine
+          this.loading = false;
+          this.cdr.detectChanges(); // Trigger change detection after setting loading = false
+
+          // Reinitialize Swiper after data loads (ensure container is ready)
+          this.swiperInitAttempts = 0;
+          setTimeout(() => {
+            console.log("?? DEBUG: Initializing Swiper after data load...");
+            this.initializeSwiper();
+          }, 0);
+          setTimeout(() => {
+            this.initializeSwiper();
+          }, 150);
+          console.log(
+            "⚙️ DEBUG: Component state after loading - hideSwiper:",
+            this.hideSwiper,
+            "loading:",
+            this.loading,
+          );
+
+          // Flatten nested subscribe: fetch related apps via switchMap
+          if (app.categories.length > 0) {
+            return this.appService.getAppsByCategory(app.categories[0]);
+          }
+        } else {
+          console.error("❌ DEBUG: No app data returned for:", appParam);
+        }
+        return of([]);
+      }),
+    ).subscribe({
+      next: (apps) => {
+        if (this.app) {
+          this.relevantApps = apps.filter((a) => a.id !== this.app!.id);
+        }
+      },
+      error: (error) => {
+        console.error("❌ DEBUG: Error loading app data:", error);
+      },
+    });
+  }
 
   // Add a method to handle navigation to a related app
   navigateToApp(lookupId: string) {
