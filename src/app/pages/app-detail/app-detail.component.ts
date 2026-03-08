@@ -1,7 +1,6 @@
 import {
   Component,
   OnInit,
-  OnDestroy,
   AfterViewInit,
   ViewChild,
   ElementRef,
@@ -36,27 +35,8 @@ import { Nl2brPipe } from "../../pipes/nl2br.pipe";
 import { OptimizedImageComponent } from "../../components/optimized-image/optimized-image.component";
 import { SeoService } from "../../services/seo.service";
 import { environment } from "../../../environments/environment";
-import { Subject, of } from "rxjs";
-import { takeUntil, switchMap } from "rxjs/operators";
 // register Swiper custom elements
 register();
-
-/**
- * Represents the possible UI states for the App Details page.
- *
- * This status is used to control which view should be rendered
- * while fetching or displaying app data.
- *
- * States:
- * - 'loading'   → API request in progress (skeleton loader is shown)
- * - 'success'   → App data loaded successfully and the page content is rendered
- * - 'not-found' → The requested app does not exist (404 response)
- * - 'error'     → API failure such as server error, timeout, or network issue
- *
- * This state management ensures proper user feedback and prevents
- * the skeleton loader from remaining visible when an error occurs.
- */
-type AppDetailStatus = 'loading' | 'success' | 'not-found' | 'error';
 
 @Component({
   selector: "app-detail",
@@ -82,7 +62,7 @@ type AppDetailStatus = 'loading' | 'success' | 'not-found' | 'error';
   styleUrls: ["./app-detail.component.scss"],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppDetailComponent implements OnInit, OnDestroy, AfterViewInit {
+export class AppDetailComponent implements OnInit, AfterViewInit {
   @ViewChild("swiperContainer") swiperContainer: any;
   @ViewChild("relatedCarousel") relatedCarousel!: ElementRef<HTMLDivElement>;
 
@@ -94,7 +74,6 @@ export class AppDetailComponent implements OnInit, OnDestroy, AfterViewInit {
   // Cache for star arrays to prevent NG0100 errors from creating new references on each change detection
   private starArrayCache = new Map<number, { fillPercent: number }[]>();
   private swiperInitAttempts = 0;
-  private destroy$ = new Subject<void>();
 
   swiperParams = {
     slidesPerView: "auto",
@@ -110,14 +89,14 @@ export class AppDetailComponent implements OnInit, OnDestroy, AfterViewInit {
   };
 
   hideSwiper = true;
-  status: AppDetailStatus = 'loading';
+  loading = true;
 
   constructor(
-    public  route: ActivatedRoute,
+    private route: ActivatedRoute,
     private appService: AppService,
     private sanitizer: DomSanitizer,
     private translateService: TranslateService,
-    public  router: Router,
+    private router: Router,
     private seoService: SeoService,
     private titleService: Title,
     private metaService: Meta,
@@ -128,29 +107,27 @@ export class AppDetailComponent implements OnInit, OnDestroy, AfterViewInit {
   ) {
     this.currentLang = this.translateService.currentLang as "ar" | "en";
     // Subscribe to language changes
-    this.translateService.onLangChange
-      .pipe(takeUntil(this.destroy$))
-      .subscribe((event) => {
-        this.currentLang = event.lang as "en" | "ar";
-        console.log("🌐 DEBUG: Language changed to:", this.currentLang);
-        // Reinitialize swiper when language changes (same pattern as data load)
-        if (this.swiperContainer) {
-          console.log("🔄 DEBUG: Reinitializing Swiper after language change...");
-          this.hideSwiper = false;
-          setTimeout(() => {
-            this.hideSwiper = true;
-            console.log(
-              "🔄 DEBUG: Swiper container reset after language change, initializing...",
-            );
-          }, 50);
-          setTimeout(() => {
-            console.log(
-              "🔄 DEBUG: Final Swiper initialization after language change...",
-            );
-            this.initializeSwiper();
-          }, 100);
-        }
-      });
+    this.translateService.onLangChange.subscribe((event) => {
+      this.currentLang = event.lang as "en" | "ar";
+      console.log("🌐 DEBUG: Language changed to:", this.currentLang);
+      // Reinitialize swiper when language changes (same pattern as data load)
+      if (this.swiperContainer) {
+        console.log("🔄 DEBUG: Reinitializing Swiper after language change...");
+        this.hideSwiper = false;
+        setTimeout(() => {
+          this.hideSwiper = true;
+          console.log(
+            "🔄 DEBUG: Swiper container reset after language change, initializing...",
+          );
+        }, 50);
+        setTimeout(() => {
+          console.log(
+            "🔄 DEBUG: Final Swiper initialization after language change...",
+          );
+          this.initializeSwiper();
+        }, 100);
+      }
+    });
   }
 
   private getBrowserLanguage(): "en" | "ar" {
@@ -169,7 +146,7 @@ export class AppDetailComponent implements OnInit, OnDestroy, AfterViewInit {
     }
 
     // Subscribe to route parameter changes (both lang and id)
-    this.route.params.pipe(takeUntil(this.destroy$)).subscribe((params) => {
+    this.route.params.subscribe((params) => {
       const newLang = params["lang"];
       const newId = params["id"];
 
@@ -180,7 +157,7 @@ export class AppDetailComponent implements OnInit, OnDestroy, AfterViewInit {
 
       // Load app data when ID changes (or on initial load)
       if (newId) {
-        this.status = 'loading';
+        this.loading = true;
         // Scroll to top of page when loading new app detail (unless fragment is present)
         if (isPlatformBrowser(this.platformId)) {
           const fragment = this.route.snapshot.fragment;
@@ -193,7 +170,7 @@ export class AppDetailComponent implements OnInit, OnDestroy, AfterViewInit {
     });
 
     // Handle fragment navigation (e.g., #downloads)
-    this.route.fragment.pipe(takeUntil(this.destroy$)).subscribe((fragment) => {
+    this.route.fragment.subscribe((fragment) => {
       if (fragment === "downloads" && isPlatformBrowser(this.platformId)) {
         // Wait for app data to load and DOM to render
         setTimeout(() => {
@@ -203,279 +180,20 @@ export class AppDetailComponent implements OnInit, OnDestroy, AfterViewInit {
     });
   }
 
-/** function loadAppData ()
- * Fetches the application data based on the URL parameter and manages the full page state lifecycle.
- *
- * This method extracts the app ID from the route parameter (slug_id format), calls the API,
- * and updates the UI state accordingly.
- *
- * Handled states:
- * - loading: displays the skeleton loader while fetching data
- * - success: renders the app details and related apps
- * - not-found: triggered when the API returns 404 or no app data
- * - error: triggered for server failures, timeouts, or network issues
- *
- * Additionally:
- * - Updates SEO metadata when the app loads successfully
- * - Applies SEO "noindex" rules for 404 and generic error states
- * - Initializes the Swiper gallery once the view is rendered
- *
- * This implementation prevents the skeleton loader from persisting indefinitely
- * when the API returns an error or a non-existent app.
- *
- * @param appParam Route parameter containing the app slug and ID (e.g., "app-name_123")
- */
- loadAppData(appParam: string) {
-  this.status = 'loading';
-
-  const lastUnderscoreIndex = appParam.lastIndexOf("_");
-  let appId: string = appParam;
-
-  if (lastUnderscoreIndex !== -1) {
-    const potentialId = appParam.substring(lastUnderscoreIndex + 1);
-    if (potentialId.length > 0) {
-      appId = potentialId;
-    }
-  }
-
-  this.appService.getAppById(appId).subscribe({
-    next: (app) => {
-      if (!app) {
-        this.status = 'not-found';
-        this.handleNotFoundSEO();
-        return;
-      }
-
-      this.app = app;
-
-      if (app.categories.length > 0) {
-        this.appService
-          .getAppsByCategory(app.categories[0])
-          .subscribe((apps) => {
-            this.relevantApps = apps.filter((a) => a.id !== app.id);
-          });
-      }
-
-      this.updateSeoData();
-      this.status = 'success';
-
-      setTimeout(() => {
-        this.initializeSwiper();
-      }, 0);
-    },
-  ngOnDestroy() {
-    this.destroy$.next();
-    this.destroy$.complete();
-  }
-
   private loadAppData(appParam: string) {
     // Parse the app parameter: format is "slug_id" (e.g., "wahy_46")
     const lastUnderscoreIndex = appParam.lastIndexOf("_");
     let appId: string = appParam;
 
-    error: (error) => {
-      if (error.status === 404) {
-        this.status = 'not-found';
-        this.handleNotFoundSEO();
-      } else {
-        this.status = 'error';
-        this.handleGenericErrorSEO();
+    if (lastUnderscoreIndex !== -1) {
+      const potentialId = appParam.substring(lastUnderscoreIndex + 1);
+      if (potentialId.length > 0) {
+        appId = potentialId;
       }
     }
-  });
-}
 
-/** function updateSeoData()
- * Updates SEO metadata and structured data for the currently loaded app.
- *
- * This method dynamically configures the page title, meta tags, Open Graph data,
- * Twitter cards, keywords, and structured data to improve search engine visibility
- * and social media previews.
- *
- * Key responsibilities:
- * - Sets localized title and description based on the current language (EN / AR)
- * - Updates Open Graph and Twitter metadata for link previews
- * - Generates structured data for the application, breadcrumbs, and organization
- * - Adds app-specific keywords derived from categories
- * - Preloads the first screenshot to optimize Largest Contentful Paint (LCP)
- *
- * SEO updates are only applied when a valid app object is available.
- */
-  private updateSeoData() {
-    this.metaService.removeTag("name='robots'");
-    
-    if (!this.app) return;
-
-    const appName =
-      this.currentLang === "ar" ? this.app.Name_Ar : this.app.Name_En;
-    const appDescription =
-      this.currentLang === "ar"
-        ? this.app.Short_Description_Ar
-        : this.app.Short_Description_En;
-    const fullDescription =
-      this.currentLang === "ar"
-        ? this.app.Description_Ar
-        : this.app.Description_En;
-
-    // Preload first screenshot for LCP optimization
-    const screenshots =
-      this.currentLang === "ar"
-        ? this.app.screenshots_ar
-        : this.app.screenshots_en;
-    if (screenshots && screenshots.length > 0) {
-      this.addPreloadLink(screenshots[0]);
-    }
-
-    // Update page title and meta tags
-    const title =
-      this.currentLang === "ar"
-        ? `${appName} - تطبيق قرآني من دليل التطبيقات القرآنية`
-        : `${appName} - Quran App from Comprehensive Quranic Directory`;
-
-    this.titleService.setTitle(title);
-    this.metaService.updateTag({ name: "title", content: title });
-    this.metaService.updateTag({
-      name: "description",
-      content: `${appDescription} - ${fullDescription?.substring(0, 150)}...`,
-    });
-
-    // Update Open Graph tags
-    this.metaService.updateTag({ property: "og:title", content: title });
-    this.metaService.updateTag({
-      property: "og:description",
-      content: appDescription || "",
-    });
-    const ogImageUrl = `${environment.apiUrl}/apps/${this.app.slug}/og-image/?lang=${this.currentLang}`;
-    this.metaService.updateTag({
-      property: "og:image",
-      content: ogImageUrl,
-    });
-    this.metaService.updateTag({
-      property: "og:url",
-      content: `https://quran-apps.itqan.dev/${this.currentLang}/app/${this.app.slug}_${this.app.id}`,
-    });
-    this.metaService.updateTag({ property: "og:type", content: "website" });
-
-    // Update Twitter Card tags
-    this.metaService.updateTag({
-      property: "twitter:card",
-      content: "summary_large_image",
-    });
-    this.metaService.updateTag({ property: "twitter:title", content: title });
-    this.metaService.updateTag({
-      property: "twitter:description",
-      content: appDescription || "",
-    });
-    this.metaService.updateTag({
-      property: "twitter:image",
-      content: ogImageUrl,
-    });
-
-    // Add app-specific keywords
-    const keywords = [
-      this.currentLang === "ar" ? "تطبيق قرآني" : "Quran app",
-      this.currentLang === "ar" ? "تطبيق إسلامي" : "Islamic app",
-      appName,
-      ...this.app.categories.map((cat) =>
-        this.currentLang === "ar" ? `تطبيقات ${cat}` : `${cat} apps`,
-      ),
-    ];
-    this.metaService.updateTag({
-      name: "keywords",
-      content: keywords.join(", "),
-    });
-
-    // Add enhanced structured data for the app
-    const appStructuredData = this.seoService.generateEnhancedAppStructuredData(
-      this.app,
-      this.currentLang,
-    );
-
-    // Add breadcrumb structured data
-    const breadcrumbs = [
-      {
-        name: this.currentLang === "ar" ? "الرئيسية" : "Home",
-        url: `https://quran-apps.itqan.dev/${this.currentLang}`,
-      },
-      {
-        name: this.currentLang === "ar" ? "التطبيقات" : "Apps",
-        url: `https://quran-apps.itqan.dev/${this.currentLang}`,
-      },
-      {
-        name: appName,
-        url: `https://quran-apps.itqan.dev/${this.currentLang}/app/${this.app.id}`,
-      },
-    ];
-
-    const breadcrumbData = this.seoService.generateBreadcrumbStructuredData(
-      breadcrumbs,
-      this.currentLang,
-    );
-    const organizationData = this.seoService.generateOrganizationStructuredData(
-      this.currentLang,
-    );
-
-    // Combine structured data
-    const combinedData = [appStructuredData, breadcrumbData, organizationData];
-
-    this.seoService.addStructuredData(combinedData);
-  } 
-
-  /** function handleNotFoundSEO()
- * Configures SEO metadata for the "App Not Found" state.
- *
- * This method is triggered when the API returns a 404 or when the requested
- * app does not exist in the system.
- *
- * Actions performed:
- * - Updates the page title to a localized "App Not Found" message
- * - Adds a "noindex" robots meta tag to prevent search engines from indexing
- *   invalid or deleted app URLs
- * - Removes crawler-specific directives (googlebot / bingbot) to ensure
- *   consistent indexing behavior
- *
- * This aligns with SEO best practices for handling 404 pages.
- */
-private handleNotFoundSEO() {
-  const title =
-    this.currentLang === 'ar'
-      ? 'التطبيق غير موجود'
-      : 'App Not Found';
-
-  this.titleService.setTitle(title);
-  this.metaService.updateTag({ name: 'robots', content: 'noindex' });
-  this.metaService.removeTag("name='googlebot'");
-this.metaService.removeTag("name='bingbot'");
-}
-
-/** function handleGenericErrorSEO()
- * Configures SEO metadata for unexpected application errors.
- *
- * This method is triggered when API requests fail due to server errors,
- * network failures, or timeouts (e.g., HTTP 500).
- *
- * Actions performed:
- * - Updates the page title to a localized "Something went wrong" message
- * - Applies a "noindex" robots meta tag to prevent search engines from
- *   indexing pages that failed to load properly
- * - Removes crawler-specific directives (googlebot / bingbot)
- *
- * This ensures that temporary error states are not indexed by search engines.
- */
-private handleGenericErrorSEO() {
-  const title =
-    this.currentLang === 'ar'
-      ? 'حدث خطأ ما'
-      : 'Something went wrong';
-
-  this.titleService.setTitle(title);
-  this.metaService.updateTag({ name: 'robots', content: 'noindex' });
-  this.metaService.removeTag("name='googlebot'");
-this.metaService.removeTag("name='bingbot'");
-}
-    this.appService.getAppById(appId).pipe(
-      takeUntil(this.destroy$),
-      switchMap((app) => {
+    this.appService.getAppById(appId).subscribe(
+      (app) => {
         if (app) {
           console.log("✅ DEBUG: App data loaded successfully:", app.Name_En);
           console.log(
@@ -495,6 +213,13 @@ this.metaService.removeTag("name='bingbot'");
           this.app = app;
           this.cdr.detectChanges(); // Trigger immediate change detection
           console.log(app.categories);
+          if (app.categories.length > 0) {
+            this.appService
+              .getAppsByCategory(app.categories[0])
+              .subscribe((apps) => {
+                this.relevantApps = apps.filter((a) => a.id !== app.id);
+              });
+          }
 
           // Update SEO data after app is loaded
           this.updateSeoData();
@@ -518,33 +243,21 @@ this.metaService.removeTag("name='bingbot'");
             "loading:",
             this.loading,
           );
-
-          // Flatten nested subscribe: fetch related apps via switchMap
-          if (app.categories.length > 0) {
-            return this.appService.getAppsByCategory(app.categories[0]);
-          }
         } else {
           console.error("❌ DEBUG: No app data returned for:", appParam);
         }
-        return of([]);
-      }),
-    ).subscribe({
-      next: (apps) => {
-        if (this.app) {
-          this.relevantApps = apps.filter((a) => a.id !== this.app!.id);
-        }
       },
-      error: (error) => {
+      (error) => {
         console.error("❌ DEBUG: Error loading app data:", error);
       },
-    });
+    );
   }
 
   // Add a method to handle navigation to a related app
   navigateToApp(lookupId: string) {
     // Clear current app data before navigation to prevent stale data display
     this.app = undefined;
-    this.status = 'loading';
+    this.loading = true;
     this.relevantApps = [];
     this.cdr.detectChanges();
 
@@ -598,7 +311,7 @@ this.metaService.removeTag("name='bingbot'");
 
     // Clear current app data before navigation to prevent stale data display
     this.app = undefined;
-    this.status = 'loading';
+    this.loading = true;
     this.relevantApps = [];
     this.cdr.detectChanges();
 
@@ -851,7 +564,123 @@ this.metaService.removeTag("name='bingbot'");
     }
   }
 
+  private updateSeoData() {
+    if (!this.app) return;
 
+    const appName =
+      this.currentLang === "ar" ? this.app.Name_Ar : this.app.Name_En;
+    const appDescription =
+      this.currentLang === "ar"
+        ? this.app.Short_Description_Ar
+        : this.app.Short_Description_En;
+    const fullDescription =
+      this.currentLang === "ar"
+        ? this.app.Description_Ar
+        : this.app.Description_En;
+
+    // Preload first screenshot for LCP optimization
+    const screenshots =
+      this.currentLang === "ar"
+        ? this.app.screenshots_ar
+        : this.app.screenshots_en;
+    if (screenshots && screenshots.length > 0) {
+      this.addPreloadLink(screenshots[0]);
+    }
+
+    // Update page title and meta tags
+    const title =
+      this.currentLang === "ar"
+        ? `${appName} - تطبيق قرآني من دليل التطبيقات القرآنية`
+        : `${appName} - Quran App from Comprehensive Quranic Directory`;
+
+    this.titleService.setTitle(title);
+    this.metaService.updateTag({ name: "title", content: title });
+    this.metaService.updateTag({
+      name: "description",
+      content: `${appDescription} - ${fullDescription?.substring(0, 150)}...`,
+    });
+
+    // Update Open Graph tags
+    this.metaService.updateTag({ property: "og:title", content: title });
+    this.metaService.updateTag({
+      property: "og:description",
+      content: appDescription || "",
+    });
+    const ogImageUrl = `${environment.apiUrl}/apps/${this.app.slug}/og-image/?lang=${this.currentLang}`;
+    this.metaService.updateTag({
+      property: "og:image",
+      content: ogImageUrl,
+    });
+    this.metaService.updateTag({
+      property: "og:url",
+      content: `https://quran-apps.itqan.dev/${this.currentLang}/app/${this.app.slug}_${this.app.id}`,
+    });
+    this.metaService.updateTag({ property: "og:type", content: "website" });
+
+    // Update Twitter Card tags
+    this.metaService.updateTag({
+      property: "twitter:card",
+      content: "summary_large_image",
+    });
+    this.metaService.updateTag({ property: "twitter:title", content: title });
+    this.metaService.updateTag({
+      property: "twitter:description",
+      content: appDescription || "",
+    });
+    this.metaService.updateTag({
+      property: "twitter:image",
+      content: ogImageUrl,
+    });
+
+    // Add app-specific keywords
+    const keywords = [
+      this.currentLang === "ar" ? "تطبيق قرآني" : "Quran app",
+      this.currentLang === "ar" ? "تطبيق إسلامي" : "Islamic app",
+      appName,
+      ...this.app.categories.map((cat) =>
+        this.currentLang === "ar" ? `تطبيقات ${cat}` : `${cat} apps`,
+      ),
+    ];
+    this.metaService.updateTag({
+      name: "keywords",
+      content: keywords.join(", "),
+    });
+
+    // Add enhanced structured data for the app
+    const appStructuredData = this.seoService.generateEnhancedAppStructuredData(
+      this.app,
+      this.currentLang,
+    );
+
+    // Add breadcrumb structured data
+    const breadcrumbs = [
+      {
+        name: this.currentLang === "ar" ? "الرئيسية" : "Home",
+        url: `https://quran-apps.itqan.dev/${this.currentLang}`,
+      },
+      {
+        name: this.currentLang === "ar" ? "التطبيقات" : "Apps",
+        url: `https://quran-apps.itqan.dev/${this.currentLang}`,
+      },
+      {
+        name: appName,
+        url: `https://quran-apps.itqan.dev/${this.currentLang}/app/${this.app.id}`,
+      },
+    ];
+
+    const breadcrumbData = this.seoService.generateBreadcrumbStructuredData(
+      breadcrumbs,
+      this.currentLang,
+    );
+    const organizationData = this.seoService.generateOrganizationStructuredData(
+      this.currentLang,
+    );
+
+    // Combine structured data
+    const combinedData = [appStructuredData, breadcrumbData, organizationData];
+
+    this.seoService.addStructuredData(combinedData);
+  }
 
   getPlatformLabel(platform: string): string {
     const labels: Record<string, Record<string, string>> = {
@@ -863,11 +692,11 @@ this.metaService.removeTag("name='bingbot'");
     return labels[platform]?.[this.currentLang] || labels['cross_platform'][this.currentLang];
   }
 
-  getStoreCount(appData: QuranApp): number {
+  getStoreCount(app: QuranApp): number {
     let count = 0;
-    if (appData.Google_Play_Link) count++;
-    if (appData.AppStore_Link) count++;
-    if (appData.App_Gallery_Link) count++;
+    if (app.Google_Play_Link) count++;
+    if (app.AppStore_Link) count++;
+    if (app.App_Gallery_Link) count++;
     return count;
   }
 
