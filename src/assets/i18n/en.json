@@ -83,6 +83,10 @@
     "apps": {
       "title": "Apps List",
       "sort": "Sort by rating"
+    },
+    "badges": {
+      "featured": "Featured",
+      "new": "New"
     }
   },
   "developer": {
