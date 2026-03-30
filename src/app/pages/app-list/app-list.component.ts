@@ -36,6 +36,7 @@ import {
   debounceTime,
 } from "rxjs/operators";
 import { SeoService } from "../../services/seo.service";
+import { RAMADAN_MODE } from "../../guards/ramadan-redirect.guard";
 import { OptimizedImageComponent } from "../../components/optimized-image/optimized-image.component";
 import { SafeHtmlPipe } from "../../pipes/safe-html.pipe";
 import { NavbarScrollService } from "../../services/navbar-scroll.service";
@@ -77,6 +78,7 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
   private isSmartSearchActive = false;
   categories: Category[] = [];
   isLoading = true;
+  ramadanMode = RAMADAN_MODE;
   // Track if initial data load has completed (to avoid showing "no apps" before data arrives)
   initialLoadComplete = false;
   error: string | null = null;

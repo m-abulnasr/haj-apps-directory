@@ -168,6 +168,7 @@
 </section>
 
 <!-- Ramadan Banner -->
+@if (ramadanMode) {
 <a class="ramadan-banner" dir="rtl" [routerLink]="['/', currentLang, 'ramadan']">
   <picture>
     <source
@@ -195,6 +196,7 @@
     </div>
   </div>
 </a>
+}
 
 <!-- Main Content -->
 <div class="main-content">
