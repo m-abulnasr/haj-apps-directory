@@ -1,4 +1,4 @@
-<nz-layout class="app-layout" [dir]="isRtl ? 'rtl' : 'ltr'" [class.ramadan-layout]="hideFooter">
+<nz-layout class="app-layout" [dir]="isRtl ? 'rtl' : 'ltr'">
   <!-- Modern Header -->
   <nz-header *ngIf="!hideChrome" class="modern-header" [class.compact-mode]="isNavbarCompact">
     <!-- Normal Header Container -->
@@ -45,22 +45,6 @@
 
       <!-- Action Buttons - Right Side -->
       <div class="header-actions">
-        <a
-          nz-button
-          nzType="default"
-          href="https://community.itqan.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="community-btn"
-        >
-          {{ "header.itqan_community" | translate }}
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
-            <path
-              d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"
-            />
-          </svg>
-        </a>
         <button
           nz-button
           nzType="text"
@@ -241,25 +225,6 @@
             nzType="text"
             nzBlock
             nzSize="large"
-            href="https://community.itqan.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            (click)="toggleMobileMenu()"
-            class="mobile-nav-link mobile-community-badge"
-          >
-            <span class="mobile-nav-icon">
-              <lucide-icon name="users" [size]="20"></lucide-icon>
-            </span>
-            {{ "header.itqan_community" | translate }}
-            <span class="external-icon">
-              <lucide-icon name="external-link" [size]="16"></lucide-icon>
-            </span>
-          </a>
-          <a
-            nz-button
-            nzType="text"
-            nzBlock
-            nzSize="large"
             [routerLink]="['/', currentLang, 'about-us']"
             (click)="toggleMobileMenu()"
             class="mobile-nav-link"
@@ -311,53 +276,4 @@
   <nz-content>
     <router-outlet></router-outlet>
   </nz-content>
-  <nz-footer *ngIf="!hideChrome && !hideFooter" class="main-footer">
-    <div class="footer-content">
-      <!-- Info Row -->
-      <div class="footer-info-row">
-        <p class="footer-open-source">{{ "footer.copyright" | translate }}</p>
-        <div class="footer-sponsor">
-          <span class="footer-sponsor-label">{{ "footer.sponsored_by" | translate }}</span>
-          <img src="assets/images/charity.svg" alt="" />
-          <img class="footer-sponsor-maknon" src="assets/images/maknon.png" alt="" />
-        </div>
-      </div>
-      <!-- Links Row -->
-      <div class="footer-links-row">
-        <h4 class="footer-links-title">{{ "footer.itqan_projects" | translate }}</h4>
-        <ul class="footer-links-list">
-          <li>
-            <a
-              [href]="'https://itqan.dev/' + currentLang"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ "footer.main_site" | translate }}
-            </a>
-            <img src="assets/images/link-square.svg" alt="" />
-          </li>
-          <li>
-            <a
-              href="https://itqan.dev/projects"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ "footer.content_management" | translate }}
-            </a>
-            <img src="assets/images/link-square.svg" alt="" />
-          </li>
-          <li>
-            <a
-              href="https://itqan.dev/resources"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ "footer.resources" | translate }}
-            </a>
-            <img src="assets/images/link-square.svg" alt="" />
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nz-footer>
 </nz-layout>

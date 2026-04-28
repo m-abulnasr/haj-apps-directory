@@ -10,7 +10,7 @@ const path = require('path');
 
 // Configuration
 const CONFIG = {
-  baseUrl: 'https://quran-apps.itqan.dev',
+  baseUrl: 'https://hajapps.org',
   languages: ['ar', 'en'],
   defaultLanguage: 'en',
   outputPath: 'src/sitemap.xml',

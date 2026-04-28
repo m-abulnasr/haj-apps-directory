@@ -530,41 +530,6 @@
     }
   }
   
-  // Footer Dark Mode Styling
-  nz-footer.main-footer {
-    background-color: var(--surface-color) !important;
-    color: var(--text-secondary) !important;
-    border-top: 1px solid var(--border-color) !important;
-    
-    .footer-section {
-      h4 {
-        color: var(--text-color) !important;
-      }
-      
-      .copyright {
-        color: var(--text-secondary) !important;
-      }
-    }
-    
-    .footer-links {
-      a {
-        color: var(--text-secondary) !important;
-        
-        &:hover {
-          color: var(--primary-color) !important;
-          text-decoration: underline;
-        }
-        
-        nz-icon {
-          color: var(--text-secondary) !important;
-        }
-        
-        &:hover nz-icon {
-          color: var(--primary-color) !important;
-        }
-      }
-    }
-  }
 }
 
 // Smooth transitions for theme changes

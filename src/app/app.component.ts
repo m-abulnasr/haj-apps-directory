@@ -51,9 +51,8 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   public isMobileMenuVisible = false;
   public currentLang: "en" | "ar" = "en";
 
-  // Hide header/footer for internal tool pages
+  // Hide header for internal tool pages
   public hideChrome = false;
-  public hideFooter = false;
 
   // Navbar compact mode with inline search
   public isNavbarCompact = false;
@@ -123,7 +122,6 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       takeUntil(this.destroy$)
     ).subscribe(() => {
       this.hideChrome = !!this.route.snapshot.firstChild?.data?.['hideChrome'];
-      this.hideFooter = !!this.route.snapshot.firstChild?.data?.['hideFooter'];
     });
 
     // Start preloading app images in background (non-blocking)

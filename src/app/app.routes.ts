@@ -58,7 +58,7 @@ export const routes: Routes = [
   },
   {
     path: ':lang/ramadan',
-    data: { title: 'Ramadan 1447', hideFooter: true },
+    data: { title: 'Ramadan 1447' },
     loadComponent: () => import('./pages/ramadan/ramadan.component').then(m => m.RamadanComponent)
   },
 
@@ -81,7 +81,7 @@ export const routes: Routes = [
   // Home route - loads Ramadan page when RAMADAN_MODE is true, otherwise apps list
   {
     path: ':lang',
-    data: { title: 'Home', ...(RAMADAN_MODE ? { hideFooter: true, hideLanguageToggle: true } : {}) },
+    data: { title: 'Home', ...(RAMADAN_MODE ? { hideLanguageToggle: true } : {}) },
     loadComponent: () => RAMADAN_MODE
       ? import('./pages/ramadan/ramadan.component').then(m => m.RamadanComponent)
       : import('./pages/app-list/app-list.component').then(m => m.AppListComponent)
