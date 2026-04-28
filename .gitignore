@@ -10,3 +10,4 @@ docs/review/
 .DS_Store
 dist/
 .env
+backend/staticfiles

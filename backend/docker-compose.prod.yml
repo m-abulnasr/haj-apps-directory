@@ -20,16 +20,11 @@ services:
       DEBUG: "False"
 
     volumes:
-      # Media uploads (temporary storage before R2 sync)
-      - mediafiles:/app/media
+      - ./staticfiles:/app/config/staticfiles
 
     networks:
       - hajapp-backend-network
     # Health check is defined in Dockerfile
-
-volumes:
-  mediafiles:
-    driver: local
 
 networks:
   hajapp-backend-network:
