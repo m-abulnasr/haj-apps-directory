@@ -4,7 +4,7 @@ export const environment = {
   development: false,
   appName: 'Quran Apps Directory (Staging)',
   appUrl: 'https://staging.hajapps.org',
-  apiUrl: 'https://stagin.hajapps.org/api',
+  apiUrl: 'https://api-staging.hajapps.org/api',
   version: '1.0.0-staging',
   analytics: {
     enabled: false,
@@ -17,12 +17,14 @@ export const environment = {
     enableServiceWorker: false
   },
   sentry: {
-    enabled: true,
-    dsn: 'https://10ae32f7f36add568917f16d53562358@o4510669335232512.ingest.de.sentry.io/4510669357842512',
-    tunnel: 'https://qad-backend-api-staging.up.railway.app/api/sentry-tunnel/',
+    enabled: false,
+    // dsn: 'https://10ae32f7f36add568917f16d53562358@o4510669335232512.ingest.de.sentry.io/4510669357842512',
+    dsn: '',
+    // tunnel: 'https://qad-backend-api-staging.up.railway.app/api/sentry-tunnel/',
+    tunnel: '',
     environment: 'staging',
-    tracesSampleRate: 1.0,
-    replaysSessionSampleRate: 0.1,
-    replaysOnErrorSampleRate: 1.0
+    tracesSampleRate: 0,
+    replaysSessionSampleRate: 0,
+    replaysOnErrorSampleRate: 0
   }
 };

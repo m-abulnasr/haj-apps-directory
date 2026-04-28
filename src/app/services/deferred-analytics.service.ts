@@ -15,17 +15,21 @@ export class DeferredAnalyticsService {
 
   /**
    * Initialize user interaction listeners to defer analytics loading
+   * @deprecated Google Analytics is commented out
    */
   private initializeInteractionListeners(): void {
+    // Google Analytics disabled - removed interaction listeners and script loading
+    return;
+
     if (!isPlatformBrowser(this.platformId)) return;
 
     const interactions = ['click', 'keydown', 'scroll', 'touchstart', 'mousemove'];
-    
+
     const loadAnalytics = () => {
       if (!this.hasUserInteracted) {
         this.hasUserInteracted = true;
         this.loadGoogleAnalytics();
-        
+
         // Remove listeners after first interaction
         interactions.forEach(event => {
           document.removeEventListener(event, loadAnalytics);
@@ -48,8 +52,12 @@ export class DeferredAnalyticsService {
 
   /**
    * Dynamically load Google Analytics script
+   * @deprecated Google Analytics is commented out
    */
   private loadGoogleAnalytics(): void {
+    // Google Analytics disabled - script loading removed
+    return;
+
     if (!isPlatformBrowser(this.platformId) || this.isLoaded) return;
 
     // Create and inject the Google Analytics script
@@ -60,15 +68,19 @@ export class DeferredAnalyticsService {
       this.initializeGtag();
       this.processPendingEvents();
     };
-    
+
     document.head.appendChild(script);
     this.isLoaded = true;
   }
 
   /**
    * Initialize gtag function and configuration
+   * @deprecated Google Analytics is commented out
    */
   private initializeGtag(): void {
+    // Google Analytics disabled - gtag initialization removed
+    return;
+
     if (!isPlatformBrowser(this.platformId)) return;
 
     // Initialize dataLayer and gtag function
@@ -92,18 +104,21 @@ export class DeferredAnalyticsService {
 
   /**
    * Process any events that were queued before analytics loaded
+   * @deprecated Google Analytics is commented out
    */
   private processPendingEvents(): void {
-    this.pendingEvents.forEach(event => {
-      this.sendEvent(event.action, event.data);
-    });
+    // Google Analytics disabled - event processing removed
     this.pendingEvents = [];
   }
 
   /**
    * Track page view (called automatically on initialization)
+   * @deprecated Google Analytics is commented out
    */
   trackPageView(page?: string): void {
+    // Google Analytics disabled - page view tracking removed
+    return;
+
     if (!isPlatformBrowser(this.platformId)) return;
 
     const data = {
@@ -117,15 +132,23 @@ export class DeferredAnalyticsService {
 
   /**
    * Track custom events
+   * @deprecated Google Analytics is commented out
    */
   trackEvent(action: string, data?: any): void {
+    // Google Analytics disabled - event tracking removed
+    return;
+
     this.sendEvent(action, data);
   }
 
   /**
    * Send event to Google Analytics (queue if not loaded yet)
+   * @deprecated Google Analytics is commented out
    */
   private sendEvent(action: string, data?: any): void {
+    // Google Analytics disabled - event sending removed
+    return;
+
     if (!isPlatformBrowser(this.platformId)) return;
 
     if (this.isLoaded && (window as any).gtag) {
@@ -138,8 +161,12 @@ export class DeferredAnalyticsService {
 
   /**
    * Check if analytics is loaded and ready
+   * @deprecated Google Analytics is commented out
    */
   isReady(): boolean {
+    // Google Analytics disabled
+    return false;
+
     if (!isPlatformBrowser(this.platformId)) return false;
     return this.isLoaded && !!(window as any).gtag;
   }

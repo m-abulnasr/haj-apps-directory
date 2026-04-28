@@ -7,8 +7,8 @@ import {
 } from '@angular/common/http';
 import { Observable, throwError, TimeoutError } from 'rxjs';
 import { timeout, catchError } from 'rxjs/operators';
-import * as Sentry from '@sentry/angular';
-import { environment } from '../../environments/environment';
+// import * as Sentry from '@sentry/angular';
+// import { environment } from '../../environments/environment';
 
 const DEFAULT_TIMEOUT_MS = 15000;
 
@@ -25,18 +25,19 @@ export class TimeoutInterceptor implements HttpInterceptor {
         if (error instanceof TimeoutError) {
           const timeoutError = new Error(`Request timeout after ${timeoutValue}ms: ${req.url}`);
 
-          if (environment.sentry.enabled && environment.sentry.dsn) {
-            Sentry.captureException(timeoutError, {
-              extra: {
-                url: req.url,
-                method: req.method,
-                timeout: timeoutValue
-              },
-              tags: {
-                type: 'http_timeout'
-              }
-            });
-          }
+          // Sentry disabled - timeout error capturing removed
+          // if (environment.sentry.enabled && environment.sentry.dsn) {
+          //   Sentry.captureException(timeoutError, {
+          //     extra: {
+          //       url: req.url,
+          //       method: req.method,
+          //       timeout: timeoutValue
+          //     },
+          //     tags: {
+          //       type: 'http_timeout'
+          //     }
+          //   });
+          // }
 
           console.warn(`⏱️ Request timeout: ${req.url} (${timeoutValue}ms)`);
           return throwError(() => timeoutError);
