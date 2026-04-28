@@ -1,0 +1,36 @@
+# ============================================================
+# Production Docker Compose - Django Backend
+# External PostgreSQL database (connected via environment variables)
+# ============================================================
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: haj-apps-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      # Django (overrides from .env)
+      DJANGO_SETTINGS_MODULE: config.settings.production
+      DEBUG: "False"
+
+    volumes:
+      # Media uploads (temporary storage before R2 sync)
+      - mediafiles:/app/media
+
+    networks:
+      - hajapp-backend-network
+    # Health check is defined in Dockerfile
+
+volumes:
+  mediafiles:
+    driver: local
+
+networks:
+  hajapp-backend-network:
+    driver: bridge
