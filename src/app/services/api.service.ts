@@ -10,7 +10,7 @@ const APPS_STATE_KEY = makeStateKey<App[]>('apps');
 const CATEGORIES_STATE_KEY = makeStateKey<Category[]>('categories');
 
 // localStorage cache keys
-const CACHE_VERSION = '1';
+const CACHE_VERSION = '2';
 const CACHE_VERSION_KEY = 'qad-cache-version';
 const APPS_CACHE_KEY = 'qad-apps-cache';
 const CATEGORIES_CACHE_KEY = 'qad-categories-cache';
