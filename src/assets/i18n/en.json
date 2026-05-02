@@ -36,12 +36,11 @@
     "switchToLight": "Switch to light mode"
   },
   "footer": {
-    "copyright": "An Open Source Project, by ITQAN community for Quran technologies, 1447 H",
-    "itqan_projects": "Other ITQAN Projects",
-    "content_management": "Quran Content Management System",
-    "main_site": "ITQAN Community Main Site",
-    "resources": "Developer Resources",
-    "mushaf_fonts": "Uthmanic Script Fonts",
+    "copyright": "A Bathel Initiative for Hajj Technologies, 1447 H",
+    "useful_links": "Quick Links",
+    "about_us": "About Us",
+    "contact_us": "Contact Us",
+    "submit_app": "Submit an App",
     "sponsored_by": "Platform Sponsored by"
   },
   "appList": {
@@ -78,7 +77,17 @@
       "memorize": "Memorize",
       "tajweed": "Tajweed",
       "tools": "Other",
-      "accessibility": "Accessibility"
+      "accessibility": "Accessibility",
+      "gov": "Government",
+      "transport-mobility": "Transport & Mobility",
+      "navigation": "Navigation",
+      "health": "Health",
+      "emergency": "Emergency",
+      "accommodation": "Accommodation",
+      "rituals": "Rituals",
+      "guide": "Pilgrimage Guide",
+      "spiritual": "Spiritual",
+      "information": "Information"
     },
     "apps": {
       "title": "Apps List",

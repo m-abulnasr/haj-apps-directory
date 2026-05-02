@@ -50,7 +50,7 @@
           <span class="search-icon" [class.searching]="isSmartSearching">
             @if (searchType === "smart") {
               <img
-                src="assets/images/searchLogo.svg"
+                src="assets/images/Vector(.svg"
                 alt="Smart Search"
                 class="search-logo-img"
                 [class.spinning]="isSmartSearching"
@@ -169,33 +169,36 @@
 
 <!-- Ramadan Banner -->
 @if (ramadanMode) {
-<a class="ramadan-banner" dir="rtl" [routerLink]="['/', currentLang, 'ramadan']">
-  <picture>
-    <source
-      media="(max-width: 768px)"
-      srcset="assets/images/ramadan-banner-mobile.png"
-    />
-    <img
-      src="assets/images/ramadanPanner.png"
-      alt=""
-      class="ramadan-banner-bg"
-    />
-  </picture>
-  <div class="ramadan-banner-overlay">
-    <div class="ramadan-banner-text">
-      <h2 class="ramadan-banner-title">
-        <span class="title-muted">مع القرآن.. </span>
-        <span class="title-bold">رفقة أقرب</span>
-      </h2>
-      <p class="ramadan-banner-desc">
-        نبحث في رمضان عن السكينة، ونمنح القرآن حضورًا دائمًا يرافقنا طوال الشهر
-      </p>
-      <span class="ramadan-banner-btn">
-        استكشف اختيارات رمضان
-      </span>
+  <a
+    class="ramadan-banner"
+    dir="rtl"
+    [routerLink]="['/', currentLang, 'ramadan']"
+  >
+    <picture>
+      <source
+        media="(max-width: 768px)"
+        srcset="assets/images/ramadan-banner-mobile.png"
+      />
+      <img
+        src="assets/images/ramadanPanner.png"
+        alt=""
+        class="ramadan-banner-bg"
+      />
+    </picture>
+    <div class="ramadan-banner-overlay">
+      <div class="ramadan-banner-text">
+        <h2 class="ramadan-banner-title">
+          <span class="title-muted">مع القرآن.. </span>
+          <span class="title-bold">رفقة أقرب</span>
+        </h2>
+        <p class="ramadan-banner-desc">
+          نبحث في رمضان عن السكينة، ونمنح القرآن حضورًا دائمًا يرافقنا طوال
+          الشهر
+        </p>
+        <span class="ramadan-banner-btn"> استكشف اختيارات رمضان </span>
+      </div>
     </div>
-  </div>
-</a>
+  </a>
 }
 
 <!-- Main Content -->
@@ -320,8 +323,18 @@
               <div class="card-badges">
                 @if (app.featured) {
                   <span class="badge badge--featured">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <path
+                        d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      />
                     </svg>
                     {{ "appList.badges.featured" | translate }}
                   </span>

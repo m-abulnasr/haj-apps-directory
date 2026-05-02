@@ -38,27 +38,27 @@ export class SeoService {
     const baseData = {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": lang === 'ar' ? "دليل التطبيقات القرآنية الشامل" : "Comprehensive Quranic Directory",
-      "alternateName": lang === 'ar' ? "دليل التطبيقات القرآنية" : "Quranic Directory",
-      "url": "https://quran-apps.itqan.dev/",
-      "description": lang === 'ar' 
-        ? "الدليل الشامل لأفضل تطبيقات القرآن الكريم - تطبيقات المصحف، التفسير، التلاوة، التحفيظ والتدبر" 
-        : "The most comprehensive Quranic directory featuring the best Quran apps for reading, memorization, translation, tafsir, and recitation",
+      "name": lang === 'ar' ? "قاصد - دليل تطبيقات الحج" : "Qasid - Hajj Apps Directory",
+      "alternateName": lang === 'ar' ? "دليل تطبيقات الحج" : "Hajj Apps Directory",
+      "url": "https://hajapps.org/",
+      "description": lang === 'ar'
+        ? "كل ما تحتاجه من تطبيقات الحج… في مكان واحد"
+        : "Everything you need in Hajj apps, in one place",
       "inLanguage": lang,
       "publisher": {
         "@type": "Organization",
-        "name": lang === 'ar' ? "مجتمع إتقان لتقنيات القرآن" : "ITQAN Community for Quran Technologies",
-        "url": "https://quran-apps.itqan.dev/",
+        "name": lang === 'ar' ? "باذل" : "Bathel",
+        "url": "https://hajapps.org/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://quran-apps.itqan.dev/assets/images/logo-with-text.svg"
+          "url": "https://hajapps.org/assets/images/logo-with-text.png"
         }
       },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": `https://quran-apps.itqan.dev/${lang}?search={search_term_string}`
+          "urlTemplate": `https://hajapps.org/${lang}?search={search_term_string}`
         },
         "query-input": "required name=search_term_string"
       }
@@ -197,49 +197,35 @@ export class SeoService {
     return {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": lang === 'ar' ? "مجتمع إتقان لتقنيات القرآن" : "ITQAN Community for Quran Technologies",
-      "alternateName": lang === 'ar' ? "إتقان" : "ITQAN",
-      "url": "https://quran-apps.itqan.dev/",
+      "name": lang === 'ar' ? "باذل" : "Bathel",
+      "alternateName": lang === 'ar' ? "قاصد" : "Qasid",
+      "url": "https://hajapps.org/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://quran-apps.itqan.dev/assets/images/logo-with-text.svg",
+        "url": "https://hajapps.org/assets/images/logo-with-text.png",
         "width": 400,
         "height": 100
       },
-      "description": lang === 'ar' 
-        ? "مجتمع متخصص في تقنيات القرآن الكريم وتطوير التطبيقات الإسلامية وتوفير دليل شامل لأفضل تطبيقات القرآن" 
-        : "Community specialized in Quran technologies, Islamic application development, and providing comprehensive directory of the best Quran apps",
-      "foundingDate": "2020",
-      "specialty": lang === 'ar' ? "تقنيات القرآن الكريم" : "Quran Technologies",
+      "description": lang === 'ar'
+        ? "كل ما تحتاجه من تطبيقات الحج… في مكان واحد"
+        : "Everything you need in Hajj apps, in one place",
+      "specialty": lang === 'ar' ? "تطبيقات الحج والعمرة" : "Hajj and Umrah Applications",
       "knowsAbout": [
-        lang === 'ar' ? "تطبيقات القرآن الكريم" : "Quran Applications",
-        lang === 'ar' ? "التطبيقات الإسلامية" : "Islamic Apps",
-        lang === 'ar' ? "تقنيات المصحف الشريف" : "Mushaf Technologies",
-        lang === 'ar' ? "تطبيقات التفسير" : "Tafsir Applications"
-      ],
-      "sameAs": [
-        "https://github.com/Itqan-community",
-        "https://x.com/itqan_community",
-        "https://community.itqan.dev",
-        "https://discord.gg/24CskUbuuB"
+        lang === 'ar' ? "تطبيقات الحج" : "Hajj Applications",
+        lang === 'ar' ? "تطبيقات العمرة" : "Umrah Applications",
+        lang === 'ar' ? "التطبيقات الإسلامية" : "Islamic Apps"
       ],
       "contactPoint": [{
         "@type": "ContactPoint",
         "contactType": "customer support",
-        "url": `https://quran-apps.itqan.dev/${lang}/contact-us`,
-        "email": "connect@itqan.dev",
-        "availableLanguage": ["Arabic", "English"]
-      }, {
-        "@type": "ContactPoint", 
-        "contactType": "technical support",
-        "url": `https://quran-apps.itqan.dev/${lang}/contact-us`,
-        "email": "connect@itqan.dev",
+        "url": `https://hajapps.org/${lang}/contact-us`,
+        "email": "info@bathel.sa",
         "availableLanguage": ["Arabic", "English"]
       }],
       "areaServed": "Worldwide",
       "audience": {
         "@type": "Audience",
-        "audienceType": lang === 'ar' ? "المسلمون وطلاب القرآن" : "Muslims and Quran Students"
+        "audienceType": lang === 'ar' ? "حجاج بيت الله والمسلمون" : "Pilgrims and Muslims"
       }
     };
   }

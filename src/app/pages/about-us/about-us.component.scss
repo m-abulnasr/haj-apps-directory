@@ -90,51 +90,52 @@ $spacing-xxl: 64px;
 // ============================================
 .page-background-left {
   position: absolute;
-  inset: 0;
-  overflow: hidden;
+  width: 990px;
+  height: 990px;
+  left: -865px;
+  top: 260px;
+  opacity: 0.3;
+  transform: rotate(30deg);
   pointer-events: none;
   z-index: 0;
 
-  // Large ellipse - #12BCAC with blur
+  // Ellipse 2 - large, heavily blurred; body ends at page x=125px so blur bleeds visibly
   &::before {
     content: "";
     position: absolute;
-    width: 800px;
+    width: 990px;
     height: 990px;
-    left: -686px;
-    top: 350px;
+    left: 0;
+    top: 0;
     background: $color-ellipse-large;
-    filter: blur(1500px);
-    transform: rotate(30deg);
     border-radius: 50%;
+    filter: blur(165px);
   }
 
-  // Medium ellipse - #15A295 with opacity
+  // Ellipse 1 - medium teal
   &::after {
     content: "";
     position: absolute;
-    width: 584px;
-    height: 583px;
-    left: -428px;
-    top: 880px;
-    background: $color-ellipse-large;
-    opacity: 0.4;
-    transform: rotate(30deg);
+    width: 584.05px;
+    height: 583.25px;
+    left: 257.72px;
+    top: 310.22px;
+    background: $color-ellipse-medium;
     border-radius: 50%;
-    filter: blur(200px);
+    opacity: 0.4;
+    filter: blur(80px);
   }
 
-  // Small ellipse - using span element
+  // Ellipse 3 - small teal
   .ellipse-small {
     position: absolute;
-    width: 302px;
-    height: 301px;
-    left: -235px;
-    top: 1100px;
+    width: 301.65px;
+    height: 300.85px;
+    left: 450.6px;
+    top: 503.1px;
     background: $color-ellipse-small;
-    transform: rotate(30deg);
     border-radius: 50%;
-    filter: blur(50px);
+    filter: blur(40px);
   }
 }
 
@@ -331,7 +332,7 @@ $spacing-xxl: 64px;
 // ============================================
 .why-section {
   margin-bottom: $spacing-xl;
-
+  text-align: center;
   h2 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -342,12 +343,15 @@ $spacing-xxl: 64px;
 }
 
 .benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: $spacing-md;
 }
 
 .benefit-item {
+  flex: 0 1 calc(33.33% - #{$spacing-md});
+  min-width: 240px;
   display: flex;
   align-items: flex-start;
   gap: $spacing-sm;
@@ -441,12 +445,15 @@ $spacing-xxl: 64px;
 }
 
 .values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: $spacing-md;
 }
 
 .value-card {
+  flex: 0 1 calc(33.33% - #{$spacing-md});
+  min-width: 200px;
   background: $color-card-bg;
   border: 1px solid $color-card-border;
   border-radius: 12px;
@@ -642,7 +649,7 @@ $spacing-xxl: 64px;
     &::before {
       width: 400px;
       height: 400px;
-      left: -300px;
+      left: 565px;
       top: 50px;
       filter: blur(120px);
     }
@@ -650,7 +657,7 @@ $spacing-xxl: 64px;
     &::after {
       width: 300px;
       height: 300px;
-      left: -220px;
+      left: 645px;
       top: 200px;
       filter: blur(80px);
     }
@@ -770,8 +777,10 @@ $spacing-xxl: 64px;
 
   // Why Choose Us: 2-column compact grid
   .benefits-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $spacing-xs;
+    justify-content: center;
   }
 
   .benefit-item {
@@ -779,6 +788,7 @@ $spacing-xxl: 64px;
     border-radius: 10px;
     gap: $spacing-xs;
     min-height: 44px;
+    min-width: 0;
 
     .check-icon {
       font-size: 1rem;
@@ -787,6 +797,12 @@ $spacing-xxl: 64px;
     span:last-child {
       font-size: 0.85rem;
       line-height: 1.4;
+    }
+
+    &:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: calc(50% - #{$spacing-xs} / 2);
     }
   }
 
@@ -812,17 +828,26 @@ $spacing-xxl: 64px;
 
   // Values: 2-column compact grid
   .values-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $spacing-xs;
+    justify-content: center;
   }
 
   .value-card {
     padding: $spacing-sm;
     border-radius: 10px;
+    min-width: 0;
 
     span {
       font-size: 0.85rem;
       line-height: 1.4;
+    }
+
+    &:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: calc(50% - #{$spacing-xs} / 2);
     }
   }
 
@@ -968,11 +993,13 @@ $spacing-xxl: 64px;
   @media (max-width: 768px) {
     .page-background-left {
       &::before {
-        right: -300px;
+        left: auto;
+        right: 565px;
       }
 
       &::after {
-        right: -220px;
+        left: auto;
+        right: 645px;
       }
 
       .ellipse-small {
