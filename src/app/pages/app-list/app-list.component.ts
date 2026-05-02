@@ -653,38 +653,30 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
     // Update page title and meta tags
     if (this.selectedCategory === "all") {
       if (this.currentLang === "ar") {
-        this.titleService.setTitle(
-          "دليل التطبيقات القرآنية الشامل - أفضل تطبيقات القرآن الكريم",
-        );
+        this.titleService.setTitle("كل ما تحتاجه من تطبيقات الحج… في مكان واحد");
         this.metaService.updateTag({
           name: "description",
-          content:
-            "استكشف أكثر من 100 تطبيق قرآني مجاني ومدفوع للمصحف والتفسير والتلاوة والتحفيظ. الدليل الشامل لتطبيقات القرآن الكريم من مجتمع إتقان",
+          content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد. اكتشف أفضل تطبيقات الحج والعمرة - تطبيقات التنقل، الأدعية، المشاعر، الإرشاد والخدمات.",
         });
       } else {
-        this.titleService.setTitle(
-          "Comprehensive Quranic Directory - Best Quran Apps Collection",
-        );
+        this.titleService.setTitle("Everything You Need in Hajj Apps... In One Place");
         this.metaService.updateTag({
           name: "description",
-          content:
-            "Explore 100+ free and premium Quran apps for reading, memorization, tafsir, and recitation. The most comprehensive directory of Islamic mobile applications.",
+          content: "Everything you need in Hajj apps, in one place. Discover the best Hajj and Umrah apps - navigation, prayers, holy sites guidance, and services.",
         });
       }
     } else {
       if (this.currentLang === "ar") {
-        this.titleService.setTitle(`${categoryName} - دليل التطبيقات القرآنية`);
+        this.titleService.setTitle(`${categoryName} - قاصد دليل تطبيقات الحج`);
         this.metaService.updateTag({
           name: "description",
-          content: `أفضل ${categoryName} للقرآن الكريم - تطبيقات مجانية ومدفوعة مختارة بعناية من مجتمع إتقان لتقنيات القرآن`,
+          content: `أفضل ${categoryName} لحجاج بيت الله الكرام - تطبيقات مجانية ومدفوعة مختارة بعناية`,
         });
       } else {
-        this.titleService.setTitle(
-          `${categoryName} - Comprehensive Quranic Directory`,
-        );
+        this.titleService.setTitle(`${categoryName} - Qasid Hajj Apps Directory`);
         this.metaService.updateTag({
           name: "description",
-          content: `Best ${categoryName} for Holy Quran - Carefully curated free and premium Islamic mobile applications by ITQAN Community.`,
+          content: `Best ${categoryName} for Hajj and Umrah - Carefully curated free and premium Islamic mobile applications.`,
         });
       }
     }

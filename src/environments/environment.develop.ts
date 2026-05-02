@@ -2,27 +2,27 @@ export const environment = {
   production: false,
   staging: false,
   development: true,
-  appName: 'Quran Apps Directory (Dev)',
-  appUrl: 'https://quran-apps-directory-frontend.pages.dev',
-  apiUrl: 'http://localhost:8000/api',
-  version: '1.0.0-dev',
+  appName: "Quran Apps Directory (Dev)",
+  appUrl: "https://quran-apps-directory-frontend.pages.dev",
+  apiUrl: "https://api-staging.hajapps.org/api",
+  version: "1.0.0-dev",
   analytics: {
     enabled: false,
-    trackingId: ''
+    trackingId: "",
   },
   features: {
     debugMode: true,
     logging: true,
     showDevBanner: true,
-    enableServiceWorker: false
+    enableServiceWorker: false,
   },
   sentry: {
     enabled: false,
-    dsn: '',
-    tunnel: '',
-    environment: 'develop',
+    dsn: "",
+    tunnel: "",
+    environment: "develop",
     tracesSampleRate: 1.0,
     replaysSessionSampleRate: 0,
-    replaysOnErrorSampleRate: 0
-  }
+    replaysOnErrorSampleRate: 0,
+  },
 };

@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://api-staging.hajapps.org",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "info"
+  }
+}

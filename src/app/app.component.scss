@@ -1227,3 +1227,185 @@
     }
   }
 }
+
+nz-footer.main-footer {
+  padding: 0;
+  background: var(--surface-color, #f3f3f3);
+  color: var(--text-secondary, #666);
+  margin: 100px 50px 0 50px !important;
+  border-radius: 50px;
+  margin-bottom: 0px !important;
+
+  @media (max-width: 768px) {
+    margin: 60px 16px 0 16px !important;
+    margin-bottom: 20px !important;
+    border-radius: 24px;
+  }
+
+  .footer-content {
+    width: 100%;
+  }
+
+  // Info Row (open source text + sponsor logos)
+  .footer-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px clamp(24px, 6vw, 80px);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px 24px;
+    }
+  }
+
+  .footer-open-source {
+    font-size: clamp(12px, 1.3vw, 14px);
+    color: var(--text-secondary, #666);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .footer-sponsor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+      gap: 4px;
+    }
+  }
+
+  .footer-sponsor-label {
+    font-size: clamp(11px, 1.2vw, 13px);
+    color: var(--text-secondary, #666);
+  }
+
+  .footer-sponsor-maknon {
+    width: 80px;
+  }
+
+  // Links Row (heading + project links)
+  .footer-links-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px clamp(24px, 6vw, 80px) 24px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px 24px 24px;
+    }
+  }
+
+  .footer-links-title {
+    font-size: clamp(14px, 1.5vw, 16px);
+    font-weight: 700;
+    color: var(--text-color, #333);
+    margin: 0;
+  }
+
+  .footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(12px, 3vw, 32px);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    a {
+      color: var(--text-secondary, #666);
+      text-decoration: none;
+      font-size: clamp(12px, 1.3vw, 14px);
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--text-color, #333);
+      }
+    }
+
+    img {
+      width: 16px;
+      height: 16px;
+      opacity: 0.5;
+    }
+  }
+
+  // RTL support
+  [dir="rtl"] & {
+    .footer-content {
+      direction: rtl;
+    }
+  }
+}
+:host ::ng-deep .ant-layout-content {
+  min-height: 10vh !important;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px !important;
+  }
+}
+
+// Ensure nz-layout contains footer margin properly
+:host ::ng-deep nz-layout.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 10vh;
+  overflow: auto; // Prevents margin collapse
+  padding-bottom: 20px; // Space after footer
+
+  @media (max-width: 768px) {
+    padding-bottom: 30px; // Extra space on mobile
+  }
+
+  &.ramadan-layout {
+    background-color: #f9ebe2 !important;
+    padding-bottom: 0;
+
+    @media (max-width: 768px) {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+// Light theme specific adjustments for modern header
+:root {
+  .modern-header {
+    .header-container {
+      background: transparent;
+      border: 1px solid #e8e8e8;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+      .nav-menu {
+        background: #f8f9fa;
+
+        .nav-link {
+          color: #495057;
+
+          &:hover {
+            color: #1890ff;
+            background: rgba(24, 144, 255, 0.06);
+          }
+        }
+      }
+    }
+  }
+}

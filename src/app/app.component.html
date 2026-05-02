@@ -1,6 +1,10 @@
 <nz-layout class="app-layout" [dir]="isRtl ? 'rtl' : 'ltr'">
   <!-- Modern Header -->
-  <nz-header *ngIf="!hideChrome" class="modern-header" [class.compact-mode]="isNavbarCompact">
+  <nz-header
+    *ngIf="!hideChrome"
+    class="modern-header"
+    [class.compact-mode]="isNavbarCompact"
+  >
     <!-- Normal Header Container -->
     <div class="header-container" [class.hidden]="isNavbarCompact">
       <!-- Logo Section with Settings Icon -->
@@ -78,9 +82,13 @@
 
       <!-- Inline Search Input -->
       <div style="display: flex; align-items: center; gap: 10px">
-        <div class="compact-logo" [routerLink]="['/', currentLang]" [class.searching]="isNavbarSearching">
+        <div
+          class="compact-logo"
+          [routerLink]="['/', currentLang]"
+          [class.searching]="isNavbarSearching"
+        >
           <img
-            src="assets/images/searchLogo.svg"
+            src="assets/images/Vector(.svg"
             alt="Quran Apps"
             width="24"
             height="24"
@@ -117,47 +125,89 @@
       </div>
 
       <!-- First 5 Category Chips (inline) -->
-      @for (category of navbarCategories | slice:0:5; track category.id) {
-        <button class="compact-category-chip"
+      @for (category of navbarCategories | slice: 0 : 5; track category.id) {
+        <button
+          class="compact-category-chip"
           [class.active]="navbarSelectedCategory === category.slug"
-          (click)="onNavbarCategoryClick(category.slug)">
-          <span class="compact-chip-icon" [innerHTML]="category.icon || '' | safeHtml"></span>
+          (click)="onNavbarCategoryClick(category.slug)"
+        >
+          <span
+            class="compact-chip-icon"
+            [innerHTML]="category.icon || '' | safeHtml"
+          ></span>
           <span class="compact-chip-text">
-            {{ currentLang === 'ar' ? category.name_ar : category.name_en }}
+            {{ currentLang === "ar" ? category.name_ar : category.name_en }}
           </span>
         </button>
       }
 
       <!-- "More" Dropdown for remaining categories -->
       @if (navbarCategories.length > 5) {
-        <div class="compact-category-dropdown" (click)="$event.stopPropagation()">
-          <button class="compact-category-trigger"
+        <div
+          class="compact-category-dropdown"
+          (click)="$event.stopPropagation()"
+        >
+          <button
+            class="compact-category-trigger"
             [class.active]="isDropdownCategorySelected()"
-            (click)="toggleCategoryDropdown($event)">
+            (click)="toggleCategoryDropdown($event)"
+          >
             <span class="compact-chip-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
-                <path fill="currentColor" d="M3.75 3.75v4.5h4.5v-4.5zm-2.25 0A2.25 2.25 0 0 1 3.75 1.5h4.5a2.25 2.25 0 0 1 2.25 2.25v4.5a2.25 2.25 0 0 1-2.25 2.25h-4.5A2.25 2.25 0 0 1 1.5 8.25zm2.25 12v4.5h4.5v-4.5zm-2.25 0a2.25 2.25 0 0 1 2.25-2.25h4.5a2.25 2.25 0 0 1 2.25 2.25v4.5a2.25 2.25 0 0 1-2.25 2.25h-4.5a2.25 2.25 0 0 1-2.25-2.25zm18.75-12h-4.5v4.5h4.5zm-4.5-2.25h4.5a2.25 2.25 0 0 1 2.25 2.25v4.5a2.25 2.25 0 0 1-2.25 2.25h-4.5a2.25 2.25 0 0 1-2.25-2.25v-4.5a2.25 2.25 0 0 1 2.25-2.25m0 14.25v4.5h4.5v-4.5zm-2.25 0a2.25 2.25 0 0 1 2.25-2.25h4.5a2.25 2.25 0 0 1 2.25 2.25v4.5a2.25 2.25 0 0 1-2.25 2.25h-4.5a2.25 2.25 0 0 1-2.25-2.25z"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+              >
+                <path
+                  fill="currentColor"
+                  d="M3.75 3.75v4.5h4.5v-4.5zm-2.25 0A2.25 2.25 0 0 1 3.75 1.5h4.5a2.25 2.25 0 0 1 2.25 2.25v4.5a2.25 2.25 0 0 1-2.25 2.25h-4.5A2.25 2.25 0 0 1 1.5 8.25zm2.25 12v4.5h4.5v-4.5zm-2.25 0a2.25 2.25 0 0 1 2.25-2.25h4.5a2.25 2.25 0 0 1 2.25 2.25v4.5a2.25 2.25 0 0 1-2.25 2.25h-4.5a2.25 2.25 0 0 1-2.25-2.25zm18.75-12h-4.5v4.5h4.5zm-4.5-2.25h4.5a2.25 2.25 0 0 1 2.25 2.25v4.5a2.25 2.25 0 0 1-2.25 2.25h-4.5a2.25 2.25 0 0 1-2.25-2.25v-4.5a2.25 2.25 0 0 1 2.25-2.25m0 14.25v4.5h4.5v-4.5zm-2.25 0a2.25 2.25 0 0 1 2.25-2.25h4.5a2.25 2.25 0 0 1 2.25 2.25v4.5a2.25 2.25 0 0 1-2.25 2.25h-4.5a2.25 2.25 0 0 1-2.25-2.25z"
+                />
               </svg>
             </span>
             <span class="compact-chip-text">
               @if (isDropdownCategorySelected()) {
-                {{ currentLang === 'ar' ? 'التصنيف' : 'Category' }}: {{ getSelectedCategoryName() }}
+                {{ currentLang === "ar" ? "التصنيف" : "Category" }}:
+                {{ getSelectedCategoryName() }}
               } @else {
-                {{ currentLang === 'ar' ? 'المزيد' : 'More' }}
+                {{ currentLang === "ar" ? "المزيد" : "More" }}
               }
             </span>
-            <svg class="compact-chevron" [class.open]="isCategoryDropdownOpen" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="m6 9 6 6 6-6"/>
+            <svg
+              class="compact-chevron"
+              [class.open]="isCategoryDropdownOpen"
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="m6 9 6 6 6-6" />
             </svg>
           </button>
           @if (isCategoryDropdownOpen) {
             <div class="compact-category-panel">
-              @for (category of navbarCategories | slice:5; track category.id) {
-                <button class="compact-category-option"
+              @for (
+                category of navbarCategories | slice: 5;
+                track category.id
+              ) {
+                <button
+                  class="compact-category-option"
                   [class.active]="navbarSelectedCategory === category.slug"
-                  (click)="onNavbarCategoryClick(category.slug); isCategoryDropdownOpen = false">
-                  <span class="compact-chip-icon" [innerHTML]="category.icon || '' | safeHtml"></span>
-                  {{ currentLang === 'ar' ? category.name_ar : category.name_en }}
+                  (click)="
+                    onNavbarCategoryClick(category.slug);
+                    isCategoryDropdownOpen = false
+                  "
+                >
+                  <span
+                    class="compact-chip-icon"
+                    [innerHTML]="category.icon || '' | safeHtml"
+                  ></span>
+                  {{
+                    currentLang === "ar" ? category.name_ar : category.name_en
+                  }}
                 </button>
               }
             </div>
@@ -179,11 +229,11 @@
             <div class="logo-wrapper" [routerLink]="['/', currentLang]">
               <img
                 height="40"
-src="../assets/images/logo.svg?v=20260501"
+                src="../assets/images/logo.svg?v=20260501"
                 alt="Quran Apps Directory"
                 class="logo-image"
               />
-                </div>
+            </div>
           </div>
           <div style="display: flex; align-items: center; gap: 8px">
             <button
@@ -276,4 +326,19 @@ src="../assets/images/logo.svg?v=20260501"
   <nz-content>
     <router-outlet></router-outlet>
   </nz-content>
+  <nz-footer class="main-footer">
+    <div class="footer-content">
+      <!-- Info Row -->
+      <div class="footer-info-row">
+        <p class="footer-open-source">{{ "footer.copyright" | translate }}</p>
+        <div class="footer-sponsor">
+          <span class="footer-sponsor-label">{{
+            "footer.sponsored_by" | translate
+          }}</span>
+          <img width="100" src="assets/images/under.png" alt="" />
+        </div>
+      </div>
+      <!-- Links Row -->
+    </div>
+  </nz-footer>
 </nz-layout>
