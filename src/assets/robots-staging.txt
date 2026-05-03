@@ -23,7 +23,7 @@ Allow: /assets/images/
 Allow: /assets/i18n/
 
 # Staging sitemap
-Sitemap: https://staging.quran-apps.itqan.dev/sitemap.xml
+Sitemap: https://staging.hajapps.org/sitemap.xml
 
 # Staging environment - prevent indexing
-# Domain: staging.quran-apps.itqan.dev
+# Domain: staging.hajapps.org

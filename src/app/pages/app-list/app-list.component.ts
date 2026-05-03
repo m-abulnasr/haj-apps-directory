@@ -725,14 +725,14 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
     const breadcrumbs = [
       {
         name: this.currentLang === "ar" ? "الرئيسية" : "Home",
-        url: `https://quran-apps.itqan.dev/${this.currentLang}`,
+        url: `https://hajapps.org/${this.currentLang}`,
       },
     ];
 
     if (this.selectedCategory !== "all") {
       breadcrumbs.push({
         name: categoryName,
-        url: `https://quran-apps.itqan.dev/${this.currentLang}/${this.selectedCategory}`,
+        url: `https://hajapps.org/${this.currentLang}/${this.selectedCategory}`,
       });
     }
 

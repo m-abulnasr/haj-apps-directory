@@ -14,7 +14,7 @@ User-agent: *
 Allow: /assets/images/fav/
 
 # No sitemap for development
-# Sitemap: https://dev.quran-apps.itqan.dev/sitemap.xml
+# Sitemap: https://dev.hajapps.org/sitemap.xml
 
 # Development environment - prevent indexing
-# Domain: dev.quran-apps.itqan.dev
+# Domain: dev.hajapps.org

@@ -18,13 +18,13 @@ const EN_TRANSLATIONS = {
     loading: "Loading...",
   },
   header: {
-    title: "Quran Apps Directory",
+    title: "Hajj Apps Directory",
     beta: "Beta",
     home: "Home",
     about: "About",
     contact: "Contact Us",
     submitApp: "Submit App",
-    itqan_community: "ITQAN Community",
+    itqan_community: "Bathel",
     theme: "Theme",
     language: {
       ar: "العربية",
@@ -36,13 +36,12 @@ const EN_TRANSLATIONS = {
     switchToLight: "Switch to light mode",
   },
   footer: {
-    copyright:
-      "An Open Source Project, by ITQAN community for Quran technologies, 1447 H",
-    itqan_projects: "Other ITQAN Projects",
-    content_management: "Quran Content Management System",
-    main_site: "ITQAN Community Main Site",
-    resources: "Developer Resources",
-    mushaf_fonts: "Uthmanic Script Fonts",
+    copyright: "A Bathel Initiative for Hajj Technologies, 1447 H",
+    useful_links: "Quick Links",
+    about_us: "About Us",
+    contact_us: "Contact Us",
+    submit_app: "Submit an App",
+    sponsored_by: "Platform Sponsored by",
   },
   appList: {
     search: {
@@ -50,7 +49,7 @@ const EN_TRANSLATIONS = {
     },
     categories: {
       all: "All",
-      "main-title": "Quran Apps Directory",
+      "main-title": "Hajj Apps Directory",
       title: "Categories",
       mushaf: "Mushaf",
       translations: "Translation",
@@ -115,9 +114,9 @@ const EN_TRANSLATIONS = {
   contactUs: {
     title: "Contact Us",
     message:
-      "We are delighted to hear from you to answer your inquiries or receive your suggestions for improving Quran Apps Directory. You can also join the ITQAN community for Quran technologies to contribute to the development of this project or participate in our other open source initiatives aimed at serving the Holy Quran.",
+      "We are delighted to hear from you to answer your inquiries or receive your suggestions for improving the Hajj Apps Directory. You can reach us at info@bathel.sa.",
     email: "Contact Us via Email",
-    appRequests: "Join ITQAN Community",
+    appRequests: "Submit an App",
     "app-request": "Request App",
     "app-request-form": "Request Form",
   },
@@ -303,13 +302,13 @@ const AR_TRANSLATIONS = {
     loading: "جار التحميل...",
   },
   header: {
-    title: "دليل التطبيقات القرآنية",
+    title: "دليل تطبيقات الحج",
     beta: "تجريبي",
     home: "الرئيسة",
     about: "عن المشروع",
     contact: "تواصل معنا",
     submitApp: "أضف تطبيقك",
-    itqan_community: "مجتمع إتقان",
+    itqan_community: "باذل",
     theme: "المظهر",
     language: {
       ar: "العربية",
@@ -321,13 +320,12 @@ const AR_TRANSLATIONS = {
     switchToLight: "تفعيل الوضع الفاتح",
   },
   footer: {
-    copyright:
-      "مشروع مفتوح المصدر، أحد مشاريع مجتمع إتقان لتقنيات القرآن، ١٤٤٧ هـ",
-    itqan_projects: "مشاريع إتقان الأخرى",
-    content_management: "نظام إدارة المحتوى القرآني",
-    main_site: "الموقع الرئيسي لمجتمع إتقان",
-    resources: "موارد المطورين",
-    mushaf_fonts: "خطوط المصحف العثمانية",
+    copyright: "مبادرة باذل لتقنيات الحج، ١٤٤٧ هـ",
+    useful_links: "روابط سريعة",
+    about_us: "عن المشروع",
+    contact_us: "تواصل معنا",
+    submit_app: "أضف تطبيقك",
+    sponsored_by: "المنصة برعاية",
   },
   appList: {
     search: {
@@ -335,7 +333,7 @@ const AR_TRANSLATIONS = {
     },
     categories: {
       all: "الكل",
-      "main-title": "دليل التطبيقات القرآنية",
+      "main-title": "دليل تطبيقات الحج",
       title: "التصنيفات",
       mushaf: "مصحف",
       translations: "ترجمات",
@@ -396,35 +394,35 @@ const AR_TRANSLATIONS = {
   contactUs: {
     title: "تواصل معنا",
     message:
-      "نسعد بتواصلكم معنا للإجابة على استفساراتكم أو استقبال اقتراحاتكم لتحسين دليل التطبيقات القرآنية.",
+      "نسعد بتواصلكم معنا للإجابة على استفساراتكم أو استقبال اقتراحاتكم لتحسين دليل تطبيقات الحج. يمكنكم التواصل معنا على info@bathel.sa",
     email: "البريد الإلكتروني",
-    appRequests: "الانضمام لمجتمع إتقان",
+    appRequests: "أضف تطبيقك",
     "app-request": "طلب إضافة تطبيق",
     "app-request-form": "نموذج الطلب",
   },
   aboutUs: {
-    title: "عن دليل التطبيقات القرآنية الشامل",
-    subtitle: "الدليل الأشمل لأفضل تطبيقات القرآن الكريم في العالم",
+    title: "عن دليل تطبيقات الحج",
+    subtitle: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد",
     intro:
-      "مرحباً بكم في دليل التطبيقات القرآنية الشامل - المنصة الرائدة لاكتشاف وتقييم أفضل التطبيقات الإسلامية المخصصة لخدمة القرآن الكريم.",
+      "مرحباً بكم في دليل تطبيقات الحج - المنصة الرائدة لاكتشاف وتقييم أفضل تطبيقات الحج والعمرة.",
     mission: "مهمتنا",
     vision: "رؤيتنا",
     missionDescription:
-      "دليل التطبيقات القرآنية الشامل هو مشروع مفتوح المصدر يهدف إلى خدمة عموم المسلمين حول العالم.",
+      "دليل تطبيقات الحج مبادرة من باذل تهدف إلى خدمة حجاج بيت الله والمعتمرين.",
     visionDescription:
-      "رؤيتنا أن نصبح المصدر الرقمي الأول والأكثر موثوقية في العالم للتطبيقات القرآنية.",
+      "رؤيتنا أن نصبح المصدر الرقمي الأول والأكثر موثوقية لتطبيقات الحج والعمرة.",
     whatWeDo: "ماذا نقدم",
     whatWeDoList: {
-      comprehensive: "تقييم شامل لأكثر من 100 تطبيق قرآني",
+      comprehensive: "تقييم شامل لأكثر من 40 تطبيق حج",
       categories: "تصنيف متقن حسب المجال",
       bilingual: "خدمة ثنائية اللغة",
       quality: "فحص جودة متقن",
       search: "بحث متقدم وتصفية ذكية",
       community: "مجتمع فعال",
     },
-    why: "لماذا دليل التطبيقات القرآنية؟",
+    why: "لماذا دليل تطبيقات الحج؟",
     whyList: {
-      largest: "أكبر مجموعة من التطبيقات القرآنية",
+      largest: "أكبر مجموعة من تطبيقات الحج والعمرة",
       verified: "جميع التطبيقات مفحوصة",
       expert: "تقييمات مهنية",
       updated: "تحديث مستمر",

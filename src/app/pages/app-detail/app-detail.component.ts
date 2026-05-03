@@ -577,14 +577,14 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
   private handleNotFoundSEO() {
     this.metaService.updateTag({ name: 'robots', content: 'noindex, nofollow' });
     this.titleService.setTitle(
-      this.currentLang === 'ar' ? 'التطبيق غير موجود - دليل التطبيقات القرآنية' : 'App Not Found - Quran Apps Directory'
+      this.currentLang === 'ar' ? 'التطبيق غير موجود - دليل تطبيقات الحج' : 'App Not Found - Hajj Apps Directory'
     );
   }
 
   private handleGenericErrorSEO() {
     this.metaService.updateTag({ name: 'robots', content: 'noindex, nofollow' });
     this.titleService.setTitle(
-      this.currentLang === 'ar' ? 'خطأ في التحميل - دليل التطبيقات القرآنية' : 'Error Loading App - Quran Apps Directory'
+      this.currentLang === 'ar' ? 'خطأ في التحميل - دليل تطبيقات الحج' : 'Error Loading App - Hajj Apps Directory'
     );
   }
 
@@ -617,8 +617,8 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     // Update page title and meta tags
     const title =
       this.currentLang === "ar"
-        ? `${appName} - تطبيق قرآني من دليل التطبيقات القرآنية`
-        : `${appName} - Quran App from Comprehensive Quranic Directory`;
+        ? `${appName} - من دليل تطبيقات الحج`
+        : `${appName} - Hajj Apps Directory`;
 
     this.titleService.setTitle(title);
     this.metaService.updateTag({ name: "title", content: title });
@@ -640,7 +640,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     });
     this.metaService.updateTag({
       property: "og:url",
-      content: `https://quran-apps.itqan.dev/${this.currentLang}/app/${this.app.slug}_${this.app.id}`,
+      content: `https://hajapps.org/${this.currentLang}/app/${this.app.slug}_${this.app.id}`,
     });
     this.metaService.updateTag({ property: "og:type", content: "website" });
 
@@ -661,7 +661,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
 
     // Add app-specific keywords
     const keywords = [
-      this.currentLang === "ar" ? "تطبيق قرآني" : "Quran app",
+      this.currentLang === "ar" ? "تطبيق حج" : "Hajj app",
       this.currentLang === "ar" ? "تطبيق إسلامي" : "Islamic app",
       appName,
       ...this.app.categories.map((cat) =>
@@ -683,15 +683,15 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     const breadcrumbs = [
       {
         name: this.currentLang === "ar" ? "الرئيسية" : "Home",
-        url: `https://quran-apps.itqan.dev/${this.currentLang}`,
+        url: `https://hajapps.org/${this.currentLang}`,
       },
       {
         name: this.currentLang === "ar" ? "التطبيقات" : "Apps",
-        url: `https://quran-apps.itqan.dev/${this.currentLang}`,
+        url: `https://hajapps.org/${this.currentLang}`,
       },
       {
         name: appName,
-        url: `https://quran-apps.itqan.dev/${this.currentLang}/app/${this.app.id}`,
+        url: `https://hajapps.org/${this.currentLang}/app/${this.app.id}`,
       },
     ];
 

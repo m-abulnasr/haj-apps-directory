@@ -1,7 +1,7 @@
 {
-  "name": "Quran Apps Directory - دليل التطبيقات القرآنية",
-  "short_name": "Quran Apps",
-  "description": "Comprehensive directory of Quranic applications - الدليل الشامل للتطبيقات القرآنية",
+  "name": "Hajj Apps Directory - دليل تطبيقات الحج",
+  "short_name": "Hajj Apps",
+  "description": "Everything you need in Hajj apps, in one place - كل ما تحتاجه من تطبيقات الحج… في مكان واحد",
   "theme_color": "#A0533B",
   "background_color": "#ffffff",
   "display": "standalone",

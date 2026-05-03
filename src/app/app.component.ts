@@ -248,7 +248,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private updateMetaTags() {
-    const currentUrl = `https://quran-apps.itqan.dev${this.router.url}`;
+    const currentUrl = `https://hajapps.org${this.router.url}`;
     
     if (this.currentLang === 'ar') {
       this.titleService.setTitle("كل ما تحتاجه من تطبيقات الحج… في مكان واحد");

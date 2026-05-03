@@ -206,7 +206,7 @@ export class DeveloperComponent implements OnInit, OnDestroy {
         : this.developerInfo.name_ar;
       
       const prefix = this.currentLang === 'en' ? 'Apps by' : 'تطبيقات';
-      this.titleService.setTitle(`${prefix} ${developerName} - Quran Apps Directory`);
+      this.titleService.setTitle(`${prefix} ${developerName} - Hajj Apps Directory`);
     }
   }
 
@@ -252,13 +252,13 @@ export class DeveloperComponent implements OnInit, OnDestroy {
     if (!this.developerInfo) return;
 
     const developerName = this.currentLang === 'en' ? this.developerInfo.name_en : this.developerInfo.name_ar;
-    const title = this.currentLang === 'ar' ? 
-      `تطبيقات ${developerName} - دليل التطبيقات القرآنية` : 
-      `${developerName} Apps - Quran Apps Directory`;
-    
+    const title = this.currentLang === 'ar' ?
+      `تطبيقات ${developerName} - دليل تطبيقات الحج` :
+      `${developerName} Apps - Hajj Apps Directory`;
+
     const description = this.currentLang === 'ar' ?
-      `اكتشف ${this.developerApps.length} تطبيق قرآني من تطوير ${developerName}. تطبيقات القرآن الكريم المتاحة للتحميل المجاني.` :
-      `Discover ${this.developerApps.length} Quran apps developed by ${developerName}. Free Quran applications available for download.`;
+      `اكتشف ${this.developerApps.length} تطبيق من تطوير ${developerName}. تطبيقات الحج والمناسك المتاحة للتحميل المجاني.` :
+      `Discover ${this.developerApps.length} apps developed by ${developerName}. Hajj and Islamic applications available for free download.`;
 
     // Set page title and meta tags
     this.titleService.setTitle(title);
@@ -275,15 +275,15 @@ export class DeveloperComponent implements OnInit, OnDestroy {
     const breadcrumbs = [
       {
         name: this.currentLang === 'ar' ? 'الرئيسية' : 'Home',
-        url: `https://quran-apps.itqan.dev/${this.currentLang}`
+        url: `https://hajapps.org/${this.currentLang}`
       },
       {
         name: this.currentLang === 'ar' ? 'المطورون' : 'Developers',
-        url: `https://quran-apps.itqan.dev/${this.currentLang}`
+        url: `https://hajapps.org/${this.currentLang}`
       },
       {
         name: developerName,
-        url: `https://quran-apps.itqan.dev/${this.currentLang}/developer/${this.developerParam}`
+        url: `https://hajapps.org/${this.currentLang}/developer/${this.developerParam}`
       }
     ];
     
