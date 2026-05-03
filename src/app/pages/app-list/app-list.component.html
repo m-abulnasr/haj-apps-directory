@@ -398,7 +398,7 @@
             <div class="category-tags">
               @for (cat of app.categories | slice: 0 : 3; track cat) {
                 <span class="category-tag">
-                  {{ "appList.categories." + cat | translate }}
+                  {{ getCategoryName(cat) }}
                 </span>
               }
               @if (app.categories.length > 3) {
@@ -409,9 +409,7 @@
                   +{{ app.categories.length - 3 }}
                   <span class="category-tooltip">
                     @for (cat of app.categories | slice: 3; track cat) {
-                      <span class="tooltip-tag">{{
-                        "appList.categories." + cat | translate
-                      }}</span>
+                      <span class="tooltip-tag">{{ getCategoryName(cat) }}</span>
                     }
                   </span>
                 </span>

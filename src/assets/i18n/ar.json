@@ -87,7 +87,13 @@
       "rituals": "المناسك",
       "guide": "دليل الحج",
       "spiritual": "روحاني",
-      "information": "المعلومات"
+      "information": "المعلومات",
+      "rituals-guidance": "إرشادات المناسك",
+      "health-emergency": "الصحة والطوارئ",
+      "maps-navigation": "الخرائط والملاحة",
+      "accommodation-services": "خدمات الإقامة",
+      "spiritual-enrichment": "الإثراء الروحاني",
+      "utility-tools": "أدوات مساعدة"
     },
     "apps": {
       "title": "قائمة التطبيقات",
