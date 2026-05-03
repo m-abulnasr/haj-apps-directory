@@ -2,7 +2,7 @@ export const environment = {
   production: true,
   staging: false,
   development: false,
-  appName: 'Quran Apps Directory',
+  appName: 'Hajj Apps Directory',
   appUrl: 'https://hajapps.org',
   apiUrl: 'https://api.hajapps.org/api',
   version: '1.0.0',

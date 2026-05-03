@@ -511,8 +511,8 @@ export class RamadanComponent implements OnInit, OnDestroy {
   private updateSeo(): void {
     const title =
       this.currentLang === "ar"
-        ? "رمضان كريم - دليل التطبيقات القرآنية"
-        : "Ramadan Kareem - Quran Apps Directory";
+        ? "رمضان كريم - دليل تطبيقات الحج"
+        : "Ramadan Kareem - Hajj Apps Directory";
     const description =
       this.currentLang === "ar"
         ? "اكتشف أفضل التطبيقات القرآنية لشهر رمضان المبارك ١٤٤٧"

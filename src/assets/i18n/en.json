@@ -17,7 +17,7 @@
     "loading": "Loading..."
   },
   "header": {
-    "title": "Quran Apps Directory",
+    "title": "Hajj Apps Directory",
     "beta": "Beta",
     "home": "Home",
     "about": "About",
@@ -65,7 +65,7 @@
     },
     "categories": {
       "all": "Category",
-      "main-title": "Quran Apps Directory",
+      "main-title": "Hajj Apps Directory",
       "title": "Categories",
       "mushaf": "Mushaf",
       "translations": "Translation",
@@ -154,51 +154,49 @@
   },
   "contactUs": {
     "title": "Contact Us",
-    "message": "We are delighted to hear from you to answer your inquiries or receive your suggestions for improving Quran Apps Directory. You can also join the ITQAN community for Quran technologies to contribute to the development of this project or participate in our other open source initiatives aimed at serving the Holy Quran.",
+    "message": "We are happy to hear from you to answer your questions or receive your suggestions for improving the Hajj applications guide.",
     "email": "Contact Us via Email",
-    "appRequests": "Join ITQAN Community",
+    "appRequests": "Submit an App",
     "app-request": "Request App",
     "app-request-form": "Request Form"
   },
   "aboutUs": {
-    "title": "About the Comprehensive Quranic Directory",
-    "subtitle": "The World's Most Complete Guide to the Best Quran Applications",
-    "intro": "Welcome to the Comprehensive Quranic Directory - the leading platform for discovering and evaluating the finest Islamic applications dedicated to serving the Holy Quran. With over 100 diverse free and premium applications, we're here to facilitate your journey in learning and contemplating the Book of Allah.",
+    "title": "The most comprehensive guide to the best Hajj apps in the world",
+    "subtitle": "The World's Most Complete Guide to the Best Hajj Applications",
+    "intro": "Welcome to the Comprehensive Hajj Guide - the leading platform for discovering and evaluating the best apps dedicated to serving pilgrims. With more than 100 diverse, free and paid apps, we are here to make your Hajj journey easier.",
     "mission": "Our Mission",
     "vision": "Our Vision",
-    "missionDescription": "The Comprehensive Quranic Directory is an open-source project designed to serve Muslims worldwide by providing a comprehensive and trusted platform for collecting, categorizing, and evaluating digital applications related to the Holy Quran. We strive to facilitate access to the best technological solutions that serve the Book of Allah, whether in recitation, memorization, tafsir, tajweed, or other Quranic fields.",
-    "visionDescription": "Our vision is to become the world's foremost and most trusted digital resource for Quranic applications, helping millions of Muslims worldwide connect with the Holy Quran and understand and contemplate it through the best modern technological methods.",
+    "missionDescription": "The Comprehensive Hajj Applications Directory is an open-source project aimed at serving Muslims worldwide by providing a comprehensive and reliable platform for collecting, classifying, and evaluating digital applications related to Hajj. We strive to facilitate access to the best technological solutions that serve Hajj, whether in government, transportation, accommodation, optimal investment, or other areas.",
+    "visionDescription": "Our vision is to become the world’s first and most trusted digital source for Hajj applications, helping millions of Muslims around the world with the best modern technological methods.",
     "whatWeDo": "What We Provide",
     "whatWeDoList": {
-      "comprehensive": "Comprehensive evaluation of over 100 Quranic applications",
-      "categories": "Expert categorization by field (Mushaf, Tafsir, Recitation, Memorization)",
       "bilingual": "Bilingual service (Arabic and English)",
-      "quality": "Rigorous quality testing to ensure reliability",
-      "search": "Advanced search and intelligent filtering",
-      "community": "Active community of developers and users"
+      "categories": "A detailed classification by field (governmental, religious, transportation)",
+      "community": "An active community of developers and users",
+      "search": "Advanced search and filtering",
+      "smart": "Smart AI-powered search",
+      "quality": "Thorough quality control to ensure reliability"
     },
-    "why": "Why Choose the Quranic Directory?",
+    "why": "Why a Hajj app guide?",
     "whyList": {
-      "largest": "The largest collection of Quranic applications in one place",
-      "verified": "All applications are tested and verified by specialists",
-      "expert": "Professional evaluations from experts in Quranic technology",
-      "updated": "Continuous updates and addition of new applications",
-      "free": "Completely free service with no advertisements",
-      "opensource": "Open-source and transparent project"
+      "verified": "All applications are tested and approved by specialists.",
+      "largest": "The largest collection of Hajj apps in one place",
+      "opensource": "An open-source and transparent project.",
+      "free": "Completely free service with no ads",
+      "updated": "Continuous updates and addition of new applications"
     },
     "categories": "Application Categories",
     "categoriesDescription": "We provide diverse applications across all fields of Quranic studies and Islamic sciences:",
     "values": "Our Values",
     "values_list": {
-      "accuracyAndAuthenticity": "Accuracy and reliability in Quranic content",
-      "userCentricDesignAndAccessibility": "User-centered design and ease of access",
       "continuousImprovementAndInnovation": "Continuous improvement and innovation in service",
-      "communityEngagementAndSupport": "Building a strong community and mutual support",
-      "transparency": "Complete transparency and accountability",
-      "innovation": "Leadership in modern Quranic technologies"
+      "userCentricDesignAndAccessibility": "User-centric design and accessibility",
+      "accuracyAndAuthenticity": "Accuracy and reliability of content",
+      "innovation": "Leading the way in modern Hajj technologies",
+      "transparency": "Full transparency and accountability"
     },
     "acknowledgments": "Acknowledgments",
-    "acknowledgementsText": "We thank all developers and creators who dedicate their efforts to serving the Holy Quran through technology. We especially thank our colleagues in the Islamic Applications project for sharing with us the initial list of applications."
+    "acknowledgementsText": "We extend our thanks to all the developers and innovators who are making efforts to serve pilgrims through technology, and we especially thank the Itqan community."
   },
   "submitApp": {
     "title": "Submit Your App",
@@ -345,8 +343,8 @@
       "home": "Home",
       "about": "About",
       "contact": "Contact Us",
-      "community": "Quran Community",
-      "directoryName": "Quran Apps Directory"
+      "community": "Bathel",
+      "directoryName": "Hajj Apps Directory"
     }
   },
   "trackSubmission": {
@@ -375,11 +373,11 @@
     }
   },
   "APP": {
-  "NOT_FOUND_TITLE": "App Not Found",
-  "NOT_FOUND_MESSAGE": "The app you are looking for does not exist.",
-  "BACK_HOME": "Back to Home",
-  "ERROR_TITLE": "Something went wrong",
-  "ERROR_MESSAGE": "We couldn’t load this app.",
-  "RETRY": "Retry"
-}
+    "NOT_FOUND_TITLE": "App Not Found",
+    "NOT_FOUND_MESSAGE": "The app you are looking for does not exist.",
+    "BACK_HOME": "Back to Home",
+    "ERROR_TITLE": "Something went wrong",
+    "ERROR_MESSAGE": "We couldn’t load this app.",
+    "RETRY": "Retry"
+  }
 }

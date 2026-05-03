@@ -71,4 +71,4 @@ User-agent: MegaIndex
 Disallow: /
 
 # Sitemap location
-Sitemap: https://quran-apps.itqan.dev/sitemap.xml
+Sitemap: https://hajapps.org/sitemap.xml

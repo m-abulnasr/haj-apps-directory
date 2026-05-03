@@ -2,7 +2,7 @@ export const environment = {
   production: false,
   staging: true,
   development: false,
-  appName: 'Quran Apps Directory (Staging)',
+  appName: 'Hajj Apps Directory (Staging)',
   appUrl: 'https://staging.hajapps.org',
   apiUrl: 'https://api-staging.hajapps.org/api',
   version: '1.0.0-staging',

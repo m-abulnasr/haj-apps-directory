@@ -99,7 +99,7 @@ export class SeoService {
       "position": index + 1,
       "name": lang === 'ar' ? app.Name_Ar : app.Name_En,
       "description": lang === 'ar' ? app.Short_Description_Ar : app.Short_Description_En,
-      "url": `https://quran-apps.itqan.dev/${lang}/app/${app.id}`,
+      "url": `https://hajapps.org/${lang}/app/${app.id}`,
       "image": app.applicationIcon,
       "applicationCategory": "MobileApplication",
       "operatingSystem": ["Android", "iOS"],
@@ -119,13 +119,13 @@ export class SeoService {
     return {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": category 
+      "name": category
         ? (lang === 'ar' ? categoryNames.ar[category as keyof typeof categoryNames.ar] : categoryNames.en[category as keyof typeof categoryNames.en])
-        : (lang === 'ar' ? "جميع تطبيقات القرآن الكريم" : "All Quran Applications"),
-      "description": category 
-        ? `${lang === 'ar' ? 'أفضل' : 'Best'} ${category} ${lang === 'ar' ? 'للقرآن الكريم' : 'for Holy Quran'}`
-        : (lang === 'ar' ? "مجموعة شاملة من تطبيقات القرآن الكريم" : "Comprehensive collection of Quran applications"),
-      "url": `https://quran-apps.itqan.dev/${lang}${category ? `/${category}` : ''}`,
+        : (lang === 'ar' ? "جميع تطبيقات الحج" : "All Hajj Applications"),
+      "description": category
+        ? `${lang === 'ar' ? 'أفضل' : 'Best'} ${category} ${lang === 'ar' ? 'لتطبيقات الحج' : 'for Hajj'}`
+        : (lang === 'ar' ? "كل ما تحتاجه من تطبيقات الحج… في مكان واحد" : "Everything you need in Hajj apps, in one place"),
+      "url": `https://hajapps.org/${lang}${category ? `/${category}` : ''}`,
       "numberOfItems": apps.length,
       "itemListElement": items
     };
@@ -140,7 +140,7 @@ export class SeoService {
       "@type": "SoftwareApplication",
       "name": lang === 'ar' ? app.Name_Ar : app.Name_En,
       "description": lang === 'ar' ? app.Description_Ar : app.Description_En,
-      "url": `https://quran-apps.itqan.dev/${lang}/app/${app.id}`,
+      "url": `https://hajapps.org/${lang}/app/${app.id}`,
       "image": app.applicationIcon,
       "screenshot": lang === 'ar' ? app.screenshots_ar : app.screenshots_en,
       "applicationCategory": "MobileApplication",
@@ -236,12 +236,12 @@ export class SeoService {
   generateFAQStructuredData(lang: 'ar' | 'en'): any {
     const faqs = lang === 'ar' ? [
       {
-        question: "ما هو دليل التطبيقات القرآنية؟",
-        answer: "دليل شامل يضم أفضل تطبيقات القرآن الكريم المتاحة للأجهزة المحمولة، يشمل تطبيقات المصحف والتفسير والتلاوة والتحفيظ والتدبر."
+        question: "ما هو دليل تطبيقات الحج؟",
+        answer: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد. دليل شامل يضم أفضل تطبيقات الحج والعمرة المتاحة للأجهزة المحمولة، يشمل تطبيقات التنقل والأدعية والمشاعر والإرشاد والخدمات."
       },
       {
         question: "كم عدد التطبيقات المتوفرة في الدليل؟",
-        answer: "يحتوي الدليل على أكثر من 40 تطبيقاً قرآنياً متنوعاً، مع معلومات مفصلة عن كل تطبيق وتقييمات المستخدمين."
+        answer: "يحتوي الدليل على أكثر من 40 تطبيقاً متنوعاً للحج والعمرة، مع معلومات مفصلة عن كل تطبيق وتقييمات المستخدمين."
       },
       {
         question: "هل التطبيقات مجانية؟",
@@ -253,12 +253,12 @@ export class SeoService {
       }
     ] : [
       {
-        question: "What is the Quran Apps Directory?",
-        answer: "A comprehensive directory featuring the best Quran applications available for mobile devices, including Mushaf, Tafsir, recitation, memorization, and reflection apps."
+        question: "What is the Hajj Apps Directory?",
+        answer: "Everything you need in Hajj apps, in one place. A comprehensive directory featuring the best Hajj and Umrah applications for mobile devices, including navigation, prayers, holy sites guidance, and service apps."
       },
       {
         question: "How many apps are available in the directory?",
-        answer: "The directory contains over 40 diverse Quran applications, with detailed information about each app and user ratings."
+        answer: "The directory contains over 40 diverse Hajj and Islamic applications, with detailed information about each app and user ratings."
       },
       {
         question: "Are the apps free?",
@@ -323,10 +323,10 @@ export class SeoService {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "name": categoryName,
-      "description": lang === 'ar' 
-        ? `مجموعة مختارة من أفضل ${categoryName} للقرآن الكريم`
-        : `Curated collection of the best ${categoryName} for the Holy Quran`,
-      "url": `https://quran-apps.itqan.dev/${lang}/${category}`,
+      "description": lang === 'ar'
+        ? `مجموعة مختارة من أفضل ${categoryName} لتطبيقات الحج`
+        : `Curated collection of the best ${categoryName} for Hajj`,
+      "url": `https://hajapps.org/${lang}/${category}`,
       "mainEntity": {
         "@type": "ItemList",
         "numberOfItems": apps.length,
@@ -334,7 +334,7 @@ export class SeoService {
           "@type": "SoftwareApplication",
           "position": index + 1,
           "name": lang === 'ar' ? app.Name_Ar : app.Name_En,
-          "url": `https://quran-apps.itqan.dev/${lang}/app/${app.id}`
+          "url": `https://hajapps.org/${lang}/app/${app.id}`
         }))
       },
       "breadcrumb": {
@@ -343,12 +343,12 @@ export class SeoService {
           "@type": "ListItem",
           "position": 1,
           "name": lang === 'ar' ? "الرئيسية" : "Home",
-          "item": `https://quran-apps.itqan.dev/${lang}`
+          "item": `https://hajapps.org/${lang}`
         }, {
           "@type": "ListItem",
           "position": 2,
           "name": categoryName,
-          "item": `https://quran-apps.itqan.dev/${lang}/${category}`
+          "item": `https://hajapps.org/${lang}/${category}`
         }]
       }
     };
@@ -362,7 +362,7 @@ export class SeoService {
     
     return {
       ...baseSchema,
-      "applicationSuite": "Quran Applications",
+      "applicationSuite": "Hajj Applications",
       "installUrl": app.Google_Play_Link || app.AppStore_Link,
       "memoryRequirements": "50MB",
       "storageRequirements": "100MB",
@@ -374,7 +374,7 @@ export class SeoService {
       "applicationSubCategory": app.categories?.join(', '),
       "countryOfOrigin": "Multiple",
       "featureList": [
-        lang === 'ar' ? "قراءة القرآن الكريم" : "Quran Reading",
+        lang === 'ar' ? "تطبيق حج وعمرة" : "Hajj and Umrah",
         lang === 'ar' ? "واجهة سهلة الاستخدام" : "User-friendly Interface",
         lang === 'ar' ? "دعم متعدد اللغات" : "Multi-language Support"
       ],
@@ -402,15 +402,15 @@ export class SeoService {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": lang === 'ar' ? developer.Developer_Name_Ar : developer.Developer_Name_En,
-      "url": developer.Developer_Website || `https://quran-apps.itqan.dev/${lang}/developer/${developer.Developer_Name_En?.toLowerCase().replace(/\s+/g, '-')}`,
+      "url": developer.Developer_Website || `https://hajapps.org/${lang}/developer/${developer.Developer_Name_En?.toLowerCase().replace(/\s+/g, '-')}`,
       "logo": {
         "@type": "ImageObject",
         "url": developer.Developer_Logo
       },
-      "description": lang === 'ar' 
-        ? `مطور تطبيقات قرآنية متخصص في تقنيات القرآن الكريم`
-        : `Quran app developer specialized in Islamic mobile applications`,
-      "specialty": lang === 'ar' ? "تطبيقات القرآن الكريم" : "Quran Applications",
+      "description": lang === 'ar'
+        ? `مطور تطبيقات إسلامية متخصص في تطبيقات الحج والمناسك`
+        : `Islamic app developer specialized in Hajj and Islamic mobile applications`,
+      "specialty": lang === 'ar' ? "تطبيقات الحج والعمرة" : "Hajj and Umrah Applications",
       "makesOffer": {
         "@type": "Offer", 
         "itemOffered": {
