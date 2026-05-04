@@ -28,7 +28,7 @@ const CRAWLER_USER_AGENTS = [
 
 const API_BASE = 'https://qad-backend-api-production.up.railway.app/api';
 const BASE_URL = 'https://quran-apps.itqan.dev';
-const DEFAULT_IMAGE = `${BASE_URL}/assets/images/Social-Media-Thumnail-2x.jpg`;
+const DEFAULT_IMAGE = `${BASE_URL}/assets/images/sharehaj.png`;
 
 // Types
 interface RouteInfo {
@@ -128,61 +128,52 @@ const generateOGTags = (route: RouteInfo, data: any): OGTags => {
     };
   }
 
+  const isAr = route.lang === 'ar';
+  const SITE_TITLE = isAr
+    ? 'كل ما تحتاجه من تطبيقات الحج… في مكان واحد'
+    : 'Everything you need from Hajj apps… in one place';
+
   // Developer page
   if (route.type === 'developer' && data) {
-    const title = route.lang === 'ar'
-      ? `${data.name_ar || data.name_en} - مطور تطبيقات`
-      : `${data.name_en || data.name_ar} - App Developer`;
-    const description = route.lang === 'ar'
-      ? `اكتشف تطبيقات ${data.name_ar || data.name_en}`
-      : `Discover apps by ${data.name_en || data.name_ar}`;
-
+    const name = isAr ? (data.name_ar || data.name_en) : (data.name_en || data.name_ar);
     const hasLogo = !!data.logo_url;
     return {
-      title,
-      description,
+      title: `${name} - ${SITE_TITLE}`,
+      description: SITE_TITLE,
       image: data.logo_url || DEFAULT_IMAGE,
       imageWidth: hasLogo ? 512 : 1200,
       imageHeight: hasLogo ? 512 : 630,
       url: `${BASE_URL}/${route.lang}/developer/${data.slug}`,
       type: 'website',
-      locale: route.lang === 'ar' ? 'ar_SA' : 'en_US',
+      locale: isAr ? 'ar_SA' : 'en_US',
     };
   }
 
   // Category page
   if (route.type === 'category' && data) {
-    const title = route.lang === 'ar' ? data.name_ar : data.name_en;
-    const description = route.lang === 'ar'
-      ? `تطبيقات ${data.name_ar} - دليل التطبيقات القرآنية`
-      : `${data.name_en} Apps - Quran Apps Directory`;
-
+    const categoryName = isAr ? data.name_ar : data.name_en;
     return {
-      title: title || 'Category',
-      description,
+      title: categoryName || SITE_TITLE,
+      description: SITE_TITLE,
       image: DEFAULT_IMAGE,
       imageWidth: 1200,
       imageHeight: 630,
       url: `${BASE_URL}/${route.lang}/${route.slug}`,
       type: 'website',
-      locale: route.lang === 'ar' ? 'ar_SA' : 'en_US',
+      locale: isAr ? 'ar_SA' : 'en_US',
     };
   }
 
   // Default/home page
   return {
-    title: route.lang === 'ar'
-      ? 'دليل التطبيقات القرآنية الشامل'
-      : 'Quran Apps Directory',
-    description: route.lang === 'ar'
-      ? 'الدليل الشامل لأفضل تطبيقات القرآن الكريم - تطبيقات المصحف، التفسير، التلاوة، التحفيظ والتدبر'
-      : 'Discover the best Quran applications - Mushaf, Tafsir, Recitation, Memorization and more',
+    title: SITE_TITLE,
+    description: SITE_TITLE,
     image: DEFAULT_IMAGE,
     imageWidth: 1200,
     imageHeight: 630,
     url: `${BASE_URL}/${route.lang}`,
     type: 'website',
-    locale: route.lang === 'ar' ? 'ar_SA' : 'en_US',
+    locale: isAr ? 'ar_SA' : 'en_US',
   };
 };
 
@@ -199,7 +190,7 @@ const injectOGTags = (html: string, tags: OGTags): string => {
     <meta property="og:image" content="${tags.image}" />
     <meta property="og:image:alt" content="${escapeHtml(tags.title)}" />${widthTag}${heightTag}
     <meta property="og:locale" content="${tags.locale}" />
-    <meta property="og:site_name" content="Quran Apps Directory" />
+    <meta property="og:site_name" content="${escapeHtml(tags.title)}" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="${tags.url}" />

@@ -6,9 +6,9 @@
 // ============================================
 // T006: COLOR VARIABLES
 // ============================================
-$color-ellipse-large: #12bcac;
-$color-ellipse-medium: #15a295;
-$color-ellipse-small: #186861;
+$color-ellipse-large: #080808;
+$color-ellipse-medium: #171818;
+$color-ellipse-small: #0b0c0c;
 
 $color-text-primary: #1a1a1a;
 $color-text-secondary: #666666;
@@ -94,7 +94,7 @@ $spacing-xxl: 64px;
   height: 990px;
   left: -865px;
   top: 260px;
-  opacity: 0.3;
+  opacity: 0.6;
   transform: rotate(30deg);
   pointer-events: none;
   z-index: 0;
@@ -122,7 +122,7 @@ $spacing-xxl: 64px;
     top: 310.22px;
     background: $color-ellipse-medium;
     border-radius: 50%;
-    opacity: 0.4;
+    opacity: 0.7;
     filter: blur(80px);
   }
 
