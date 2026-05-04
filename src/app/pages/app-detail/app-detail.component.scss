@@ -1679,9 +1679,8 @@ html[dir="rtl"] .content-section {
 .related-category-tooltip {
   position: absolute;
   bottom: calc(100% + 8px);
-  right: 0;
-  left: auto;
-  transform: translateY(4px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 10px;
@@ -1695,16 +1694,15 @@ html[dir="rtl"] .content-section {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease;
-  z-index: 1000;
+  z-index: 10;
   pointer-events: none;
 
   &::after {
     content: "";
     position: absolute;
     top: 100%;
-    right: 10px;
-    left: auto;
-    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
     border: 6px solid transparent;
     border-top-color: #fff;
   }
@@ -1713,9 +1711,8 @@ html[dir="rtl"] .content-section {
     content: "";
     position: absolute;
     top: 100%;
-    right: 9px;
-    left: auto;
-    transform: none;
+    left: 50%;
+    transform: translateX(-50%);
     border: 7px solid transparent;
     border-top-color: rgba(0, 0, 0, 0.08);
   }

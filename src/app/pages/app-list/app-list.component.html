@@ -32,13 +32,13 @@
         >
           {{ "appList.search.traditional" | translate }}
         </button>
-        <!-- <button
+        <button
           class="search-tab"
           [class.active]="searchType === 'smart'"
           (click)="searchType = 'smart'"
         >
           {{ "appList.search.smart" | translate }}
-        </button> -->
+        </button>
       </div>
 
       <!-- Search Input -->
@@ -409,9 +409,7 @@
                   +{{ app.categories.length - 3 }}
                   <span class="category-tooltip">
                     @for (cat of app.categories | slice: 3; track cat) {
-                      <span class="tooltip-tag">{{
-                        getCategoryName(cat)
-                      }}</span>
+                      <span class="tooltip-tag">{{ getCategoryName(cat) }}</span>
                     }
                   </span>
                 </span>

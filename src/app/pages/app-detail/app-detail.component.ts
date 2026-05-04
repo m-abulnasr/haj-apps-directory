@@ -23,7 +23,6 @@ import { NzTagModule } from "ng-zorro-antd/tag";
 import { NzGridModule } from "ng-zorro-antd/grid";
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { AppService, QuranApp } from "../../services/app.service";
-import { ApiService, Category } from "../../services/api.service";
 import { DomSanitizer, SafeHtml, Title, Meta } from "@angular/platform-browser";
 import { NzDividerModule } from "ng-zorro-antd/divider";
 import { categories } from "../../services/applicationsData";
@@ -73,7 +72,6 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
   relevantApps: QuranApp[] = [];
   currentLang: "en" | "ar" = "ar";
   categoriesSet: Array<{ name: string; icon: string }> = categories;
-  apiCategories: Category[] = [];
   isExpanded = false;
   // Cache for star arrays to prevent NG0100 errors from creating new references on each change detection
   private starArrayCache = new Map<number, { fillPercent: number }[]>();
@@ -98,7 +96,6 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
   constructor(
     private route: ActivatedRoute,
     private appService: AppService,
-    private apiService: ApiService,
     private sanitizer: DomSanitizer,
     private translateService: TranslateService,
     private router: Router,
@@ -142,10 +139,6 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.apiService.getCategories().subscribe((cats) => {
-      this.apiCategories = cats;
-    });
-
     // Set language immediately from snapshot
     const lang = this.route.snapshot.params["lang"];
     const id = this.route.snapshot.params["id"];
@@ -545,12 +538,6 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
         }
       }
     }
-  }
-
-  getCategoryName(slug: string): string {
-    const cat = this.apiCategories.find((c) => c.slug === slug);
-    if (cat) return this.currentLang === 'ar' ? cat.name_ar : cat.name_en;
-    return slug;
   }
 
   getCategoryIcon(category: string): SafeHtml {

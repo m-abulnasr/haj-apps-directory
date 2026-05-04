@@ -742,7 +742,9 @@
                   [innerHTML]="getCategoryIcon(category)"
                 ></span>
                 <span class="badge-name">
-                  {{ getCategoryName(category) }}
+                  {{
+                    "appList.categories." + category.toLowerCase() | translate
+                  }}
                 </span>
               </div>
             }
@@ -850,7 +852,7 @@
                     track cat
                   ) {
                     <span class="related-category-tag">
-                      {{ getCategoryName(cat) }}
+                      {{ "appList.categories." + cat | translate }}
                     </span>
                   }
                   @if (relatedApp.categories.length > 3) {
@@ -864,7 +866,9 @@
                           cat of relatedApp.categories | slice: 3;
                           track cat
                         ) {
-                          <span class="related-tooltip-tag">{{ getCategoryName(cat) }}</span>
+                          <span class="related-tooltip-tag">{{
+                            "appList.categories." + cat | translate
+                          }}</span>
                         }
                       </span>
                     </span>
