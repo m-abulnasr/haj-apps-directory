@@ -1,21 +1,55 @@
 {
-  "name": "Hajj Apps Directory",
+  "name": "Hajj Apps Directory - دليل تطبيقات الحج",
   "short_name": "Hajj Apps",
+  "description": "Everything you need in Hajj apps, in one place - كل ما تحتاجه من تطبيقات الحج… في مكان واحد",
+  "theme_color": "#A0533B",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
     {
-      "src": "/favicon/web-app-manifest-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     },
     {
-      "src": "/favicon/web-app-manifest-512x512.png",
-      "sizes": "512x512",
+      "src": "favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "android-icon-144x144.png",
+      "sizes": "144x144",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#000000",
-  "display": "standalone"
+  "categories": ["education", "utilities", "lifestyle"],
+  "lang": ["en", "ar"],
+  "dir": "ltr"
 }

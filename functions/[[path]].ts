@@ -28,7 +28,7 @@ const CRAWLER_USER_AGENTS = [
 
 const API_BASE = 'https://qad-backend-api-production.up.railway.app/api';
 const BASE_URL = 'https://hajapps.org';
-const DEFAULT_IMAGE = `${BASE_URL}/assets/images/sharehaj.png`;
+const DEFAULT_IMAGE = `${BASE_URL}/assets/images/preview/preview.png`;
 
 // Types
 interface RouteInfo {

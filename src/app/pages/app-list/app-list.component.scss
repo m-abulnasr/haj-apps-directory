@@ -30,7 +30,7 @@
   margin: 10px;
   border-radius: 22px;
   z-index: 0;
-  background-color: rgba(228, 70, 37, 0.07);
+  background: linear-gradient(to top right, #000000 0%, #1a1508 5%, #2a2010 10%, #6b5a3a 20%, #a89470 35%, #c8b896 50%, #dab87a 70%, #dfc98f 100%);
   overflow: hidden;
 
   // Teal ellipse group (left side) - from Figma
@@ -41,7 +41,7 @@
     height: 990px;
     left: -700px;
     top: 150px;
-    background: #12bcac;
+    background: #000000;
     opacity: 0.3;
     filter: blur(165px);
     transform: rotate(30deg);
@@ -258,13 +258,13 @@
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: #558b2f;
+  color: #ffffff;
   margin: 0 0 32px;
   font-weight: 400;
   letter-spacing: 0.5px;
 
   :host-context(.dark-theme) & {
-    color: #a5d6a7;
+    color: #ffffff;
   }
 
   @media (max-width: 768px) {

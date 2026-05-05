@@ -263,13 +263,13 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       this.metaService.updateTag({ property: "og:url", content: currentUrl });
       this.metaService.updateTag({ property: "og:title", content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد" });
       this.metaService.updateTag({ property: "og:description", content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد. اكتشف أفضل تطبيقات الحج والعمرة." });
-      this.metaService.updateTag({ property: "og:image", content: "https://hajapps.org/assets/images/sharehaj.png" });
+      this.metaService.updateTag({ property: "og:image", content: "https://hajapps.org/assets/images/preview/preview.png" });
       this.metaService.updateTag({ property: "og:locale", content: "ar_SA" });
       this.metaService.updateTag({ property: "twitter:card", content: "summary_large_image" });
       this.metaService.updateTag({ property: "twitter:url", content: currentUrl });
       this.metaService.updateTag({ property: "twitter:title", content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد" });
       this.metaService.updateTag({ property: "twitter:description", content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد. اكتشف أفضل تطبيقات الحج والعمرة." });
-      this.metaService.updateTag({ property: "twitter:image", content: "https://hajapps.org/assets/images/sharehaj.png" });
+      this.metaService.updateTag({ property: "twitter:image", content: "https://hajapps.org/assets/images/preview/preview.png" });
     } else {
       this.titleService.setTitle("Everything You Need in Hajj Apps... In One Place");
       this.metaService.updateTag({ name: "title", content: "Everything You Need in Hajj Apps... In One Place" });
@@ -283,13 +283,13 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       this.metaService.updateTag({ property: "og:url", content: currentUrl });
       this.metaService.updateTag({ property: "og:title", content: "Everything You Need in Hajj Apps... In One Place" });
       this.metaService.updateTag({ property: "og:description", content: "Everything you need in Hajj apps, in one place. Discover the best Hajj and Umrah apps." });
-      this.metaService.updateTag({ property: "og:image", content: "https://hajapps.org/assets/images/sharehaj.png" });
+      this.metaService.updateTag({ property: "og:image", content: "https://hajapps.org/assets/images/preview/preview.png" });
       this.metaService.updateTag({ property: "og:locale", content: "en_US" });
       this.metaService.updateTag({ property: "twitter:card", content: "summary_large_image" });
       this.metaService.updateTag({ property: "twitter:url", content: currentUrl });
       this.metaService.updateTag({ property: "twitter:title", content: "Everything You Need in Hajj Apps... In One Place" });
       this.metaService.updateTag({ property: "twitter:description", content: "Everything you need in Hajj apps, in one place. Discover the best Hajj and Umrah apps." });
-      this.metaService.updateTag({ property: "twitter:image", content: "https://hajapps.org/assets/images/sharehaj.png" });
+      this.metaService.updateTag({ property: "twitter:image", content: "https://hajapps.org/assets/images/preview/preview.png" });
     }
     
     // Add canonical URL
