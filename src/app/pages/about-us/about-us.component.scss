@@ -99,6 +99,10 @@ $spacing-xxl: 64px;
   pointer-events: none;
   z-index: 0;
 
+  @media (max-width: 768px) {
+    opacity: 0.26;
+  }
+
   // Ellipse 2 - large, heavily blurred; body ends at page x=125px so blur bleeds visibly
   &::before {
     content: "";
