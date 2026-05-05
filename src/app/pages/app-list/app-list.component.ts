@@ -902,6 +902,12 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
   /**
    * Get default icon for categories without custom icon
    */
+  getCategoryName(slug: string): string {
+    const cat = this.categories.find((c) => c.slug === slug);
+    if (cat) return this.currentLang === 'ar' ? cat.name_ar : cat.name_en;
+    return slug;
+  }
+
   getDefaultCategoryIcon(): string {
     return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
       <path fill="#A0533B" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>

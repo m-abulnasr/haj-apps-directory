@@ -1086,6 +1086,12 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    z-index: 100;
+  }
 
   :host-context(.dark-theme) & {
     background: #1e1e1e;
@@ -1363,8 +1369,9 @@
 .category-tooltip {
   position: absolute;
   bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%) translateY(4px);
+  right: 0;
+  left: auto;
+  transform: translateY(4px);
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 10px;
@@ -1378,7 +1385,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease;
-  z-index: 10;
+  z-index: 1000;
   pointer-events: none;
 
   // Arrow
@@ -1386,8 +1393,9 @@
     content: "";
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 10px;
+    left: auto;
+    transform: none;
     border: 6px solid transparent;
     border-top-color: #fff;
   }
@@ -1396,8 +1404,9 @@
     content: "";
     position: absolute;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 9px;
+    left: auto;
+    transform: none;
     border: 7px solid transparent;
     border-top-color: rgba(0, 0, 0, 0.08);
   }

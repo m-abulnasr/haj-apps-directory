@@ -46,7 +46,7 @@
   "appList": {
     "hero": {
       "title": "Light in your hands..",
-      "subtitle": "Choose your companion in the Quran journey"
+      "subtitle": "Choose your companion in the Hajj journey"
     },
     "search": {
       "placeholder": "Search for: Hafs narration, Mushaf ..",
@@ -87,7 +87,13 @@
       "rituals": "Rituals",
       "guide": "Pilgrimage Guide",
       "spiritual": "Spiritual",
-      "information": "Information"
+      "information": "Information",
+      "rituals-guidance": "Rituals Guidance",
+      "health-emergency": "Health & Emergency",
+      "maps-navigation": "Maps & Navigation",
+      "accommodation-services": "Accommodation Services",
+      "spiritual-enrichment": "Spiritual Enrichment",
+      "utility-tools": "Utility Tools"
     },
     "apps": {
       "title": "Apps List",

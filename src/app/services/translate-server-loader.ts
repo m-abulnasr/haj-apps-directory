@@ -329,7 +329,7 @@ const AR_TRANSLATIONS = {
   },
   appList: {
     search: {
-      placeholder: "البحث في التطبيقات...",
+      placeholder: "ابحث عن تطبيق...",
     },
     categories: {
       all: "الكل",
