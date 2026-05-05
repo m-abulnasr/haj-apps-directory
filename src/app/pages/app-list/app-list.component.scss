@@ -42,7 +42,7 @@
     left: -700px;
     top: 150px;
     background: #000000;
-    opacity: 0.3;
+    opacity: 0.1;
     filter: blur(165px);
     transform: rotate(30deg);
   }
@@ -72,7 +72,7 @@
       left: -400px;
       top: 100px;
       filter: blur(100px);
-      opacity: 0.25;
+      opacity: 0.1;
     }
 
     &::after {

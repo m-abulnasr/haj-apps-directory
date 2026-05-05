@@ -528,22 +528,20 @@ html[dir="rtl"] .app-hero-section {
   bottom: 10px;
   border-radius: 22px;
   z-index: 0;
-  background-color: rgba(228, 70, 37, 0.07);
+  background: linear-gradient(to top right, #000000 0%, #1a1508 5%, #2a2010 10%, #6b5a3a 20%, #a89470 35%, #c8b896 50%, #dab87a 70%, #dfc98f 100%);
   overflow: hidden;
 
-  // Teal ellipse group (left side)
+  // Black ellipse group (left side)
   &::before {
     content: "";
     position: absolute;
     width: 990px;
     height: 990px;
-    left: -706px;
-    top: 146px;
-    background: #12bcac;
+    left: -700px;
+    top: 150px;
+    background: #000000;
     filter: blur(165px);
-    opacity: 0.3;
-    border-radius: 50%;
-    pointer-events: none;
+    opacity: 0.1;
     transform: rotate(30deg);
   }
 
@@ -556,10 +554,10 @@ html[dir="rtl"] .app-hero-section {
     left: 847px;
     top: -700px;
     background: #dfc98f;
-    filter: blur(200px);
+    filter: blur(165px);
     border-radius: 50%;
     pointer-events: none;
-    transform: rotate(1deg);
+    transform: rotate(-135deg);
   }
 
   @media (max-width: 768px) {
@@ -575,7 +573,7 @@ html[dir="rtl"] .app-hero-section {
       left: -400px;
       top: 100px;
       filter: blur(100px);
-      opacity: 0.25;
+      opacity: 0.1;
     }
 
     &::after {
