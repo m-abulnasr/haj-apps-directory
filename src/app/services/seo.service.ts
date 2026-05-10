@@ -73,24 +73,28 @@ export class SeoService {
   generateItemListStructuredData(apps: any[], category: string | null, lang: 'ar' | 'en'): any {
     const categoryNames = {
       'ar': {
-        'mushaf': 'تطبيقات المصحف',
-        'tafsir': 'تطبيقات التفسير',
-        'translations': 'تطبيقات الترجمة',
-        'audio': 'التلاوات الصوتية',
-        'recite': 'تطبيقات التسميع',
-        'kids': 'تطبيقات الأطفال',
-        'riwayat': 'الروايات القرآنية',
-        'tajweed': 'تطبيقات التجويد'
+        'official-apps': 'التطبيقات الرسمية',
+        'rituals-guidance': 'إرشاد المناسك',
+        'transport-mobility': 'المواصلات والتنقل',
+        'health-emergency': 'الصحة والطوارئ',
+        'accommodation-services': 'خدمات الإقامة',
+        'spiritual-enrichment': 'الإثراء الروحي',
+        'maps-navigation': 'الخرائط والملاحة',
+        'trip-management': 'إدارة الرحلة',
+        'communication-groups': 'التواصل والمجموعات',
+        'utility-tools': 'الأدوات المساعدة'
       },
       'en': {
-        'mushaf': 'Mushaf Apps',
-        'tafsir': 'Tafsir Apps',
-        'translations': 'Translation Apps',
-        'audio': 'Audio Recitations',
-        'recite': 'Recitation Apps',
-        'kids': 'Kids Apps',
-        'riwayat': 'Quran Narrations',
-        'tajweed': 'Tajweed Apps'
+        'official-apps': 'Official Apps',
+        'rituals-guidance': 'Rituals Guidance',
+        'transport-mobility': 'Transport & Mobility',
+        'health-emergency': 'Health & Emergency',
+        'accommodation-services': 'Accommodation Services',
+        'spiritual-enrichment': 'Spiritual Enrichment',
+        'maps-navigation': 'Maps & Navigation',
+        'trip-management': 'Trip Management',
+        'communication-groups': 'Communication & Groups',
+        'utility-tools': 'Utility Tools'
       }
     };
 
@@ -290,30 +294,28 @@ export class SeoService {
   generateCollectionPageStructuredData(category: string, apps: any[], lang: 'ar' | 'en'): any {
     const categoryMap = {
       'ar': {
-        'Mushaf': 'تطبيقات المصحف الشريف',
-        'Tafsir': 'تطبيقات التفسير',
-        'Translations': 'تطبيقات الترجمة',
-        'Audio': 'التلاوات الصوتية',
-        'Recite': 'تطبيقات التسميع',
-        'Kids': 'تطبيقات الأطفال',
-        'Riwayat': 'الروايات القرآنية',
-        'Tajweed': 'تطبيقات التجويد',
-        'Memorize': 'تطبيقات التحفيظ',
-        'Accessibility': 'تطبيقات إمكانية الوصول',
-        'Tools': 'أدوات قرآنية'
+        'official-apps': 'التطبيقات الرسمية',
+        'rituals-guidance': 'إرشاد المناسك',
+        'transport-mobility': 'المواصلات والتنقل',
+        'health-emergency': 'الصحة والطوارئ',
+        'accommodation-services': 'خدمات الإقامة',
+        'spiritual-enrichment': 'الإثراء الروحي',
+        'maps-navigation': 'الخرائط والملاحة',
+        'trip-management': 'إدارة الرحلة',
+        'communication-groups': 'التواصل والمجموعات',
+        'utility-tools': 'الأدوات المساعدة'
       },
       'en': {
-        'Mushaf': 'Mushaf Applications',
-        'Tafsir': 'Tafsir Applications', 
-        'Translations': 'Translation Applications',
-        'Audio': 'Audio Recitations',
-        'Recite': 'Recitation Applications',
-        'Kids': 'Kids Applications',
-        'Riwayat': 'Quran Narrations',
-        'Tajweed': 'Tajweed Applications',
-        'Memorize': 'Memorization Applications',
-        'Accessibility': 'Accessibility Applications',
-        'Tools': 'Quranic Tools'
+        'official-apps': 'Official Apps',
+        'rituals-guidance': 'Rituals Guidance',
+        'transport-mobility': 'Transport & Mobility',
+        'health-emergency': 'Health & Emergency',
+        'accommodation-services': 'Accommodation Services',
+        'spiritual-enrichment': 'Spiritual Enrichment',
+        'maps-navigation': 'Maps & Navigation',
+        'trip-management': 'Trip Management',
+        'communication-groups': 'Communication & Groups',
+        'utility-tools': 'Utility Tools'
       }
     };
 

@@ -59,12 +59,19 @@ function parseApplicationsData() {
       }
     }
     
-    // Parse category names
-    const categories = [];
-    const categoryMatches = dataContent.matchAll(/name:\s*"([^"]+)"/g);
-    for (const match of categoryMatches) {
-      categories.push(match[1]);
-    }
+    // Known category slugs from the API (synced with backend categories table)
+    const categories = [
+      'official-apps',
+      'rituals-guidance',
+      'transport-mobility',
+      'health-emergency',
+      'accommodation-services',
+      'spiritual-enrichment',
+      'maps-navigation',
+      'trip-management',
+      'communication-groups',
+      'utility-tools'
+    ];
     
     console.log(`📊 Parsed data:`);
     console.log(`   Apps: ${appIds.length}`);
