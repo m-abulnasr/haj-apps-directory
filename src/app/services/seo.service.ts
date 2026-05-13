@@ -50,18 +50,12 @@ export class SeoService {
         "logo": {
           "@type": "ImageObject",
           "url": "https://hajapps.org/assets/images/logo-with-text.png"
-        }
-        /* TODO: Add social media and physical address when available
+        } ,
         "sameAs": [
-          "https://twitter.com/Bathel_SA",
-          "https://www.linkedin.com/company/bathel"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Riyadh",
-          "addressCountry": "SA"
-        }
-        */
+          "https://x.com/BathelFdn",
+          "https://www.linkedin.com/company/bathelfdn/",
+          "https://bathel.sa/"
+        ]
       },
       "potentialAction": {
         "@type": "SearchAction",
@@ -219,17 +213,11 @@ export class SeoService {
         "width": 400,
         "height": 100
       },
-      /* TODO: Add social media and physical address when available
       "sameAs": [
-        "https://twitter.com/Bathel_SA",
-        "https://www.linkedin.com/company/bathel"
+        "https://x.com/BathelFdn",
+        "https://www.linkedin.com/company/bathelfdn/",
+        "https://bathel.sa/"
       ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Riyadh",
-        "addressCountry": "SA"
-      },
-      */
       "description": lang === 'ar'
         ? "كل ما تحتاجه من تطبيقات الحج… في مكان واحد"
         : "Everything you need in Hajj apps, in one place",

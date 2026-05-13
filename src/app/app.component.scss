@@ -1261,6 +1261,62 @@ nz-footer.main-footer {
     }
   }
 
+  .footer-social-row {
+    padding: 16px clamp(24px, 6vw, 80px) 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+    .footer-copyright-hijri {
+      font-size: 13px;
+      color: var(--text-secondary, #666);
+      font-weight: 500;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+      }
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary, #666);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--primary-color, #a0533b);
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-icon {
+      color: var(--text-secondary, #666);
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        color: var(--primary-color, #a0533b);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
   .footer-open-source {
     font-size: clamp(12px, 1.3vw, 14px);
     color: var(--text-secondary, #666);

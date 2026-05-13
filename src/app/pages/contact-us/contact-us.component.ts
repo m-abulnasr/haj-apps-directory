@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LucideAngularModule } from 'lucide-angular';
 import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-contact-us',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, LucideAngularModule],
   templateUrl: './contact-us.component.html',
   styleUrls: ['./contact-us.component.scss']
 })
