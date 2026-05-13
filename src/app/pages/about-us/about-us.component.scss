@@ -1,3 +1,4 @@
+@use "sass:color";
 // ============================================
 // ABOUT US PAGE - REDESIGN
 // T006-T039: Complete styles for all user stories
@@ -428,8 +429,8 @@ $spacing-xxl: 64px;
   }
 
   &:hover {
-    background: darken($color-pill-bg, 5%);
-    border-color: darken($color-pill-border, 10%);
+    background: color.adjust($color-pill-bg, $lightness: -5%);
+    border-color: color.adjust($color-pill-border, $lightness: -10%);
   }
 }
 
@@ -1132,8 +1133,8 @@ $spacing-xxl: 64px;
     }
 
     &:hover {
-      background: lighten($dark-pill-bg, 5%);
-      border-color: lighten($dark-pill-border, 10%);
+      background: color.adjust($dark-pill-bg, $lightness: 5%);
+      border-color: color.adjust($dark-pill-border, $lightness: 10%);
     }
   }
 

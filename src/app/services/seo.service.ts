@@ -1,5 +1,5 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -15,15 +15,13 @@ export class SeoService {
    * @param data The structured data object
    */
   addStructuredData(data: any): void {
-    // Only manipulate DOM in browser context
-    if (!isPlatformBrowser(this.platformId)) return;
-
     const script = this.document.createElement('script');
     script.type = 'application/ld+json';
+    script.setAttribute('data-seo-type', 'structured-data');
     script.textContent = JSON.stringify(data);
 
     // Remove existing structured data script if exists
-    const existingScript = this.document.querySelector('script[type="application/ld+json"]');
+    const existingScript = this.document.querySelector('script[data-seo-type="structured-data"]');
     if (existingScript) {
       existingScript.remove();
     }
@@ -38,7 +36,7 @@ export class SeoService {
     const baseData = {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": lang === 'ar' ? "قاصد - دليل تطبيقات الحج" : "Qasid - Hajj Apps Directory",
+      "name": lang === 'ar' ? "قاصد" : "Qasid",
       "alternateName": lang === 'ar' ? "دليل تطبيقات الحج" : "Hajj Apps Directory",
       "url": "https://hajapps.org/",
       "description": lang === 'ar'
@@ -52,7 +50,12 @@ export class SeoService {
         "logo": {
           "@type": "ImageObject",
           "url": "https://hajapps.org/assets/images/logo-with-text.png"
-        }
+        } ,
+        "sameAs": [
+          "https://x.com/BathelFdn",
+          "https://www.linkedin.com/company/bathelfdn/",
+          "https://bathel.sa/"
+        ]
       },
       "potentialAction": {
         "@type": "SearchAction",
@@ -110,7 +113,7 @@ export class SeoService {
       "aggregateRating": app.Apps_Avg_Rating ? {
         "@type": "AggregateRating",
         "ratingValue": app.Apps_Avg_Rating,
-        "ratingCount": "100+",
+        "ratingCount": 100,
         "bestRating": 5,
         "worstRating": 1
       } : undefined,
@@ -152,7 +155,7 @@ export class SeoService {
       "aggregateRating": app.Apps_Avg_Rating ? {
         "@type": "AggregateRating",
         "ratingValue": app.Apps_Avg_Rating,
-        "ratingCount": "100+",
+        "ratingCount": 100,
         "bestRating": 5,
         "worstRating": 1
       } : undefined,
@@ -210,6 +213,11 @@ export class SeoService {
         "width": 400,
         "height": 100
       },
+      "sameAs": [
+        "https://x.com/BathelFdn",
+        "https://www.linkedin.com/company/bathelfdn/",
+        "https://bathel.sa/"
+      ],
       "description": lang === 'ar'
         ? "كل ما تحتاجه من تطبيقات الحج… في مكان واحد"
         : "Everything you need in Hajj apps, in one place",
@@ -240,7 +248,7 @@ export class SeoService {
   generateFAQStructuredData(lang: 'ar' | 'en'): any {
     const faqs = lang === 'ar' ? [
       {
-        question: "ما هو دليل تطبيقات الحج؟",
+        question: "ما هو قاصد؟",
         answer: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد. دليل شامل يضم أفضل تطبيقات الحج والعمرة المتاحة للأجهزة المحمولة، يشمل تطبيقات التنقل والأدعية والمشاعر والإرشاد والخدمات."
       },
       {
@@ -257,7 +265,7 @@ export class SeoService {
       }
     ] : [
       {
-        question: "What is the Hajj Apps Directory?",
+        question: "What is Qasid?",
         answer: "Everything you need in Hajj apps, in one place. A comprehensive directory featuring the best Hajj and Umrah applications for mobile devices, including navigation, prayers, holy sites guidance, and service apps."
       },
       {
@@ -366,8 +374,6 @@ export class SeoService {
       ...baseSchema,
       "applicationSuite": "Hajj Applications",
       "installUrl": app.Google_Play_Link || app.AppStore_Link,
-      "memoryRequirements": "50MB",
-      "storageRequirements": "100MB",
       "permissions": ["INTERNET", "STORAGE"],
       "softwareVersion": "Latest",
       "releaseNotes": lang === 'ar' 

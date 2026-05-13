@@ -206,7 +206,7 @@ export class DeveloperComponent implements OnInit, OnDestroy {
         : this.developerInfo.name_ar;
       
       const prefix = this.currentLang === 'en' ? 'Apps by' : 'تطبيقات';
-      this.titleService.setTitle(`${prefix} ${developerName} - Hajj Apps Directory`);
+      this.titleService.setTitle(`${prefix} ${developerName} - Qasid`);
     }
   }
 
@@ -253,8 +253,8 @@ export class DeveloperComponent implements OnInit, OnDestroy {
 
     const developerName = this.currentLang === 'en' ? this.developerInfo.name_en : this.developerInfo.name_ar;
     const title = this.currentLang === 'ar' ?
-      `تطبيقات ${developerName} - دليل تطبيقات الحج` :
-      `${developerName} Apps - Hajj Apps Directory`;
+      `تطبيقات ${developerName} - قاصد` :
+      `${developerName} Apps - Qasid`;
 
     const description = this.currentLang === 'ar' ?
       `اكتشف ${this.developerApps.length} تطبيق من تطوير ${developerName}. تطبيقات الحج والمناسك المتاحة للتحميل المجاني.` :

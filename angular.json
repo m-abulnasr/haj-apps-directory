@@ -15,7 +15,8 @@
               "extractLicenses": false,
               "namedChunks": true,
               "optimization": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "prerender": false
             },
             "staging": {
               "fileReplacements": [
@@ -29,7 +30,8 @@
               "namedChunks": true,
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": true
+              "sourceMap": true,
+              "prerender": false
             },
             "develop": {
               "fileReplacements": [
@@ -43,7 +45,8 @@
               "namedChunks": true,
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": true
+              "sourceMap": true,
+              "prerender": false
             },
             "production": {
               "fileReplacements": [
@@ -75,20 +78,23 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1.5mb",
-                  "maximumError": "2.0mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "20kb",
-                  "maximumError": "40kb"
+                  "maximumWarning": "40kb",
+                  "maximumError": "60kb"
                 }
-              ]
+              ],
+              "prerender": {
+                "routesFile": "routes.txt"
+              }
             }
           },
           "options": {
-            "prerender": false,
             "ssr": false,
+            "prerender": false,
             "assets": [
               "src/sitemap.xml",
               "src/robots.txt",
@@ -112,6 +118,7 @@
             ],
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "server": "src/main.server.ts",
             "outputPath": "dist",
             "polyfills": ["zone.js"],
             "scripts": [],

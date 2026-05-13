@@ -18,23 +18,15 @@
   <!-- Contact Cards -->
   <div class="cards-container">
     <div class="contact-cards">
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLScVcueRuAzWHk0f6Oj3p-P45-TQLzRTO60TPYY0AjZQxMCc7Q/viewform"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="contact-card"
-      >
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScVcueRuAzWHk0f6Oj3p-P45-TQLzRTO60TPYY0AjZQxMCc7Q/viewform"
+        target="_blank" rel="noopener noreferrer" class="contact-card">
         <span class="card-arrow">&#x203a;</span>
         <div class="card-content">
           <h3>{{ "contactUs.app-request-form" | translate }}</h3>
           <p>{{ "contactUs.app-request" | translate }}</p>
         </div>
         <span class="card-icon">
-          <img
-            src="assets/images/mail-02.svg"
-            alt=""
-            onerror="this.outerHTML = '&#9993;'"
-          />
+          <img src="assets/images/mail-02.svg" alt="Email icon" onerror="this.outerHTML = '&#9993;'" />
         </span>
       </a>
 
@@ -45,12 +37,21 @@
           <p>{{ "contactUs.email" | translate }}</p>
         </div>
         <span class="card-icon">
-          <img
-            src="assets/images/mail-02.svg"
-            alt=""
-            onerror="this.outerHTML = '&#9993;'"
-          />
+          <img src="assets/images/mail-02.svg" alt="Email icon" onerror="this.outerHTML = '&#9993;'" />
         </span>
+      </a>
+    </div>
+  </div>
+  <!-- Social Section -->
+  <div class="social-section">
+    <div class="social-links-container">
+      <a href="https://x.com/BathelFdn" target="_blank" rel="noopener noreferrer" class="social-icon-card twitter"
+        aria-label="X (Twitter)">
+        <lucide-icon name="twitter" [size]="24"></lucide-icon>
+      </a>
+      <a href="https://www.linkedin.com/company/bathelfdn/" target="_blank" rel="noopener noreferrer"
+        class="social-icon-card linkedin" aria-label="LinkedIn">
+        <lucide-icon name="linkedin" [size]="24"></lucide-icon>
       </a>
     </div>
   </div>

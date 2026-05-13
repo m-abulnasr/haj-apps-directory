@@ -41,6 +41,7 @@ export const routes: Routes = [
     data: { title: 'Contact Us' },
     loadComponent: () => import('./pages/contact-us/contact-us.component').then(m => m.ContactUsComponent)
   },
+  /*
   {
     path: ':lang/submit-app',
     data: { title: 'Submit App' },
@@ -51,6 +52,7 @@ export const routes: Routes = [
     data: { title: 'Track Submission' },
     loadComponent: () => import('./pages/track-submission/track-submission.component').then(m => m.TrackSubmissionComponent)
   },
+  */
   {
     path: ':lang/search-comparison',
     data: { title: 'Search Comparison', hideChrome: true },
@@ -86,5 +88,5 @@ export const routes: Routes = [
       ? import('./pages/ramadan/ramadan.component').then(m => m.RamadanComponent)
       : import('./pages/app-list/app-list.component').then(m => m.AppListComponent)
   },
-  { path: '**', redirectTo: '/ar', pathMatch: 'full'}
+  { path: '**', loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent) }
 ];

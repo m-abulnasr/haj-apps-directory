@@ -4,1132 +4,1702 @@
   <!-- Homepage URLs - Priority 1.0 -->
   <url>
     <loc>https://hajapps.org/ar</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar"/>
   </url>
   <url>
     <loc>https://hajapps.org/en</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar"/>
   </url>
 
   <!-- Category Pages - Priority 0.9 -->
   <url>
     <loc>https://hajapps.org/ar/official-apps</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/official-apps"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/official-apps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/official-apps"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/official-apps</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/official-apps"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/official-apps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/official-apps"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/rituals-guidance</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/rituals-guidance"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/rituals-guidance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/rituals-guidance"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/rituals-guidance</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/rituals-guidance"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/rituals-guidance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/rituals-guidance"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/transport-mobility</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/transport-mobility"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/transport-mobility"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/transport-mobility"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/transport-mobility</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/transport-mobility"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/transport-mobility"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/transport-mobility"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/health-emergency</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/health-emergency"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/health-emergency"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/health-emergency"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/health-emergency</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/health-emergency"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/health-emergency"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/health-emergency"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/accommodation-services</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/accommodation-services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/accommodation-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/accommodation-services"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/accommodation-services</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/accommodation-services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/accommodation-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/accommodation-services"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/spiritual-enrichment</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/spiritual-enrichment"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/spiritual-enrichment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/spiritual-enrichment"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/spiritual-enrichment</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/spiritual-enrichment"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/spiritual-enrichment"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/spiritual-enrichment"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/maps-navigation</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/maps-navigation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/maps-navigation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/maps-navigation"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/maps-navigation</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/maps-navigation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/maps-navigation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/maps-navigation"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/trip-management</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/trip-management"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/trip-management"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/trip-management"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/trip-management</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/trip-management"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/trip-management"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/trip-management"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/communication-groups</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/communication-groups"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/communication-groups"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/communication-groups"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/communication-groups</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/communication-groups"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/communication-groups"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/communication-groups"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/utility-tools</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/utility-tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/utility-tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/utility-tools"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/utility-tools</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/utility-tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/utility-tools"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/utility-tools"/>
   </url>
 
   <!-- Individual App Pages - Priority 0.8 -->
   <url>
-    <loc>https://hajapps.org/ar/app/1_Wahy</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/wahy_1_Wahy</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/wahy_1_Wahy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/wahy_1_Wahy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/wahy_1_Wahy"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/1_Wahy</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/wahy_1_Wahy</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/wahy_1_Wahy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/wahy_1_Wahy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/wahy_1_Wahy"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/15_Ayah</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/ayah_15_Ayah</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/ayah_15_Ayah"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/ayah_15_Ayah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/ayah_15_Ayah"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/15_Ayah</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/ayah_15_Ayah</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/ayah_15_Ayah"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/ayah_15_Ayah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/ayah_15_Ayah"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/14_Quran Mobasher</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/quran-mobasher_14_Quran%20Mobasher</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran-mobasher_14_Quran%20Mobasher"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran-mobasher_14_Quran%20Mobasher"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran-mobasher_14_Quran%20Mobasher"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/14_Quran Mobasher</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/quran-mobasher_14_Quran%20Mobasher</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran-mobasher_14_Quran%20Mobasher"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran-mobasher_14_Quran%20Mobasher"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran-mobasher_14_Quran%20Mobasher"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/10_Adnan The Quran Teacher</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/adnan-the-quran-teacher_10_Adnan%20The%20Quran%20Teacher</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/adnan-the-quran-teacher_10_Adnan%20The%20Quran%20Teacher"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/adnan-the-quran-teacher_10_Adnan%20The%20Quran%20Teacher"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/adnan-the-quran-teacher_10_Adnan%20The%20Quran%20Teacher"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/10_Adnan The Quran Teacher</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/adnan-the-quran-teacher_10_Adnan%20The%20Quran%20Teacher</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/adnan-the-quran-teacher_10_Adnan%20The%20Quran%20Teacher"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/adnan-the-quran-teacher_10_Adnan%20The%20Quran%20Teacher"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/adnan-the-quran-teacher_10_Adnan%20The%20Quran%20Teacher"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/17_Al Fatiha</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/al-fatiha_17_Al%20Fatiha</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/al-fatiha_17_Al%20Fatiha"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/al-fatiha_17_Al%20Fatiha"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/al-fatiha_17_Al%20Fatiha"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/17_Al Fatiha</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/al-fatiha_17_Al%20Fatiha</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/al-fatiha_17_Al%20Fatiha"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/al-fatiha_17_Al%20Fatiha"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/al-fatiha_17_Al%20Fatiha"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/5_Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/quran_5_Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran_5_Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran_5_Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran_5_Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/5_Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/quran_5_Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran_5_Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran_5_Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran_5_Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/36_Mushaf Altdabbor</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/mushaf-altdabbor_36_Mushaf%20Altdabbor</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/mushaf-altdabbor_36_Mushaf%20Altdabbor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/mushaf-altdabbor_36_Mushaf%20Altdabbor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/mushaf-altdabbor_36_Mushaf%20Altdabbor"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/36_Mushaf Altdabbor</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/mushaf-altdabbor_36_Mushaf%20Altdabbor</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/mushaf-altdabbor_36_Mushaf%20Altdabbor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/mushaf-altdabbor_36_Mushaf%20Altdabbor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/mushaf-altdabbor_36_Mushaf%20Altdabbor"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/11_Tarteel</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/tarteel_11_Tarteel</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/tarteel_11_Tarteel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/tarteel_11_Tarteel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/tarteel_11_Tarteel"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/11_Tarteel</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/tarteel_11_Tarteel</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/tarteel_11_Tarteel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/tarteel_11_Tarteel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/tarteel_11_Tarteel"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/6_Rayyaan &amp; Bayaan</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/rayyaan--bayaan_6_Rayyaan%20%26%20Bayaan</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/rayyaan--bayaan_6_Rayyaan%20%26%20Bayaan"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/rayyaan--bayaan_6_Rayyaan%20%26%20Bayaan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/rayyaan--bayaan_6_Rayyaan%20%26%20Bayaan"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/6_Rayyaan &amp; Bayaan</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/rayyaan--bayaan_6_Rayyaan%20%26%20Bayaan</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/rayyaan--bayaan_6_Rayyaan%20%26%20Bayaan"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/rayyaan--bayaan_6_Rayyaan%20%26%20Bayaan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/rayyaan--bayaan_6_Rayyaan%20%26%20Bayaan"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/39_Ayah widget</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/ayah-widget_39_Ayah%20widget</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/ayah-widget_39_Ayah%20widget"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/ayah-widget_39_Ayah%20widget"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/ayah-widget_39_Ayah%20widget"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/39_Ayah widget</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/ayah-widget_39_Ayah%20widget</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/ayah-widget_39_Ayah%20widget"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/ayah-widget_39_Ayah%20widget"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/ayah-widget_39_Ayah%20widget"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/48_Mushaf Mecca</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/mushaf-mecca_48_Mushaf%20Mecca</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/mushaf-mecca_48_Mushaf%20Mecca"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/mushaf-mecca_48_Mushaf%20Mecca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/mushaf-mecca_48_Mushaf%20Mecca"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/48_Mushaf Mecca</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/mushaf-mecca_48_Mushaf%20Mecca</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/mushaf-mecca_48_Mushaf%20Mecca"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/mushaf-mecca_48_Mushaf%20Mecca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/mushaf-mecca_48_Mushaf%20Mecca"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/9_Maher</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/maher_9_Maher</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/maher_9_Maher"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/maher_9_Maher"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/maher_9_Maher"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/9_Maher</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/maher_9_Maher</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/maher_9_Maher"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/maher_9_Maher"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/maher_9_Maher"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/49_Elmohafez</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/elmohafez_49_Elmohafez</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/elmohafez_49_Elmohafez"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/elmohafez_49_Elmohafez"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/elmohafez_49_Elmohafez"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/49_Elmohafez</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/elmohafez_49_Elmohafez</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/elmohafez_49_Elmohafez"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/elmohafez_49_Elmohafez"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/elmohafez_49_Elmohafez"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/7_Moddakir</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/moddakir_7_Moddakir</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/moddakir_7_Moddakir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/moddakir_7_Moddakir"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/moddakir_7_Moddakir"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/7_Moddakir</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/moddakir_7_Moddakir</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/moddakir_7_Moddakir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/moddakir_7_Moddakir"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/moddakir_7_Moddakir"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/38_MA&#39;ANONI DA SHIRIYAR ALQUR&#39;ANI</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/maanoni-da-shiriyar-alqurani_38_MA&#39;ANONI%20DA%20SHIRIYAR%20ALQUR&#39;ANI</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/maanoni-da-shiriyar-alqurani_38_MA&#39;ANONI%20DA%20SHIRIYAR%20ALQUR&#39;ANI"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/maanoni-da-shiriyar-alqurani_38_MA&#39;ANONI%20DA%20SHIRIYAR%20ALQUR&#39;ANI"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/maanoni-da-shiriyar-alqurani_38_MA&#39;ANONI%20DA%20SHIRIYAR%20ALQUR&#39;ANI"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/38_MA&#39;ANONI DA SHIRIYAR ALQUR&#39;ANI</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/maanoni-da-shiriyar-alqurani_38_MA&#39;ANONI%20DA%20SHIRIYAR%20ALQUR&#39;ANI</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/maanoni-da-shiriyar-alqurani_38_MA&#39;ANONI%20DA%20SHIRIYAR%20ALQUR&#39;ANI"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/maanoni-da-shiriyar-alqurani_38_MA&#39;ANONI%20DA%20SHIRIYAR%20ALQUR&#39;ANI"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/maanoni-da-shiriyar-alqurani_38_MA&#39;ANONI%20DA%20SHIRIYAR%20ALQUR&#39;ANI"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/50_Mofassal</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/mofassal_50_Mofassal</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/mofassal_50_Mofassal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/mofassal_50_Mofassal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/mofassal_50_Mofassal"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/50_Mofassal</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/mofassal_50_Mofassal</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/mofassal_50_Mofassal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/mofassal_50_Mofassal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/mofassal_50_Mofassal"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/51_The Correct Quotation</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/the-correct-quotation_51_The%20Correct%20Quotation</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/the-correct-quotation_51_The%20Correct%20Quotation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/the-correct-quotation_51_The%20Correct%20Quotation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/the-correct-quotation_51_The%20Correct%20Quotation"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/51_The Correct Quotation</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/the-correct-quotation_51_The%20Correct%20Quotation</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/the-correct-quotation_51_The%20Correct%20Quotation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/the-correct-quotation_51_The%20Correct%20Quotation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/the-correct-quotation_51_The%20Correct%20Quotation"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/52_Satr</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/satr_52_Satr</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/satr_52_Satr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/satr_52_Satr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/satr_52_Satr"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/52_Satr</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/satr_52_Satr</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/satr_52_Satr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/satr_52_Satr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/satr_52_Satr"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/53_Moeen</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/moeen_53_Moeen</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/moeen_53_Moeen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/moeen_53_Moeen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/moeen_53_Moeen"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/53_Moeen</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/moeen_53_Moeen</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/moeen_53_Moeen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/moeen_53_Moeen"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/moeen_53_Moeen"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/80_Quran Tadabbur</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/quran-tadabbur_80_Quran%20Tadabbur</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran-tadabbur_80_Quran%20Tadabbur"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran-tadabbur_80_Quran%20Tadabbur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran-tadabbur_80_Quran%20Tadabbur"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/80_Quran Tadabbur</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/quran-tadabbur_80_Quran%20Tadabbur</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran-tadabbur_80_Quran%20Tadabbur"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran-tadabbur_80_Quran%20Tadabbur"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran-tadabbur_80_Quran%20Tadabbur"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/69_Translations of Quran meanings</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/translations-of-quran-meanings_69_Translations%20of%20Quran%20meanings</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/translations-of-quran-meanings_69_Translations%20of%20Quran%20meanings"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/translations-of-quran-meanings_69_Translations%20of%20Quran%20meanings"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/translations-of-quran-meanings_69_Translations%20of%20Quran%20meanings"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/69_Translations of Quran meanings</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/translations-of-quran-meanings_69_Translations%20of%20Quran%20meanings</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/translations-of-quran-meanings_69_Translations%20of%20Quran%20meanings"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/translations-of-quran-meanings_69_Translations%20of%20Quran%20meanings"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/translations-of-quran-meanings_69_Translations%20of%20Quran%20meanings"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/54_Ana Atlou</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/ana-atlou_54_Ana%20Atlou</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/ana-atlou_54_Ana%20Atlou"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/ana-atlou_54_Ana%20Atlou"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/ana-atlou_54_Ana%20Atlou"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/54_Ana Atlou</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/ana-atlou_54_Ana%20Atlou</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/ana-atlou_54_Ana%20Atlou"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/ana-atlou_54_Ana%20Atlou"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/ana-atlou_54_Ana%20Atlou"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/55_Alfanous</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/alfanous_55_Alfanous</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/alfanous_55_Alfanous"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/alfanous_55_Alfanous"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/alfanous_55_Alfanous"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/55_Alfanous</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/alfanous_55_Alfanous</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/alfanous_55_Alfanous"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/alfanous_55_Alfanous"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/alfanous_55_Alfanous"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/57_Noor International Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/noor-international-quran_57_Noor%20International%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/noor-international-quran_57_Noor%20International%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/noor-international-quran_57_Noor%20International%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/noor-international-quran_57_Noor%20International%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/57_Noor International Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/noor-international-quran_57_Noor%20International%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/noor-international-quran_57_Noor%20International%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/noor-international-quran_57_Noor%20International%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/noor-international-quran_57_Noor%20International%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/58_Werdy</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/werdy_58_Werdy</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/werdy_58_Werdy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/werdy_58_Werdy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/werdy_58_Werdy"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/58_Werdy</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/werdy_58_Werdy</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/werdy_58_Werdy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/werdy_58_Werdy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/werdy_58_Werdy"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/37_Interactive Tafsir</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/interactive-tafsir_37_Interactive%20Tafsir</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/interactive-tafsir_37_Interactive%20Tafsir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/interactive-tafsir_37_Interactive%20Tafsir"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/interactive-tafsir_37_Interactive%20Tafsir"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/37_Interactive Tafsir</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/interactive-tafsir_37_Interactive%20Tafsir</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/interactive-tafsir_37_Interactive%20Tafsir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/interactive-tafsir_37_Interactive%20Tafsir"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/interactive-tafsir_37_Interactive%20Tafsir"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/59_School Mushaf</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/school-mushaf_59_School%20Mushaf</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/school-mushaf_59_School%20Mushaf"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/school-mushaf_59_School%20Mushaf"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/school-mushaf_59_School%20Mushaf"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/59_School Mushaf</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/school-mushaf_59_School%20Mushaf</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/school-mushaf_59_School%20Mushaf"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/school-mushaf_59_School%20Mushaf"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/school-mushaf_59_School%20Mushaf"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/60_School Mushaf - Sign Language</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/school-mushaf---sign-language_60_School%20Mushaf%20-%20Sign%20Language</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/school-mushaf---sign-language_60_School%20Mushaf%20-%20Sign%20Language"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/school-mushaf---sign-language_60_School%20Mushaf%20-%20Sign%20Language"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/school-mushaf---sign-language_60_School%20Mushaf%20-%20Sign%20Language"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/60_School Mushaf - Sign Language</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/school-mushaf---sign-language_60_School%20Mushaf%20-%20Sign%20Language</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/school-mushaf---sign-language_60_School%20Mushaf%20-%20Sign%20Language"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/school-mushaf---sign-language_60_School%20Mushaf%20-%20Sign%20Language"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/school-mushaf---sign-language_60_School%20Mushaf%20-%20Sign%20Language"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/23_Quran Hafs</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/quran-hafs_23_Quran%20Hafs</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran-hafs_23_Quran%20Hafs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran-hafs_23_Quran%20Hafs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran-hafs_23_Quran%20Hafs"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/23_Quran Hafs</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/quran-hafs_23_Quran%20Hafs</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran-hafs_23_Quran%20Hafs"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran-hafs_23_Quran%20Hafs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran-hafs_23_Quran%20Hafs"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/65_Tangheem Al Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/tangheem-al-quran_65_Tangheem%20Al%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/tangheem-al-quran_65_Tangheem%20Al%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/tangheem-al-quran_65_Tangheem%20Al%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/tangheem-al-quran_65_Tangheem%20Al%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/65_Tangheem Al Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/tangheem-al-quran_65_Tangheem%20Al%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/tangheem-al-quran_65_Tangheem%20Al%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/tangheem-al-quran_65_Tangheem%20Al%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/tangheem-al-quran_65_Tangheem%20Al%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/56_Tebyan Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/tebyan-quran_56_Tebyan%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/tebyan-quran_56_Tebyan%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/tebyan-quran_56_Tebyan%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/tebyan-quran_56_Tebyan%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/56_Tebyan Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/tebyan-quran_56_Tebyan%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/tebyan-quran_56_Tebyan%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/tebyan-quran_56_Tebyan%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/tebyan-quran_56_Tebyan%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/62_Quran Warsh</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/quran-warsh_62_Quran%20Warsh</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran-warsh_62_Quran%20Warsh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran-warsh_62_Quran%20Warsh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran-warsh_62_Quran%20Warsh"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/62_Quran Warsh</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/quran-warsh_62_Quran%20Warsh</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran-warsh_62_Quran%20Warsh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran-warsh_62_Quran%20Warsh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran-warsh_62_Quran%20Warsh"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/70_Quranic Recitations Collection</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/quranic-recitations-collection_70_Quranic%20Recitations%20Collection</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quranic-recitations-collection_70_Quranic%20Recitations%20Collection"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quranic-recitations-collection_70_Quranic%20Recitations%20Collection"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quranic-recitations-collection_70_Quranic%20Recitations%20Collection"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/70_Quranic Recitations Collection</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/quranic-recitations-collection_70_Quranic%20Recitations%20Collection</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quranic-recitations-collection_70_Quranic%20Recitations%20Collection"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quranic-recitations-collection_70_Quranic%20Recitations%20Collection"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quranic-recitations-collection_70_Quranic%20Recitations%20Collection"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/64_Kaedat Alnoor</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/kaedat-alnoor_64_Kaedat%20Alnoor</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/kaedat-alnoor_64_Kaedat%20Alnoor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/kaedat-alnoor_64_Kaedat%20Alnoor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/kaedat-alnoor_64_Kaedat%20Alnoor"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/64_Kaedat Alnoor</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/kaedat-alnoor_64_Kaedat%20Alnoor</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/kaedat-alnoor_64_Kaedat%20Alnoor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/kaedat-alnoor_64_Kaedat%20Alnoor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/kaedat-alnoor_64_Kaedat%20Alnoor"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/81_Amazighi Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/amazighi-quran_81_Amazighi%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/amazighi-quran_81_Amazighi%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/amazighi-quran_81_Amazighi%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/amazighi-quran_81_Amazighi%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/81_Amazighi Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/amazighi-quran_81_Amazighi%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/amazighi-quran_81_Amazighi%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/amazighi-quran_81_Amazighi%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/amazighi-quran_81_Amazighi%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/82_Quran Indonesia Kemenag koran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/quran-indonesia-kemenag-koran_82_Quran%20Indonesia%20Kemenag%20koran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran-indonesia-kemenag-koran_82_Quran%20Indonesia%20Kemenag%20koran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran-indonesia-kemenag-koran_82_Quran%20Indonesia%20Kemenag%20koran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran-indonesia-kemenag-koran_82_Quran%20Indonesia%20Kemenag%20koran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/82_Quran Indonesia Kemenag koran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/quran-indonesia-kemenag-koran_82_Quran%20Indonesia%20Kemenag%20koran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/quran-indonesia-kemenag-koran_82_Quran%20Indonesia%20Kemenag%20koran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/quran-indonesia-kemenag-koran_82_Quran%20Indonesia%20Kemenag%20koran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/quran-indonesia-kemenag-koran_82_Quran%20Indonesia%20Kemenag%20koran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/47_Convey</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/convey_47_Convey</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/convey_47_Convey"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/convey_47_Convey"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/convey_47_Convey"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/47_Convey</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/convey_47_Convey</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/convey_47_Convey"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/convey_47_Convey"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/convey_47_Convey"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/67_Salem</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/salem_67_Salem</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/salem_67_Salem"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/salem_67_Salem"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/salem_67_Salem"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/67_Salem</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/salem_67_Salem</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/salem_67_Salem"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/salem_67_Salem"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/salem_67_Salem"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/83_Telawa Warsh</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/telawa-warsh_83_Telawa%20Warsh</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/telawa-warsh_83_Telawa%20Warsh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/telawa-warsh_83_Telawa%20Warsh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/telawa-warsh_83_Telawa%20Warsh"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/83_Telawa Warsh</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/telawa-warsh_83_Telawa%20Warsh</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/telawa-warsh_83_Telawa%20Warsh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/telawa-warsh_83_Telawa%20Warsh"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/telawa-warsh_83_Telawa%20Warsh"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/63_Wiqaya</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/wiqaya_63_Wiqaya</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/wiqaya_63_Wiqaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/wiqaya_63_Wiqaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/wiqaya_63_Wiqaya"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/63_Wiqaya</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/wiqaya_63_Wiqaya</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/wiqaya_63_Wiqaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/wiqaya_63_Wiqaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/wiqaya_63_Wiqaya"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/35_Study Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/study-quran_35_Study%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/study-quran_35_Study%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/study-quran_35_Study%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/study-quran_35_Study%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/35_Study Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/study-quran_35_Study%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/study-quran_35_Study%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/study-quran_35_Study%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/study-quran_35_Study%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/13_The Holy Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/the-holy-quran_13_The%20Holy%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/the-holy-quran_13_The%20Holy%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/the-holy-quran_13_The%20Holy%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/the-holy-quran_13_The%20Holy%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/13_The Holy Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/the-holy-quran_13_The%20Holy%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/the-holy-quran_13_The%20Holy%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/the-holy-quran_13_The%20Holy%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/the-holy-quran_13_The%20Holy%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/41_Ghareeb</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/ghareeb_41_Ghareeb</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/ghareeb_41_Ghareeb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/ghareeb_41_Ghareeb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/ghareeb_41_Ghareeb"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/41_Ghareeb</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/ghareeb_41_Ghareeb</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/ghareeb_41_Ghareeb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/ghareeb_41_Ghareeb"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/ghareeb_41_Ghareeb"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/61_Ehfaz Al Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/ehfaz-al-quran_61_Ehfaz%20Al%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/ehfaz-al-quran_61_Ehfaz%20Al%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/ehfaz-al-quran_61_Ehfaz%20Al%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/ehfaz-al-quran_61_Ehfaz%20Al%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/61_Ehfaz Al Quran</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/ehfaz-al-quran_61_Ehfaz%20Al%20Quran</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/ehfaz-al-quran_61_Ehfaz%20Al%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/ehfaz-al-quran_61_Ehfaz%20Al%20Quran"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/ehfaz-al-quran_61_Ehfaz%20Al%20Quran"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/app/Surah</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/app/surah_Surah</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/surah_Surah"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/surah_Surah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/surah_Surah"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/app/Surah</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/app/surah_Surah</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/app/surah_Surah"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/app/surah_Surah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/app/surah_Surah"/>
   </url>
 
   <!-- Developer Pages - Priority 0.7 -->
   <url>
     <loc>https://hajapps.org/ar/developer/tafsir-center-for-quranic-studies</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/tafsir-center-for-quranic-studies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/tafsir-center-for-quranic-studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/tafsir-center-for-quranic-studies"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/tafsir-center-for-quranic-studies</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/tafsir-center-for-quranic-studies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/tafsir-center-for-quranic-studies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/tafsir-center-for-quranic-studies"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/abdullah-bajaber</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/abdullah-bajaber"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/abdullah-bajaber"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/abdullah-bajaber"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/abdullah-bajaber</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/abdullah-bajaber"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/abdullah-bajaber"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/abdullah-bajaber"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/maknon</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/maknon"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/maknon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/maknon"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/maknon</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/maknon"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/maknon"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/maknon"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/kidsapp-company</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/kidsapp-company"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/kidsapp-company"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/kidsapp-company"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/kidsapp-company</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/kidsapp-company"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/kidsapp-company"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/kidsapp-company"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/quran-audio-library</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/quran-audio-library"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/quran-audio-library"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/quran-audio-library"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/quran-audio-library</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/quran-audio-library"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/quran-audio-library"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/quran-audio-library"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/qurancom</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/qurancom"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/qurancom"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/qurancom"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/qurancom</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/qurancom"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/qurancom"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/qurancom"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/malem-altdabbor</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/malem-altdabbor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/malem-altdabbor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/malem-altdabbor"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/malem-altdabbor</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/malem-altdabbor"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/malem-altdabbor"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/malem-altdabbor"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/tarteel-inc</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/tarteel-inc"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/tarteel-inc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/tarteel-inc"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/tarteel-inc</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/tarteel-inc"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/tarteel-inc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/tarteel-inc"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/badr-alhanaky</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/badr-alhanaky"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/badr-alhanaky"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/badr-alhanaky"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/badr-alhanaky</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/badr-alhanaky"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/badr-alhanaky"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/badr-alhanaky"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/mushaf-makkah</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/mushaf-makkah"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/mushaf-makkah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/mushaf-makkah"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/mushaf-makkah</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/mushaf-makkah"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/mushaf-makkah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/mushaf-makkah"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/al-borhan-charity-for-sunnah-quran-services</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/al-borhan-charity-for-sunnah-quran-services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/al-borhan-charity-for-sunnah-quran-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/al-borhan-charity-for-sunnah-quran-services"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/al-borhan-charity-for-sunnah-quran-services</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/al-borhan-charity-for-sunnah-quran-services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/al-borhan-charity-for-sunnah-quran-services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/al-borhan-charity-for-sunnah-quran-services"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/elmohafez</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/elmohafez"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/elmohafez"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/elmohafez"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/elmohafez</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/elmohafez"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/elmohafez"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/elmohafez"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/moddakir</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/moddakir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/moddakir"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/moddakir"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/moddakir</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/moddakir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/moddakir"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/moddakir"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/basayir</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/basayir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/basayir"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/basayir"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/basayir</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/basayir"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/basayir"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/basayir"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/ministry-of-islamic-affairs-dawah-and-guidance</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/ministry-of-islamic-affairs-dawah-and-guidance"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/ministry-of-islamic-affairs-dawah-and-guidance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/ministry-of-islamic-affairs-dawah-and-guidance"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/ministry-of-islamic-affairs-dawah-and-guidance</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/ministry-of-islamic-affairs-dawah-and-guidance"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/ministry-of-islamic-affairs-dawah-and-guidance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/ministry-of-islamic-affairs-dawah-and-guidance"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/digital-corners</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/digital-corners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/digital-corners"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/digital-corners"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/digital-corners</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/digital-corners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/digital-corners"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/digital-corners"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/faisal-haddad</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/faisal-haddad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/faisal-haddad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/faisal-haddad"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/faisal-haddad</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/faisal-haddad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/faisal-haddad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/faisal-haddad"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/almenhaj-center-for-educational-supervision-and-training</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/almenhaj-center-for-educational-supervision-and-training"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/almenhaj-center-for-educational-supervision-and-training"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/almenhaj-center-for-educational-supervision-and-training"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/almenhaj-center-for-educational-supervision-and-training</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/almenhaj-center-for-educational-supervision-and-training"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/almenhaj-center-for-educational-supervision-and-training"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/almenhaj-center-for-educational-supervision-and-training"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/the-noble-quran-encyclopedia</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/the-noble-quran-encyclopedia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/the-noble-quran-encyclopedia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/the-noble-quran-encyclopedia"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/the-noble-quran-encyclopedia</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/the-noble-quran-encyclopedia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/the-noble-quran-encyclopedia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/the-noble-quran-encyclopedia"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/noor-taibah-foundation</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/noor-taibah-foundation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/noor-taibah-foundation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/noor-taibah-foundation"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/noor-taibah-foundation</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/noor-taibah-foundation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/noor-taibah-foundation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/noor-taibah-foundation"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/islam-phone</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/islam-phone"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/islam-phone"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/islam-phone"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/islam-phone</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/islam-phone"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/islam-phone"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/islam-phone"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/noor-international</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/noor-international"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/noor-international"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/noor-international"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/noor-international</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/noor-international"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/noor-international"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/noor-international"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/arabia-it</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/arabia-it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/arabia-it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/arabia-it"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/arabia-it</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/arabia-it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/arabia-it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/arabia-it"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/nuqayah</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/nuqayah"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/nuqayah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/nuqayah"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/nuqayah</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/nuqayah"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/nuqayah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/nuqayah"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/arabic-it</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/arabic-it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/arabic-it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/arabic-it"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/arabic-it</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/arabic-it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/arabic-it"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/arabic-it"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/king-fahd-glorious-quran-printing-complex</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/king-fahd-glorious-quran-printing-complex"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/king-fahd-glorious-quran-printing-complex"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/king-fahd-glorious-quran-printing-complex"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/king-fahd-glorious-quran-printing-complex</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/king-fahd-glorious-quran-printing-complex"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/king-fahd-glorious-quran-printing-complex"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/king-fahd-glorious-quran-printing-complex"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/-</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/-"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/-"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/-"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/-</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/-"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/-"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/-"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/liajlehum</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/liajlehum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/liajlehum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/liajlehum"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/liajlehum</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/liajlehum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/liajlehum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/liajlehum"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/quranic-recitations-collection</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/quranic-recitations-collection"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/quranic-recitations-collection"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/quranic-recitations-collection"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/quranic-recitations-collection</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/quranic-recitations-collection"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/quranic-recitations-collection"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/quranic-recitations-collection"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/jabal-al-noor-scientific-complex-in-makkah</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/jabal-al-noor-scientific-complex-in-makkah"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/jabal-al-noor-scientific-complex-in-makkah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/jabal-al-noor-scientific-complex-in-makkah"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/jabal-al-noor-scientific-complex-in-makkah</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/jabal-al-noor-scientific-complex-in-makkah"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/jabal-al-noor-scientific-complex-in-makkah"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/jabal-al-noor-scientific-complex-in-makkah"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/qaf-group-for-research-translation-publication-and-it-solutions</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/qaf-group-for-research-translation-publication-and-it-solutions"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/qaf-group-for-research-translation-publication-and-it-solutions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/qaf-group-for-research-translation-publication-and-it-solutions"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/qaf-group-for-research-translation-publication-and-it-solutions</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/qaf-group-for-research-translation-publication-and-it-solutions"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/qaf-group-for-research-translation-publication-and-it-solutions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/qaf-group-for-research-translation-publication-and-it-solutions"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/wiqaya</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/wiqaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/wiqaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/wiqaya"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/wiqaya</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/wiqaya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/wiqaya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/wiqaya"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/-</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/-"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/-"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/-"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/-</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/-"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/-"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/-"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/developer/ealamy-group</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/ealamy-group"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/ealamy-group"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/ealamy-group"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/developer/ealamy-group</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/developer/ealamy-group"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/developer/ealamy-group"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/developer/ealamy-group"/>
   </url>
 
   <!-- Static Pages - Priority 0.6 -->
   <url>
     <loc>https://hajapps.org/ar/about-us</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/about-us"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/about-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/about-us"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/about-us</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/about-us"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/about-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/about-us"/>
   </url>
   <url>
     <loc>https://hajapps.org/ar/contact-us</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/contact-us"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/contact-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/contact-us"/>
   </url>
   <url>
     <loc>https://hajapps.org/en/contact-us</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/contact-us"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/contact-us"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/contact-us"/>
   </url>
   <url>
-    <loc>https://hajapps.org/ar/request</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/ar/submit-app</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/submit-app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/submit-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/submit-app"/>
   </url>
   <url>
-    <loc>https://hajapps.org/en/request</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://hajapps.org/en/submit-app</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/submit-app"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/submit-app"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/submit-app"/>
+  </url>
+  <url>
+    <loc>https://hajapps.org/ar/track-submission</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/track-submission"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/track-submission"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/track-submission"/>
+  </url>
+  <url>
+    <loc>https://hajapps.org/en/track-submission</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://hajapps.org/ar/track-submission"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hajapps.org/en/track-submission"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hajapps.org/ar/track-submission"/>
   </url>
 </urlset>

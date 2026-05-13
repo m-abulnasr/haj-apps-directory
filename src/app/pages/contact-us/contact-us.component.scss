@@ -551,4 +551,77 @@ $spacing-xl: 48px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     }
   }
+
+  .social-icon-card {
+    background: $dark-card-bg;
+    border-color: $dark-card-border;
+    color: $dark-text-secondary;
+
+    &:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+// ============================================
+// SOCIAL SECTION
+// ============================================
+.social-section {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 $spacing-md $spacing-xl;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links-container {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: $color-card-bg;
+  border: 1px solid $color-card-border;
+  border-radius: 16px;
+  color: $color-text-secondary;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  padding: 0;
+
+  lucide-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: $color-ellipse2-medium;
+    color: $color-ellipse2-medium;
+
+    lucide-icon {
+      transform: scale(1.1);
+    }
+  }
+
+  &.twitter:hover {
+    color: #1da1f2;
+    border-color: #1da1f2;
+  }
+
+  &.linkedin:hover {
+    color: #0077b5;
+    border-color: #0077b5;
+  }
 }

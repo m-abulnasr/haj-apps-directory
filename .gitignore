@@ -4,6 +4,7 @@ backend/.env.local
 backend/.env
 AGENTS.md
 backend/venv/
+backend/.venv-local/
 backend/config/logs/staging.log
 .claude-flow/
 docs/review/
@@ -11,3 +12,15 @@ docs/review/
 dist/
 .env
 backend/staticfiles
+
+# Python cache artifacts (backend)
+**/__pycache__/
+backend/**/__pycache__/
+backend/apps/api/__pycache__/
+*.py[cod]
+*$py.class
+
+# Common Python tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

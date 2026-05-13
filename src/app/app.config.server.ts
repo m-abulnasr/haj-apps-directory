@@ -5,6 +5,7 @@ import { appConfig } from './app.config';
 import { translateServerLoaderFactory } from './services/translate-server-loader';
 import { serverRoutes } from './app.routes.server';
 
+
 // Server-side translation initializer that doesn't rely on browser APIs
 export function serverInitializeTranslations(translate: TranslateService): () => Promise<void> {
   return async () => {

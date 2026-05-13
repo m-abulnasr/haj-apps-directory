@@ -1,0 +1,35 @@
+# ===== Dockerfile.frontend =====
+# Multi-stage: install deps once, serve in dev with polling for bind mounts
+
+FROM node:20-alpine AS deps
+
+WORKDIR /app
+
+# Copy manifests first for layer caching
+COPY package*.json ./
+RUN npm install --legacy-peer-deps
+
+# ===== Development Stage =====
+FROM node:20-alpine AS development
+
+WORKDIR /app
+
+# Copy installed node_modules from deps stage
+COPY --from=deps /app/node_modules ./node_modules
+
+# Copy source code (node_modules excluded by .dockerignore via anonymous volume)
+COPY . .
+
+EXPOSE 4200
+
+# Use npx ng directly so we control all flags:
+# --host 0.0.0.0        → listen on all interfaces inside the container
+# --disable-host-check  → allow requests from Docker network hostnames
+# --proxy-config        → forward /api calls to backend service
+# --poll 1000           → detect file changes on bind-mounted volumes (Windows/WSL)
+CMD ["./node_modules/.bin/ng", "serve", "demo", \
+     "--host", "0.0.0.0", \
+     "--port", "4200", \
+     "--allowed-hosts", \
+     "--proxy-config", "proxy.docker.conf.json", \
+     "--poll", "1000"]
