@@ -50,7 +50,13 @@ export class LanguageService {
         if (lang !== this.langSubject.getValue()) {
           // Wait for translations to load before updating DOM
           this.translate.use(lang).subscribe({
-            next: () => this.applyLanguage(lang),
+            next: () => {
+              this.applyLanguage(lang);
+              // Force a full page reload when language changes via URL navigation
+              if (isPlatformBrowser(this.platformId)) {
+                window.location.reload();
+              }
+            },
             error: () => this.applyLanguage(lang)
           });
         }
@@ -81,7 +87,14 @@ export class LanguageService {
     const pathSegments = urlPath.split('/').filter(segment => segment);
     const remainingPath = pathSegments.slice(1).join('/');
     const targetUrl = `/${lang}/${remainingPath}`;
-    this.router.navigateByUrl(targetUrl);
+    
+    // Instead of router navigation, we do a full page reload to target URL
+    // This ensures all services and components are re-initialized with the new language
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = targetUrl;
+    } else {
+      this.router.navigateByUrl(targetUrl);
+    }
   }
 
   /** Single place that applies language to DOM and notifies subscribers */
