@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -19,6 +20,7 @@ import { NzEmptyModule } from 'ng-zorro-antd/empty';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 
 import { SubmissionService, SubmissionStatus, SubmissionListItem } from '../../services/submission.service';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-track-submission',
@@ -56,22 +58,27 @@ export class TrackSubmissionComponent implements OnInit, OnDestroy {
   error = '';
   submission: SubmissionStatus | null = null;
   submissions: SubmissionListItem[] = [];
-
+  
   currentLang: 'en' | 'ar' = 'en';
 
   constructor(
     private route: ActivatedRoute,
     private submissionService: SubmissionService,
     private translate: TranslateService,
+    private titleService: Title,
+    private metaService: Meta,
+    private seoService: SeoService
   ) {}
 
   ngOnInit(): void {
     this.currentLang = (this.translate.currentLang as 'en' | 'ar') || 'en';
+    this.updateSeoData();
 
     this.translate.onLangChange
       .pipe(takeUntil(this.destroy$))
       .subscribe(event => {
         this.currentLang = event.lang as 'en' | 'ar';
+        this.updateSeoData();
       });
 
     // Check for tracking ID in query params
@@ -88,6 +95,29 @@ export class TrackSubmissionComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  private updateSeoData() {
+    const title = this.currentLang === 'ar' 
+      ? 'تتبع طلبك | قاصد' 
+      : 'Track Submission | Qasid';
+      
+    const description = this.currentLang === 'ar'
+      ? 'تتبع حالة طلب إضافة تطبيقك إلى دليل قاصد لتطبيقات الحج والعمرة'
+      : 'Track the status of your app submission to the Qasid directory';
+
+    this.titleService.setTitle(title);
+    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.updateTag({ property: 'og:title', content: title });
+    this.metaService.updateTag({ property: 'og:description', content: description });
+    
+    const breadcrumbs = [
+      { name: this.currentLang === "ar" ? "الرئيسية" : "Home", url: `https://hajapps.org/${this.currentLang}` },
+      { name: this.currentLang === "ar" ? "تتبع الطلب" : "Track Submission", url: `https://hajapps.org/${this.currentLang}/track-submission` }
+    ];
+    
+    const breadcrumbData = this.seoService.generateBreadcrumbStructuredData(breadcrumbs, this.currentLang);
+    this.seoService.addStructuredData([breadcrumbData]);
   }
 
   onTabChange(index: number): void {

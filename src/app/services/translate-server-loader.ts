@@ -18,7 +18,7 @@ const EN_TRANSLATIONS = {
     loading: "Loading...",
   },
   header: {
-    title: "Hajj Apps Directory",
+    title: "Qasid",
     beta: "Beta",
     home: "Home",
     about: "About",
@@ -49,7 +49,7 @@ const EN_TRANSLATIONS = {
     },
     categories: {
       all: "All",
-      "main-title": "Hajj Apps Directory",
+      "main-title": "Qasid",
       title: "Categories",
       mushaf: "Mushaf",
       translations: "Translation",
@@ -114,7 +114,7 @@ const EN_TRANSLATIONS = {
   contactUs: {
     title: "Contact Us",
     message:
-      "We are delighted to hear from you to answer your inquiries or receive your suggestions for improving the Hajj Apps Directory. You can reach us at info@bathel.sa.",
+      "We are delighted to hear from you to answer your inquiries or receive your suggestions for improving Qasid. You can reach us at info@bathel.sa.",
     email: "Contact Us via Email",
     appRequests: "Submit an App",
     "app-request": "Request App",
@@ -302,7 +302,7 @@ const AR_TRANSLATIONS = {
     loading: "جار التحميل...",
   },
   header: {
-    title: "دليل تطبيقات الحج",
+    title: "قاصد",
     beta: "تجريبي",
     home: "الرئيسة",
     about: "عن المشروع",
@@ -333,7 +333,7 @@ const AR_TRANSLATIONS = {
     },
     categories: {
       all: "الكل",
-      "main-title": "دليل تطبيقات الحج",
+      "main-title": "قاصد",
       title: "التصنيفات",
       mushaf: "مصحف",
       translations: "ترجمات",
@@ -394,21 +394,21 @@ const AR_TRANSLATIONS = {
   contactUs: {
     title: "تواصل معنا",
     message:
-      "نسعد بتواصلكم معنا للإجابة على استفساراتكم أو استقبال اقتراحاتكم لتحسين دليل تطبيقات الحج. يمكنكم التواصل معنا على info@bathel.sa",
+      "نسعد بتواصلكم معنا للإجابة على استفساراتكم أو استقبال اقتراحاتكم لتحسين قاصد. يمكنكم التواصل معنا على info@bathel.sa",
     email: "البريد الإلكتروني",
     appRequests: "أضف تطبيقك",
     "app-request": "طلب إضافة تطبيق",
     "app-request-form": "نموذج الطلب",
   },
   aboutUs: {
-    title: "عن دليل تطبيقات الحج",
+    title: "عن قاصد",
     subtitle: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد",
     intro:
-      "مرحباً بكم في دليل تطبيقات الحج - المنصة الرائدة لاكتشاف وتقييم أفضل تطبيقات الحج والعمرة.",
+      "مرحباً بكم في قاصد - المنصة الرائدة لاكتشاف وتقييم أفضل تطبيقات الحج والعمرة.",
     mission: "مهمتنا",
     vision: "رؤيتنا",
     missionDescription:
-      "دليل تطبيقات الحج مبادرة من باذل تهدف إلى خدمة حجاج بيت الله والمعتمرين.",
+      "قاصد مبادرة من باذل تهدف إلى خدمة حجاج بيت الله والمعتمرين.",
     visionDescription:
       "رؤيتنا أن نصبح المصدر الرقمي الأول والأكثر موثوقية لتطبيقات الحج والعمرة.",
     whatWeDo: "ماذا نقدم",
@@ -420,7 +420,7 @@ const AR_TRANSLATIONS = {
       search: "بحث متقدم وتصفية ذكية",
       community: "مجتمع فعال",
     },
-    why: "لماذا دليل تطبيقات الحج؟",
+    why: "لماذا قاصد؟",
     whyList: {
       largest: "أكبر مجموعة من تطبيقات الحج والعمرة",
       verified: "جميع التطبيقات مفحوصة",

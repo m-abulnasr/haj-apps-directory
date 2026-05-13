@@ -17,6 +17,7 @@ import { DeferredAnalyticsService } from "./services/deferred-analytics.service"
 import { Http2OptimizationService } from "./services/http2-optimization.service";
 import { AppImagePreloaderService } from "./services/app-image-preloader.service";
 import { NavbarScrollService, NavbarSearchState } from "./services/navbar-scroll.service";
+import { LinkService } from "./services/link.service";
 import { Category } from "./services/api.service";
 import { filter, Subject, takeUntil } from "rxjs";
 import { LucideAngularModule, Menu, X, Globe, Home, Info, Mail, Users, PlusCircle, ExternalLink, ChevronRight, Search } from 'lucide-angular';
@@ -77,7 +78,8 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     private deferredAnalytics: DeferredAnalyticsService,
     private http2Optimization: Http2OptimizationService,
     private appImagePreloader: AppImagePreloaderService,
-    private navbarScrollService: NavbarScrollService
+    private navbarScrollService: NavbarScrollService,
+    private linkService: LinkService
   ) {
     // Icons are globally registered in main.ts
     // Translations are initialized via APP_INITIALIZER in main.ts (ensures they load before render)
@@ -293,12 +295,20 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     }
     
     // Add canonical URL
-    this.metaService.updateTag({ rel: "canonical", href: currentUrl });
+    this.linkService.setCanonical(currentUrl);
     
     // Add alternate language tags (hreflang)
-    const baseUrl = currentUrl.replace(/\/(ar|en)/, '');
-    this.metaService.updateTag({ rel: "alternate", hreflang: "ar", href: `${baseUrl}/ar` });
-    this.metaService.updateTag({ rel: "alternate", hreflang: "en", href: `${baseUrl}/en` });
-    this.metaService.updateTag({ rel: "alternate", hreflang: "x-default", href: `${baseUrl}/en` });
+    // Extract base URL without language prefix (e.g. https://hajapps.org/app/1)
+    const urlTree = this.router.parseUrl(this.router.url);
+    // The segments are ['ar', 'app', '1']. We want to drop the first one.
+    const segments = urlTree.root.children['primary']?.segments.slice(1).map(s => s.path) || [];
+    const basePath = segments.length > 0 ? '/' + segments.join('/') : '';
+    const baseUrl = `https://hajapps.org`;
+    
+    this.linkService.setHreflang([
+      { hreflang: 'ar', href: `${baseUrl}/ar${basePath}` },
+      { hreflang: 'en', href: `${baseUrl}/en${basePath}` },
+      { hreflang: 'x-default', href: `${baseUrl}/ar${basePath}` }
+    ]);
   }
 }

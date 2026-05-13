@@ -36,7 +36,7 @@
     "switchToLight": "Switch to light mode"
   },
   "footer": {
-    "copyright": "A Bathel Initiative for Hajj Technologies, 1447 H",
+    "copyright": "A Bathel Initiative for Hajj Technologies",
     "useful_links": "Quick Links",
     "about_us": "About Us",
     "contact_us": "Contact Us",
@@ -300,7 +300,7 @@
     }
   },
   "ramadan": {
-    "title": "Ramadan 1447",
+    "title": "Ramadan",
     "tagline": "With the Quran.. A Closer Companion",
     "description": "In Ramadan we seek companionship, and the Quran creates for us a bond of believers' hearts. In this guide we curated diverse Quran apps suited for Ramadan to create a beautiful new companionship in this blessed month.",
     "cta": "Browse Apps",
@@ -339,7 +339,7 @@
       "description": "The Living Quran Project - we explore ways to serve the Quran and share its message, delivering apps, ideas, and projects to as many people as possible.",
       "cta": "Join ITQAN Community",
       "openSource": "An open source project by ITQAN Community",
-      "appsDirectory": "Quran Apps 1447 AH",
+      "appsDirectory": "Quran Apps",
       "mainSite": "ITQAN Community Main Site",
       "cms": "Quran Content Management System",
       "devResources": "Developer Resources",

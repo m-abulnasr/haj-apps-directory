@@ -10,9 +10,9 @@ export const serverRoutes: ServerRoute[] = [
     path: 'ar',
     renderMode: RenderMode.Prerender
   },
-  // All other routes render on client (SPA)
+  // All other routes render as prerender (using routes.txt)
   {
     path: '**',
-    renderMode: RenderMode.Client
+    renderMode: RenderMode.Prerender
   }
 ];

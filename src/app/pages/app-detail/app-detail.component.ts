@@ -590,14 +590,14 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
   private handleNotFoundSEO() {
     this.metaService.updateTag({ name: 'robots', content: 'noindex, nofollow' });
     this.titleService.setTitle(
-      this.currentLang === 'ar' ? 'التطبيق غير موجود - دليل تطبيقات الحج' : 'App Not Found - Hajj Apps Directory'
+      this.currentLang === 'ar' ? 'التطبيق غير موجود - قاصد' : 'App Not Found - Qasid'
     );
   }
 
   private handleGenericErrorSEO() {
     this.metaService.updateTag({ name: 'robots', content: 'noindex, nofollow' });
     this.titleService.setTitle(
-      this.currentLang === 'ar' ? 'خطأ في التحميل - دليل تطبيقات الحج' : 'Error Loading App - Hajj Apps Directory'
+      this.currentLang === 'ar' ? 'خطأ في التحميل - قاصد' : 'Error Loading App - Qasid'
     );
   }
 
@@ -630,8 +630,8 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     // Update page title and meta tags
     const title =
       this.currentLang === "ar"
-        ? `${appName} - من دليل تطبيقات الحج`
-        : `${appName} - Hajj Apps Directory`;
+        ? `${appName} - من قاصد`
+        : `${appName} - Qasid`;
 
     this.titleService.setTitle(title);
     this.metaService.updateTag({ name: "title", content: title });

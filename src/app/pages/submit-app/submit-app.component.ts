@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, ActivatedRoute } from '@angular/router';
@@ -24,6 +25,7 @@ import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
 
 import { SubmissionService, SubmissionRequest, Category } from '../../services/submission.service';
+import { SeoService } from '../../services/seo.service';
 
 interface FormData {
   // Contact
@@ -157,6 +159,9 @@ export class SubmitAppComponent implements OnInit, OnDestroy {
     private modal: NzModalService,
     private router: Router,
     private route: ActivatedRoute,
+    private titleService: Title,
+    private metaService: Meta,
+    private seoService: SeoService
   ) {}
 
   ngOnInit(): void {
@@ -166,6 +171,8 @@ export class SubmitAppComponent implements OnInit, OnDestroy {
     // Get language from route parameter to avoid race condition
     const routeLang = this.route.snapshot.paramMap.get('lang');
     this.currentLang = (routeLang as 'en' | 'ar') || (this.translate.currentLang as 'en' | 'ar') || 'en';
+    
+    this.updateSeoData();
 
     // Ensure TranslateService uses the correct language and wait for translations to load
     const langToUse = routeLang || this.currentLang;
@@ -184,7 +191,31 @@ export class SubmitAppComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe(event => {
         this.currentLang = event.lang as 'en' | 'ar';
+        this.updateSeoData();
       });
+  }
+
+  private updateSeoData() {
+    const title = this.currentLang === 'ar' 
+      ? 'أضف تطبيقك | قاصد' 
+      : 'Submit Your App | Qasid';
+      
+    const description = this.currentLang === 'ar'
+      ? 'أضف تطبيقك الإسلامي أو تطبيق الحج والعمرة إلى دليل قاصد ليصل إلى آلاف الحجاج والمعتمرين'
+      : 'Submit your Islamic or Hajj and Umrah app to the Qasid directory to reach thousands of pilgrims';
+
+    this.titleService.setTitle(title);
+    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.updateTag({ property: 'og:title', content: title });
+    this.metaService.updateTag({ property: 'og:description', content: description });
+    
+    const breadcrumbs = [
+      { name: this.currentLang === "ar" ? "الرئيسية" : "Home", url: `https://hajapps.org/${this.currentLang}` },
+      { name: this.currentLang === "ar" ? "أضف تطبيقك" : "Submit App", url: `https://hajapps.org/${this.currentLang}/submit-app` }
+    ];
+    
+    const breadcrumbData = this.seoService.generateBreadcrumbStructuredData(breadcrumbs, this.currentLang);
+    this.seoService.addStructuredData([breadcrumbData]);
   }
 
   ngOnDestroy(): void {

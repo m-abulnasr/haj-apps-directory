@@ -86,5 +86,5 @@ export const routes: Routes = [
       ? import('./pages/ramadan/ramadan.component').then(m => m.RamadanComponent)
       : import('./pages/app-list/app-list.component').then(m => m.AppListComponent)
   },
-  { path: '**', redirectTo: '/ar', pathMatch: 'full'}
+  { path: '**', loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent) }
 ];

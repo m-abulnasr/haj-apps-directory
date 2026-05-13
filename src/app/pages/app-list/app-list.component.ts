@@ -616,39 +616,9 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private updateSeoData() {
-    const categoryMap = {
-      ar: {
-        mushaf: "تطبيقات المصحف",
-        tafsir: "تطبيقات التفسير",
-        translations: "تطبيقات الترجمة",
-        audio: "التلاوات الصوتية",
-        recite: "تطبيقات التسميع",
-        kids: "تطبيقات الأطفال",
-        riwayat: "الروايات القرآنية",
-        tajweed: "تطبيقات التجويد",
-        all: "جميع تطبيقات القرآن الكريم",
-      },
-      en: {
-        mushaf: "Mushaf Apps",
-        tafsir: "Tafsir Apps",
-        translations: "Translation Apps",
-        audio: "Audio Recitations",
-        recite: "Recitation Apps",
-        kids: "Kids Apps",
-        riwayat: "Quran Narrations",
-        tajweed: "Tajweed Apps",
-        all: "All Quran Applications",
-      },
-    };
-
-    const categoryName =
-      categoryMap[this.currentLang][
-        this
-          .selectedCategory as keyof (typeof categoryMap)[typeof this.currentLang]
-      ] ||
-      (this.currentLang === "ar"
-        ? "تطبيقات القرآن الكريم"
-        : "Quran Applications");
+    const categoryName = this.selectedCategory === "all"
+      ? (this.currentLang === "ar" ? "جميع التطبيقات" : "All Apps")
+      : this.getCategoryName(this.selectedCategory);
 
     // Update page title and meta tags
     if (this.selectedCategory === "all") {
@@ -667,13 +637,13 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
       }
     } else {
       if (this.currentLang === "ar") {
-        this.titleService.setTitle(`${categoryName} - قاصد دليل تطبيقات الحج`);
+        this.titleService.setTitle(`${categoryName} - قاصد`);
         this.metaService.updateTag({
           name: "description",
           content: `أفضل ${categoryName} لحجاج بيت الله الكرام - تطبيقات مجانية ومدفوعة مختارة بعناية`,
         });
       } else {
-        this.titleService.setTitle(`${categoryName} - Qasid Hajj Apps Directory`);
+        this.titleService.setTitle(`${categoryName} - Qasid`);
         this.metaService.updateTag({
           name: "description",
           content: `Best ${categoryName} for Hajj and Umrah - Carefully curated free and premium Islamic mobile applications.`,
