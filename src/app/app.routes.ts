@@ -2,9 +2,6 @@ import { Routes } from '@angular/router';
 import { RAMADAN_MODE } from './guards/ramadan-redirect.guard';
 
 export const routes: Routes = [
-  // SEO and utility routes
-  { path: 'robots.txt', redirectTo: '/assets/robots.txt' },
-
   // Specific routes MUST come before generic category route
   // Use exact path matching to prevent `:lang/:category` from matching developer routes
   {
