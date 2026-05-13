@@ -27,9 +27,9 @@ EXPOSE 4200
 # --disable-host-check  → allow requests from Docker network hostnames
 # --proxy-config        → forward /api calls to backend service
 # --poll 1000           → detect file changes on bind-mounted volumes (Windows/WSL)
-CMD ["./node_modules/.bin/ng", "serve", \
+CMD ["./node_modules/.bin/ng", "serve", "demo", \
      "--host", "0.0.0.0", \
      "--port", "4200", \
-     "--allowed-hosts", "all", \
+     "--allowed-hosts", \
      "--proxy-config", "proxy.docker.conf.json", \
      "--poll", "1000"]
