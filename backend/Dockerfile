@@ -2,7 +2,7 @@
 # Build stages: base, development, production
 
 # ===== STAGE 1: Base =====
-FROM python:3.9-slim as base
+FROM python:3.12-slim as base
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \
@@ -30,6 +30,7 @@ FROM base as development
 
 # Install development dependencies
 RUN pip install --no-cache-dir -r requirements/local.txt
+RUN pip install --no-cache-dir "setuptools<81"
 
 # Copy project
 COPY . /app/
