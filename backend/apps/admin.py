@@ -36,6 +36,7 @@ class AppAdmin(admin.ModelAdmin):
         'icon_preview',
         'name_en',
         'name_ar',
+        'name_ur',
         'platform',
         'avg_rating',
         'review_count',
@@ -57,9 +58,11 @@ class AppAdmin(admin.ModelAdmin):
     search_fields = [
         'name_en',
         'name_ar',
+        'name_ur',
         'slug',
         'short_description_en',
         'short_description_ar',
+        'short_description_ur',
         'developer__name_en',
         'developer__name_ar',
     ]
@@ -77,6 +80,7 @@ class AppAdmin(admin.ModelAdmin):
                 'id',
                 'name_en',
                 'name_ar',
+                'name_ur',
                 'slug',
                 'status',
             ]
@@ -85,16 +89,19 @@ class AppAdmin(admin.ModelAdmin):
             'fields': [
                 'short_description_en',
                 'short_description_ar',
+                'short_description_ur',
                 'description_en',
                 'description_ar',
+                'description_ur',
             ]
         }),
         ('Media', {
-            'fields': [
-                'application_icon',
-                'main_image_en',
-                'main_image_ar',
-            ],
+             'fields': [
+                 'application_icon',
+                 'main_image_en',
+                 'main_image_ar',
+                 'main_image_ur',
+             ],
             'description': 'Screenshots are managed via the inline section below.'
         }),
         ('Legacy Screenshots (JSON)', {
@@ -144,7 +151,7 @@ class AppAdmin(admin.ModelAdmin):
         """Use custom widget for image fields to show inline preview."""
         if db_field.name == 'application_icon':
             kwargs['widget'] = AdminImageWithPreview(preview_height=50)
-        elif db_field.name in ('main_image_en', 'main_image_ar'):
+        elif db_field.name in ('main_image_en', 'main_image_ar', 'main_image_ur'):
             kwargs['widget'] = AdminImageWithPreview(preview_height=80)
         return super().formfield_for_dbfield(db_field, request, **kwargs)
 
