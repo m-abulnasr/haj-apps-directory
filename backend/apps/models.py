@@ -60,6 +60,22 @@ def main_image_ar_upload_path(instance, filename):
     return f"app-images/{slug}/main_ar.webp"
 
 
+def main_image_ur_upload_path(instance, filename):
+    """
+    Generate upload path for Urdu main images.
+
+    Args:
+        instance: App model instance
+        filename: Original filename
+
+    Returns:
+        Path like 'app-images/app-slug/main_ur.webp'
+    """
+    # Always use .webp since we convert images
+    slug = instance.slug or 'unknown'
+    return f"app-images/{slug}/main_ur.webp"
+
+
 def screenshot_upload_path(instance, filename):
     """
     Generate upload path for app screenshots.
@@ -163,6 +179,18 @@ class App(PublishedModel):
         blank=False,
         null=False,
         help_text="Main cover image - Arabic (PNG, JPG, WebP, max 5MB, required)"
+    )
+    name_ur = models.CharField(max_length=200, db_index=True, null=True, blank=True)
+    short_description_ur = models.TextField(null=True, blank=True)
+    description_ur = models.TextField(null=True, blank=True)
+    main_image_ur = models.ImageField(
+        upload_to=main_image_ur_upload_path,
+        storage=R2Storage(),
+        validators=[validate_image_file],
+        max_length=500,  # Full URLs can be long
+        blank=True,
+        null=True,
+        help_text="Main cover image - Urdu (PNG, JPG, WebP, max 5MB)"
     )
     google_play_link = models.URLField(blank=True, null=True)
     app_store_link = models.URLField(blank=True, null=True)
@@ -309,7 +337,7 @@ class App(PublishedModel):
 
         # Process main images before saving (only for new uploads)
         update_fields = kwargs.get('update_fields')
-        if not update_fields or 'main_image_en' in update_fields or 'main_image_ar' in update_fields:
+        if not update_fields or 'main_image_en' in update_fields or 'main_image_ar' in update_fields or 'main_image_ur' in update_fields:
             self._process_main_images()
 
         # Track if this is a new instance
@@ -339,7 +367,7 @@ class App(PublishedModel):
         """Process main images (resize, compress, convert to WebP)."""
         from core.utils.image_processing import process_main_image
 
-        for field_name in ('main_image_en', 'main_image_ar'):
+        for field_name in ('main_image_en', 'main_image_ar', 'main_image_ur'):
             field = getattr(self, field_name)
             # Skip external URLs - they aren't stored in R2
             if field and field.name and field.name.startswith(('http://', 'https://')):
@@ -568,7 +596,7 @@ class AppScreenshot(models.Model):
     )
     language = models.CharField(
         max_length=2,
-        choices=[('en', 'English'), ('ar', 'Arabic')],
+        choices=[('en', 'English'), ('ar', 'Arabic'), ('ur', 'Urdu')],
         default='en',
         db_index=True
     )
