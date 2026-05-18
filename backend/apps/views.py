@@ -27,7 +27,7 @@ class AppViewSet(viewsets.ReadOnlyModelViewSet):
         'featured': ['exact'],
         'developer__id': ['exact'],
     }
-    search_fields = ['name_en', 'name_ar', 'short_description_en', 'short_description_ar']
+    search_fields = ['name_en', 'name_ar', 'name_ur', 'short_description_en', 'short_description_ar', 'short_description_ur']
     ordering_fields = ['name_en', 'name_ar', 'avg_rating', 'review_count', 'view_count', 'sort_order', 'created_at']
     ordering = ['sort_order', 'name_en']
 
