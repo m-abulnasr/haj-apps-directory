@@ -106,7 +106,7 @@ class AppService:
         if screenshot_files_ur:
             screenshots_ur = [s.image.url for s in screenshot_files_ur]
         else:
-            screenshots_ur = app.screenshots_ur or []
+            screenshots_ur = getattr(app, 'screenshots_ur', []) or [] 
 
         # Get metadata values from AppMetadataValue table (dynamic)
         metadata_values = self._get_app_metadata_values(app)
