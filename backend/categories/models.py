@@ -10,8 +10,10 @@ class Category(BaseModel):
     """
     name_en = models.CharField(max_length=100, unique=True)
     name_ar = models.CharField(max_length=100, unique=True)
+    name_ur = models.CharField(max_length=100, blank=True, null=True, help_text="Category name in Urdu")
     description_en = models.TextField(blank=True)
     description_ar = models.TextField(blank=True)
+    description_ur = models.TextField(blank=True, null=True, help_text="Category description in Urdu")
     slug = models.SlugField(max_length=120, unique=True, db_index=True)
     icon = models.URLField(blank=True, null=True, help_text="Icon URL for the category")
     color = models.CharField(max_length=7, blank=True, help_text="Hex color code for the category")

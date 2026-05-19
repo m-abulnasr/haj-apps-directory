@@ -13,6 +13,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'icon_preview',
         'name_en',
         'name_ar',
+        'name_ur',
         'slug',
         'app_count',
         'sort_order',
@@ -26,9 +27,11 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = [
         'name_en',
         'name_ar',
+        'name_ur',
         'slug',
         'description_en',
         'description_ar',
+        'description_ur',
     ]
     prepopulated_fields = {'slug': ('name_en',)}
     readonly_fields = ['id', 'created_at', 'updated_at', 'icon_preview_large', 'color_preview']
@@ -39,6 +42,7 @@ class CategoryAdmin(admin.ModelAdmin):
                 'id',
                 'name_en',
                 'name_ar',
+                'name_ur',
                 'slug',
                 'is_active',
             ]
@@ -47,6 +51,7 @@ class CategoryAdmin(admin.ModelAdmin):
             'fields': [
                 'description_en',
                 'description_ar',
+                'description_ur',
             ]
         }),
         ('Visual', {

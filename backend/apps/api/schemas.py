@@ -14,9 +14,11 @@ class CategorySchema(BaseModel):
     id: int
     name_en: str = Field(..., alias="name_en")
     name_ar: str = Field(..., alias="name_ar")
+    name_ur: Optional[str] = Field(None, alias="name_ur")
     slug: str
     description_en: Optional[str] = Field(None, alias="description_en")
     description_ar: Optional[str] = Field(None, alias="description_ar")
+    description_ur: Optional[str] = Field(None, alias="description_ur")
     icon: Optional[str] = None
 
     class Config:
@@ -40,14 +42,18 @@ class AppSchema(BaseModel):
     id: str
     name_en: str = Field(..., alias="name_en")
     name_ar: str = Field(..., alias="name_ar")
+    name_ur: Optional[str] = Field(None, alias="name_ur")
     slug: str
     short_description_en: str = Field(..., alias="short_description_en")
     short_description_ar: str = Field(..., alias="short_description_ar")
+    short_description_ur: Optional[str] = Field(None, alias="short_description_ur")
     description_en: str = Field(..., alias="description_en")
     description_ar: str = Field(..., alias="description_ar")
+    description_ur: Optional[str] = Field(None, alias="description_ur")
     application_icon: str
     main_image_en: str = Field(..., alias="main_image_en")
     main_image_ar: str = Field(..., alias="main_image_ar")
+    main_image_ur: Optional[str] = Field(None, alias="main_image_ur")
     google_play_link: Optional[str] = None
     app_store_link: Optional[str] = None
     app_gallery_link: Optional[str] = None
@@ -78,9 +84,11 @@ class AppListSchema(BaseModel):
     id: str
     name_en: str = Field(..., alias="name_en")
     name_ar: str = Field(..., alias="name_ar")
+    name_ur: Optional[str] = Field(None, alias="name_ur")
     slug: str
     short_description_en: str = Field(..., alias="short_description_en")
     short_description_ar: str = Field(..., alias="short_description_ar")
+    short_description_ur: Optional[str] = Field(None, alias="short_description_ur")
     application_icon: str
     main_image_en: str = Field(..., alias="main_image_en")
     main_image_ar: str = Field(..., alias="main_image_ar")
@@ -108,13 +116,17 @@ class AppCreateSchema(BaseModel):
     """Schema for creating new apps."""
     name_en: str = Field(..., alias="name_en")
     name_ar: str = Field(..., alias="name_ar")
+    name_ur: Optional[str] = Field(None, alias="name_ur")
     short_description_en: str = Field(..., alias="short_description_en")
     short_description_ar: str = Field(..., alias="short_description_ar")
+    short_description_ur: Optional[str] = Field(None, alias="short_description_ur")
     description_en: str = Field(..., alias="description_en")
     description_ar: str = Field(..., alias="description_ar")
+    description_ur: Optional[str] = Field(None, alias="description_ur")
     application_icon: str = Field(..., description="App icon (required)")
     main_image_en: str = Field(..., alias="main_image_en", description="Main cover image - English (required)")
     main_image_ar: str = Field(..., alias="main_image_ar", description="Main cover image - Arabic (required)")
+    main_image_ur: Optional[str] = Field(None, alias="main_image_ur", description="Main cover image - Urdu")
     google_play_link: Optional[str] = None
     app_store_link: Optional[str] = None
     app_gallery_link: Optional[str] = None
@@ -138,13 +150,17 @@ class AppUpdateSchema(BaseModel):
     """Schema for updating existing apps."""
     name_en: Optional[str] = Field(None, alias="name_en")
     name_ar: Optional[str] = Field(None, alias="name_ar")
+    name_ur: Optional[str] = Field(None, alias="name_ur")
     short_description_en: Optional[str] = Field(None, alias="short_description_en")
     short_description_ar: Optional[str] = Field(None, alias="short_description_ar")
+    short_description_ur: Optional[str] = Field(None, alias="short_description_ur")
     description_en: Optional[str] = Field(None, alias="description_en")
     description_ar: Optional[str] = Field(None, alias="description_ar")
+    description_ur: Optional[str] = Field(None, alias="description_ur")
     application_icon: Optional[str] = None
     main_image_en: Optional[str] = Field(None, alias="main_image_en")
     main_image_ar: Optional[str] = Field(None, alias="main_image_ar")
+    main_image_ur: Optional[str] = Field(None, alias="main_image_ur")
     google_play_link: Optional[str] = None
     app_store_link: Optional[str] = None
     app_gallery_link: Optional[str] = None
@@ -227,9 +243,11 @@ class HybridAppListSchema(BaseModel):
     id: str
     name_en: str = Field(..., alias="name_en")
     name_ar: str = Field(..., alias="name_ar")
+    name_ur: Optional[str] = Field(None, alias="name_ur")
     slug: str
     short_description_en: str = Field(..., alias="short_description_en")
     short_description_ar: str = Field(..., alias="short_description_ar")
+    short_description_ur: Optional[str] = Field(None, alias="short_description_ur")
     application_icon: str
     main_image_en: str = Field(..., alias="main_image_en")
     main_image_ar: str = Field(..., alias="main_image_ar")

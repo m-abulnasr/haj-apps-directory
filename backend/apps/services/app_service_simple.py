@@ -86,10 +86,12 @@ class AppService:
         # Main images - use .url accessor (returns full URL from R2Storage)
         main_image_en = app.main_image_en.url if app.main_image_en else ""
         main_image_ar = app.main_image_ar.url if app.main_image_ar else ""
+        main_image_ur = app.main_image_ur.url if app.main_image_ur else ""
 
         # Screenshots - prefer AppScreenshot model, fallback to legacy JSON during transition
         screenshot_files_en = list(app.screenshot_files.filter(language='en').order_by('sort_order'))
         screenshot_files_ar = list(app.screenshot_files.filter(language='ar').order_by('sort_order'))
+        screenshot_files_ur = list(app.screenshot_files.filter(language='ur').order_by('sort_order'))
 
         if screenshot_files_en:
             screenshots_en = [s.image.url for s in screenshot_files_en]
@@ -101,6 +103,11 @@ class AppService:
         else:
             screenshots_ar = app.screenshots_ar or []
 
+        if screenshot_files_ur:
+            screenshots_ur = [s.image.url for s in screenshot_files_ur]
+        else:
+            screenshots_ur = getattr(app, 'screenshots_ur', []) or [] 
+
         # Get metadata values from AppMetadataValue table (dynamic)
         metadata_values = self._get_app_metadata_values(app)
 
@@ -108,19 +115,24 @@ class AppService:
             "id": str(app.id),
             "name_en": app.name_en,
             "name_ar": app.name_ar,
+            "name_ur": app.name_ur or "",
             "slug": app.slug,
             "short_description_en": app.short_description_en,
             "short_description_ar": app.short_description_ar,
+            "short_description_ur": app.short_description_ur or "",
             "description_en": app.description_en or "",
             "description_ar": app.description_ar or "",
+            "description_ur": app.description_ur or "",
             "application_icon": app.application_icon.url if app.application_icon else "",
             "main_image_en": main_image_en,
             "main_image_ar": main_image_ar,
+            "main_image_ur": main_image_ur,
             "google_play_link": app.google_play_link or "",
             "app_store_link": app.app_store_link or "",
             "app_gallery_link": app.app_gallery_link or "",
             "screenshots_en": screenshots_en,
             "screenshots_ar": screenshots_ar,
+            "screenshots_ur": screenshots_ur,
             "avg_rating": float(app.avg_rating) if app.avg_rating else 0,
             "review_count": app.review_count or 0,
             "view_count": app.view_count or 0,
@@ -202,8 +214,10 @@ class AppService:
                 queryset = queryset.filter(
                     Q(name_en__icontains=search_term) |
                     Q(name_ar__icontains=search_term) |
+                    Q(name_ur__icontains=search_term) |
                     Q(short_description_en__icontains=search_term) |
-                    Q(short_description_ar__icontains=search_term)
+                    Q(short_description_ar__icontains=search_term) |
+                    Q(short_description_ur__icontains=search_term)
                 )
 
             # Category filter (supports multi-select with comma-separated values)

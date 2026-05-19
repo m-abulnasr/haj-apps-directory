@@ -273,11 +273,14 @@ def get_app_og_image(request, app_id: str):
     app_data = {
         "name_en": app_obj.name_en,
         "name_ar": app_obj.name_ar,
+        "name_ur": app_obj.name_ur or "",
         "short_description_en": app_obj.short_description_en,
         "short_description_ar": app_obj.short_description_ar,
+        "short_description_ur": app_obj.short_description_ur or "",
         "application_icon": app_obj.application_icon.url if app_obj.application_icon else "",
         "main_image_en": app_obj.main_image_en.url if app_obj.main_image_en else "",
         "main_image_ar": app_obj.main_image_ar.url if app_obj.main_image_ar else "",
+        "main_image_ur": app_obj.main_image_ur.url if app_obj.main_image_ur else "",
         "slug": app_obj.slug,
         "updated_at": str(app_obj.updated_at),
     }
@@ -386,9 +389,11 @@ def get_categories(request):
             "id": cat.id,
             "name_en": cat.name_en,
             "name_ar": cat.name_ar,
+            "name_ur": cat.name_ur or "",
             "slug": cat.slug,
             "description_en": cat.description_en or "",
             "description_ar": cat.description_ar or "",
+            "description_ur": cat.description_ur or "",
             "icon": icon
         })
 
