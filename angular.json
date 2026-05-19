@@ -87,9 +87,7 @@
                   "maximumError": "60kb"
                 }
               ],
-              "prerender": {
-                "routesFile": "routes.txt"
-              }
+              "prerender": false
             }
           },
           "options": {

@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -n \"^\\\\s*f$\" src/app/app.component.html)"
+      "Bash(grep -n \"^\\\\s*f$\" src/app/app.component.html)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); proj=list\\(d['projects'].values\\(\\)\\)[0]; print\\(json.dumps\\(proj.get\\('architect',{}\\).get\\('build',{}\\).get\\('options',{}\\), indent=2\\)\\)\")",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); proj=list\\(d['projects'].values\\(\\)\\)[0]; print\\(json.dumps\\(proj.get\\('architect',{}\\).get\\('build',{}\\).get\\('configurations',{}\\).get\\('production',{}\\), indent=2\\)\\)\")",
+      "Bash(node --input-type=module)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); proj=list\\(d['projects'].values\\(\\)\\)[0]; opts=proj.get\\('architect',{}\\).get\\('build',{}\\).get\\('options',{}\\); print\\('SSR:', opts.get\\('ssr'\\)\\); print\\('prerender:', opts.get\\('prerender'\\)\\); prod=proj.get\\('architect',{}\\).get\\('build',{}\\).get\\('configurations',{}\\).get\\('production',{}\\); print\\('prod prerender:', prod.get\\('prerender'\\)\\)\")"
     ]
   }
 }
