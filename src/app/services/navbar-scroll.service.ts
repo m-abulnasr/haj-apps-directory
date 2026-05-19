@@ -9,7 +9,7 @@ export interface NavbarSearchState {
   searchType: 'traditional' | 'smart';
   categories: Category[];
   selectedCategory: string;
-  currentLang: 'en' | 'ar';
+  currentLang: 'en' | 'ar' | 'ur';
   isSearching: boolean;
 }
 

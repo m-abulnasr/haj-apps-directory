@@ -87,7 +87,7 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
   scrollLeft = 0;
   sortAscending = true;
   private categoriesContainer: HTMLElement | null = null;
-  currentLang: "en" | "ar" = "en"; // Initialize with browser language
+  currentLang: "en" | "ar" | "ur" = "en";
   selectedCategory: string = "all";
   isDarkMode = false;
   private destroy$ = new Subject<void>();
@@ -120,9 +120,8 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
       const urlPath = window.location.pathname;
       const pathSegments = urlPath.split("/").filter((segment) => segment);
       const urlLang = pathSegments[0];
-      if (urlLang === "ar" || urlLang === "en") {
-        this.currentLang = urlLang;
-        // Ensure TranslateService uses the correct language
+      if (["ar", "en", "ur"].includes(urlLang)) {
+        this.currentLang = urlLang as "en" | "ar" | "ur";
         if (this.translateService.currentLang !== urlLang) {
           this.translateService.use(urlLang);
         }
@@ -133,14 +132,14 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
         this.translateService.currentLang ||
         this.translateService.getDefaultLang() ||
         "ar";
-      this.currentLang = lang as "en" | "ar";
+      this.currentLang = lang as "en" | "ar" | "ur";
     }
 
     // Subscribe to language changes
     this.translateService.onLangChange
       .pipe(takeUntil(this.destroy$))
       .subscribe((event) => {
-        this.currentLang = event.lang as "en" | "ar";
+        this.currentLang = event.lang as "en" | "ar" | "ur";
         this.cdr.detectChanges();
       });
 
@@ -198,9 +197,8 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
           const lang = params.get("lang");
           const category = params.get("category");
 
-          if (lang && (lang === "ar" || lang === "en")) {
-            this.currentLang = lang as "en" | "ar";
-            // Ensure TranslateService uses the correct language
+          if (lang && ["ar", "en", "ur"].includes(lang)) {
+            this.currentLang = lang as "en" | "ar" | "ur";
             if (this.translateService.currentLang !== lang) {
               this.translateService.use(lang);
             }
@@ -395,7 +393,7 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
           !appsResponse?.results || appsResponse.results.length === 0;
         if (hasNoCategories && hasNoApps && !this.error) {
           this.error =
-            this.currentLang === "ar"
+            (this.currentLang === "ar" || this.currentLang === "ur")
               ? "تعذر تحميل المحتوى. يرجى التحقق من اتصالك بالإنترنت وإعادة تحميل الصفحة."
               : "Unable to load content. Please check your connection and refresh the page.";
         }
@@ -617,12 +615,12 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private updateSeoData() {
     const categoryName = this.selectedCategory === "all"
-      ? (this.currentLang === "ar" ? "جميع التطبيقات" : "All Apps")
+      ? ((this.currentLang === "ar" || this.currentLang === "ur") ? "جميع التطبيقات" : "All Apps")
       : this.getCategoryName(this.selectedCategory);
 
     // Update page title and meta tags
     if (this.selectedCategory === "all") {
-      if (this.currentLang === "ar") {
+      if ((this.currentLang === "ar" || this.currentLang === "ur")) {
         this.titleService.setTitle("كل ما تحتاجه من تطبيقات الحج… في مكان واحد");
         this.metaService.updateTag({
           name: "description",
@@ -636,7 +634,7 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
         });
       }
     } else {
-      if (this.currentLang === "ar") {
+      if ((this.currentLang === "ar" || this.currentLang === "ur")) {
         this.titleService.setTitle(`${categoryName} - قاصد`);
         this.metaService.updateTag({
           name: "description",
@@ -694,7 +692,7 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
     // Add breadcrumb structured data
     const breadcrumbs = [
       {
-        name: this.currentLang === "ar" ? "الرئيسية" : "Home",
+        name: (this.currentLang === "ar" || this.currentLang === "ur") ? "الرئيسية" : "Home",
         url: `https://hajapps.org/${this.currentLang}`,
       },
     ];
@@ -750,10 +748,10 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
 
   getPlatformLabel(platform: string): string {
     const labels: Record<string, Record<string, string>> = {
-      android: { en: 'Android', ar: 'أندرويد' },
-      ios: { en: 'iOS', ar: 'آي أو إس' },
-      cross_platform: { en: 'All', ar: 'الجميع' },
-      web: { en: 'Web', ar: 'ويب' },
+      android: { en: 'Android', ar: 'أندرويد', ur: 'اینڈرائیڈ' },
+      ios: { en: 'iOS', ar: 'آي أو إس', ur: 'آئی او ایس' },
+      cross_platform: { en: 'All', ar: 'الجميع', ur: 'سب' },
+      web: { en: 'Web', ar: 'ويب', ur: 'ویب' },
     };
     return labels[platform]?.[this.currentLang] || labels['cross_platform'][this.currentLang];
   }
@@ -874,7 +872,11 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
    */
   getCategoryName(slug: string): string {
     const cat = this.categories.find((c) => c.slug === slug);
-    if (cat) return this.currentLang === 'ar' ? cat.name_ar : cat.name_en;
+    if (cat) {
+      if (this.currentLang === 'ur') return cat.name_ur || cat.name_ar;
+      if (this.currentLang === 'ar') return cat.name_ar;
+      return cat.name_en;
+    }
     return slug;
   }
 
@@ -934,10 +936,12 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
 
     if (!isPlatformBrowser(this.platformId)) return;
 
-    const appName = this.currentLang === "ar" ? app.Name_Ar : app.Name_En;
-    const appDescription = this.currentLang === "ar"
-      ? app.Short_Description_Ar
-      : app.Short_Description_En;
+    const appName = this.currentLang === "en" ? app.Name_En
+      : this.currentLang === "ur" ? (app.Name_Ur || app.Name_Ar)
+      : app.Name_Ar;
+    const appDescription = this.currentLang === "en" ? app.Short_Description_En
+      : this.currentLang === "ur" ? (app.Short_Description_Ur || app.Short_Description_Ar || app.Short_Description_En)
+      : app.Short_Description_Ar;
 
     const appUrlParam = this.getAppUrlParam(app);
     const shareUrl = `${window.location.origin}/${this.currentLang}/app/${appUrlParam}`;
@@ -954,7 +958,7 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
       } else {
         // Fallback: copy to clipboard
         await navigator.clipboard.writeText(shareUrl);
-        alert(this.currentLang === "ar"
+        alert((this.currentLang === "ar" || this.currentLang === "ur")
           ? "تم نسخ الرابط إلى الحافظة"
           : "Link copied to clipboard");
       }

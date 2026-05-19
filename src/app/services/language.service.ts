@@ -8,7 +8,7 @@ import { BehaviorSubject, Observable, filter } from 'rxjs';
   providedIn: 'root'
 })
 export class LanguageService {
-  private supportedLanguages = ['en', 'ar'];
+  private supportedLanguages = ['en', 'ar', 'ur'];
   private defaultLanguage = 'ar';
   private urlSubscriptionActive = false;
 
@@ -101,7 +101,7 @@ export class LanguageService {
   private applyLanguage(lang: string) {
     this.translate.setDefaultLang(lang);
     if (isPlatformBrowser(this.platformId)) {
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
       document.documentElement.lang = lang;
     }
     this.langSubject.next(lang);

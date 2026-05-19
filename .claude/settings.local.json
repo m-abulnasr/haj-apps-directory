@@ -12,7 +12,8 @@
       "WebFetch(domain:qad-backend-api-production.up.railway.app)",
       "Bash(git checkout:*)",
       "Bash(git cherry-pick:*)",
-      "Bash(git ls-tree:*)"
+      "Bash(git ls-tree:*)",
+      "Bash(npx tsc *)"
     ]
   }
 }

@@ -61,7 +61,7 @@
                   <div style="max-height: 220px; overflow: hidden;">
                     <img
                       [alt]="app.Name_En + ' screenshot'"
-                      [src]="currentLang === 'en' ? app.mainImage_en : app.mainImage_ar"
+                      [src]="currentLang === 'en' ? app.mainImage_en : currentLang === 'ur' ? (app.mainImage_ur || app.mainImage_ar) : app.mainImage_ar"
                       style="width: 100%;"
                       loading="lazy"
                       decoding="async"
@@ -74,8 +74,8 @@
                   </div>
                   <div class="card-data-container">
                     <nz-card-meta
-                      [nzTitle]="currentLang == 'en' ? app.Name_En : app.Name_Ar"
-                      [nzDescription]="currentLang == 'en' ? app.Short_Description_En : app.Short_Description_Ar"
+                      [nzTitle]="currentLang === 'en' ? app.Name_En : (currentLang === 'ur' ? (app.Name_Ur || app.Name_Ar) : app.Name_Ar)"
+                      [nzDescription]="currentLang === 'en' ? app.Short_Description_En : (currentLang === 'ur' ? (app.Short_Description_Ur || app.Short_Description_Ar) : app.Short_Description_Ar)"
                     ></nz-card-meta>
                     <!-- Rating display -->
                     <div class="app-rating">

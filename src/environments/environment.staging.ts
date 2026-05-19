@@ -2,29 +2,29 @@ export const environment = {
   production: false,
   staging: true,
   development: false,
-  appName: 'Hajj Apps Directory (Staging)',
-  appUrl: 'https://staging.hajapps.org',
-  apiUrl: 'https://api-staging.hajapps.org/api',
-  version: '1.0.0-staging',
+  appName: "Hajj Apps Directory (Staging)",
+  appUrl: "https://staging.hajapps.org",
+  apiUrl: "https://api.hajapps.org/api",
+  version: "1.0.0-staging",
   analytics: {
     enabled: false,
-    trackingId: ''
+    trackingId: "",
   },
   features: {
     debugMode: true,
     logging: true,
     showStagingBanner: true,
-    enableServiceWorker: false
+    enableServiceWorker: false,
   },
   sentry: {
     enabled: false,
     // dsn: 'https://10ae32f7f36add568917f16d53562358@o4510669335232512.ingest.de.sentry.io/4510669357842512',
-    dsn: '',
+    dsn: "",
     // tunnel: 'https://qad-backend-api-staging.up.railway.app/api/sentry-tunnel/',
-    tunnel: '',
-    environment: 'staging',
+    tunnel: "",
+    environment: "staging",
     tracesSampleRate: 0,
     replaysSessionSampleRate: 0,
-    replaysOnErrorSampleRate: 0
-  }
+    replaysOnErrorSampleRate: 0,
+  },
 };

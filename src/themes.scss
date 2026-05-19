@@ -606,3 +606,13 @@ html, body {
     }
   }
 }
+
+// Urdu language font override
+:lang(ur) {
+  font-family: 'Urdu Khush Khati', 'Noto Nastaliq Urdu', 'Expo Arabic', serif !important;
+
+  * {
+    font-family: 'Urdu Khush Khati', 'Noto Nastaliq Urdu', 'Expo Arabic', serif !important;
+  }
+}
+

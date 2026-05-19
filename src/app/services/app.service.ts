@@ -27,14 +27,18 @@ interface BackendApp {
   id: string;
   name_en: string;
   name_ar: string;
+  name_ur?: string;
   slug: string;
   short_description_en: string;
   short_description_ar: string;
+  short_description_ur?: string;
   description_en?: string;
   description_ar?: string;
+  description_ur?: string;
   application_icon: string | null;
   main_image_en?: string | null;
   main_image_ar?: string | null;
+  main_image_ur?: string | null;
   google_play_link?: string | null;
   app_store_link?: string | null;
   app_gallery_link?: string | null;
@@ -67,12 +71,16 @@ export interface QuranApp {
   slug: string;
   Name_Ar: string;
   Name_En: string;
+  Name_Ur?: string;
   Short_Description_Ar: string | null;
   Short_Description_En: string | null;
+  Short_Description_Ur?: string | null;
   Description_Ar: string | null;
   Description_En: string | null;
+  Description_Ur?: string | null;
   mainImage_ar: string | null;
   mainImage_en: string | null;
+  mainImage_ur?: string | null;
   applicationIcon: string | null;
   Developer_Logo: string | null;
   Developer_Name_En: string | null;
@@ -123,12 +131,16 @@ export class AppService {
       slug: backendApp.slug,
       Name_En: backendApp.name_en,
       Name_Ar: backendApp.name_ar,
+      Name_Ur: backendApp.name_ur || '',
       Short_Description_En: backendApp.short_description_en,
       Short_Description_Ar: backendApp.short_description_ar,
+      Short_Description_Ur: backendApp.short_description_ur || '',
       Description_En: backendApp.description_en || null,
       Description_Ar: backendApp.description_ar || null,
+      Description_Ur: backendApp.description_ur || null,
       mainImage_en: backendApp.main_image_en || null,
       mainImage_ar: backendApp.main_image_ar || null,
+      mainImage_ur: backendApp.main_image_ur || null,
       applicationIcon: backendApp.application_icon,
       Developer_Logo: backendApp.developer?.logo_url || null,
       Developer_Name_En: backendApp.developer?.name_en || backendApp.developer_name || null,

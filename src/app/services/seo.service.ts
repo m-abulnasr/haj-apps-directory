@@ -32,7 +32,7 @@ export class SeoService {
   /**
    * Generate structured data for the main website
    */
-  generateWebsiteStructuredData(lang: 'ar' | 'en'): any {
+  generateWebsiteStructuredData(lang: 'ar' | 'en' | 'ur'): any {
     const baseData = {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -73,7 +73,7 @@ export class SeoService {
   /**
    * Generate structured data for app listings page
    */
-  generateItemListStructuredData(apps: any[], category: string | null, lang: 'ar' | 'en'): any {
+  generateItemListStructuredData(apps: any[], category: string | null, lang: 'ar' | 'en' | 'ur'): any {
     const categoryNames = {
       'ar': {
         'official-apps': 'التطبيقات الرسمية',
@@ -141,7 +141,7 @@ export class SeoService {
   /**
    * Generate structured data for individual app page
    */
-  generateAppStructuredData(app: any, lang: 'ar' | 'en'): any {
+  generateAppStructuredData(app: any, lang: 'ar' | 'en' | 'ur'): any {
     return {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
@@ -184,7 +184,7 @@ export class SeoService {
   /**
    * Generate BreadcrumbList structured data
    */
-  generateBreadcrumbStructuredData(breadcrumbs: Array<{name: string, url: string}>, lang: 'ar' | 'en'): any {
+  generateBreadcrumbStructuredData(breadcrumbs: Array<{name: string, url: string}>, lang: 'ar' | 'en' | 'ur'): any {
     return {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -200,7 +200,7 @@ export class SeoService {
   /**
    * Generate Organization structured data
    */
-  generateOrganizationStructuredData(lang: 'ar' | 'en'): any {
+  generateOrganizationStructuredData(lang: 'ar' | 'en' | 'ur'): any {
     return {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -245,7 +245,7 @@ export class SeoService {
   /**
    * Generate FAQ structured data
    */
-  generateFAQStructuredData(lang: 'ar' | 'en'): any {
+  generateFAQStructuredData(lang: 'ar' | 'en' | 'ur'): any {
     const faqs = lang === 'ar' ? [
       {
         question: "ما هو قاصد؟",
@@ -299,8 +299,8 @@ export class SeoService {
   /**
    * Generate CollectionPage structured data
    */
-  generateCollectionPageStructuredData(category: string, apps: any[], lang: 'ar' | 'en'): any {
-    const categoryMap = {
+  generateCollectionPageStructuredData(category: string, apps: any[], lang: 'ar' | 'en' | 'ur'): any {
+    const categoryMap: Record<'ar' | 'en' | 'ur', Record<string, string>> = {
       'ar': {
         'official-apps': 'التطبيقات الرسمية',
         'rituals-guidance': 'إرشاد المناسك',
@@ -324,16 +324,28 @@ export class SeoService {
         'trip-management': 'Trip Management',
         'communication-groups': 'Communication & Groups',
         'utility-tools': 'Utility Tools'
+      },
+      'ur': {
+        'official-apps': 'سرکاری ایپس',
+        'rituals-guidance': 'مناسک کی رہنمائی',
+        'transport-mobility': 'نقل و حمل',
+        'health-emergency': 'صحت اور ہنگامی',
+        'accommodation-services': 'رہائش کی خدمات',
+        'spiritual-enrichment': 'روحانی ترقی',
+        'maps-navigation': 'نقشے اور راستہ',
+        'trip-management': 'سفر کا انتظام',
+        'communication-groups': 'رابطہ اور گروہ',
+        'utility-tools': 'مددگار اوزار'
       }
     };
 
-    const categoryName = categoryMap[lang][category as keyof typeof categoryMap['ar']] || category;
+    const categoryName = categoryMap[lang][category] || category;
 
     return {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       "name": categoryName,
-      "description": lang === 'ar'
+      "description": (lang === 'ar' || lang === 'ur')
         ? `مجموعة مختارة من أفضل ${categoryName} لتطبيقات الحج`
         : `Curated collection of the best ${categoryName} for Hajj`,
       "url": `https://hajapps.org/${lang}/${category}`,
@@ -367,7 +379,7 @@ export class SeoService {
   /**
    * Generate enhanced SoftwareApplication with more details
    */
-  generateEnhancedAppStructuredData(app: any, lang: 'ar' | 'en'): any {
+  generateEnhancedAppStructuredData(app: any, lang: 'ar' | 'en' | 'ur'): any {
     const baseSchema = this.generateAppStructuredData(app, lang);
     
     return {
@@ -405,7 +417,7 @@ export class SeoService {
   /**
    * Generate Person/Organization schema for developers
    */
-  generateDeveloperStructuredData(developer: any, lang: 'ar' | 'en'): any {
+  generateDeveloperStructuredData(developer: any, lang: 'ar' | 'en' | 'ur'): any {
     return {
       "@context": "https://schema.org",
       "@type": "Organization",

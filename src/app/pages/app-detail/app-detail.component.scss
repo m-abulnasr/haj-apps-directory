@@ -839,6 +839,24 @@ html[dir="rtl"] .content-section {
   }
 }
 
+.categories-carousel {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+
+  // Hide scrollbar visually
+  &::-webkit-scrollbar { display: none; }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  .category-badge {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
+
 .dev-container {
   cursor: pointer;
   padding: 12px;

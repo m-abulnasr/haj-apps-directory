@@ -68,20 +68,22 @@
             app.applicationIcon ||
             'https://itqan.dev/images/home/hero-card-mushaf.svg'
           "
-          [alt]="currentLang === 'en' ? app.Name_En : app.Name_Ar"
+          [alt]="currentLang === 'en' ? app.Name_En : (currentLang === 'ur' ? (app.Name_Ur || app.Name_Ar) : app.Name_Ar)"
           class="app-hero-icon"
         />
 
         <!-- Details Column -->
         <div class="hero-details-col">
           <h1 class="app-hero-title">
-            {{ currentLang === "en" ? app.Name_En : app.Name_Ar }}
+            {{ currentLang === "en" ? app.Name_En : (currentLang === "ur" ? (app.Name_Ur || app.Name_Ar) : app.Name_Ar) }}
           </h1>
           <p class="app-hero-subtitle">
             {{
               currentLang === "en"
                 ? app.Short_Description_En
-                : app.Short_Description_Ar
+                : currentLang === "ur"
+                  ? (app.Short_Description_Ur || app.Short_Description_Ar)
+                  : app.Short_Description_Ar
             }}
           </p>
 
@@ -122,7 +124,7 @@
               <div class="stat-item">
                 <span class="stat-value">{{ getStoreCount(app) }}</span>
                 <span class="stat-label">{{
-                  currentLang === "ar" ? "متاجر" : "Stores"
+                  currentLang === "en" ? "Stores" : "متاجر"
                 }}</span>
               </div>
               <div class="stat-item">
@@ -644,7 +646,7 @@
             <h2>{{ "appDetail.screenshots" | translate }}</h2>
             <div
               class="carousel-nav-buttons"
-              [class.rtl]="currentLang === 'ar'"
+              [class.rtl]="currentLang === 'ar' || currentLang === 'ur'"
             >
               <button
                 class="nav-btn prev-btn"
@@ -683,7 +685,7 @@
             <swiper-container
               #swiperContainer
               init="false"
-              [dir]="currentLang == 'en' ? 'ltr' : 'rtl'"
+              [dir]="currentLang === 'en' ? 'ltr' : 'rtl'"
             >
               @for (
                 screenshot of currentLang === "en"
@@ -725,8 +727,32 @@
         <nz-divider></nz-divider>
 
         <div class="categories-section">
-          <h2>{{ "appList.categories.title" | translate }}</h2>
-          <div class="categories">
+          <div class="section-header">
+            <h2>{{ "appList.categories.title" | translate }}</h2>
+            @if (app.categories.length > 3) {
+              <div class="carousel-nav-buttons" [class.rtl]="currentLang === 'ar' || currentLang === 'ur'">
+                <button
+                  class="nav-btn"
+                  (click)="scrollCategoriesLeft()"
+                  [attr.aria-label]="(currentLang === 'ar' || currentLang === 'ur') ? 'التالي' : 'Previous'"
+                >
+                  <svg width="11" height="20" viewBox="0 0 11 20" fill="none">
+                    <path d="M9.5 1L1.5 10L9.5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button
+                  class="nav-btn"
+                  (click)="scrollCategoriesRight()"
+                  [attr.aria-label]="(currentLang === 'ar' || currentLang === 'ur') ? 'السابق' : 'Next'"
+                >
+                  <svg width="11" height="20" viewBox="0 0 11 20" fill="none">
+                    <path d="M1.5 1L9.5 10L1.5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            }
+          </div>
+          <div class="categories categories-carousel" #categoriesCarousel>
             @for (category of app.categories; track category) {
               <div
                 class="category-badge"
@@ -753,11 +779,11 @@
         <!-- Related apps section -->
         <div class="section-header">
           <h2>{{ "appDetail.relevantApps" | translate }}</h2>
-          <div class="carousel-nav-buttons" [class.rtl]="currentLang === 'ar'">
+          <div class="carousel-nav-buttons" [class.rtl]="currentLang === 'ar' || currentLang === 'ur'">
             <button
               class="nav-btn"
               (click)="scrollRelatedLeft()"
-              [attr.aria-label]="currentLang === 'ar' ? 'التالي' : 'Previous'"
+              [attr.aria-label]="(currentLang === 'ar' || currentLang === 'ur') ? 'التالي' : 'Previous'"
             >
               <svg width="11" height="20" viewBox="0 0 11 20" fill="none">
                 <path
@@ -769,7 +795,7 @@
             <button
               class="nav-btn"
               (click)="scrollRelatedRight()"
-              [attr.aria-label]="currentLang === 'ar' ? 'السابق' : 'Next'"
+              [attr.aria-label]="(currentLang === 'ar' || currentLang === 'ur') ? 'السابق' : 'Next'"
             >
               <svg width="11" height="20" viewBox="0 0 11 20" fill="none">
                 <path
@@ -793,7 +819,9 @@
                   [src]="
                     (currentLang === 'en'
                       ? relatedApp.mainImage_en
-                      : relatedApp.mainImage_ar) ||
+                      : currentLang === 'ur'
+                        ? (relatedApp.mainImage_ur || relatedApp.mainImage_ar)
+                        : relatedApp.mainImage_ar) ||
                     'https://itqan.dev/images/home/hero-card-mushaf.svg'
                   "
                   [alt]="relatedApp.Name_En + ' screenshot'"
@@ -830,14 +858,18 @@
                       {{
                         currentLang === "en"
                           ? relatedApp.Name_En
-                          : relatedApp.Name_Ar
+                          : currentLang === "ur"
+                            ? (relatedApp.Name_Ur || relatedApp.Name_Ar)
+                            : relatedApp.Name_Ar
                       }}
                     </h3>
                     <p class="related-app-description">
                       {{
                         currentLang === "en"
                           ? relatedApp.Short_Description_En
-                          : relatedApp.Short_Description_Ar
+                          : currentLang === "ur"
+                            ? (relatedApp.Short_Description_Ur || relatedApp.Short_Description_Ar)
+                            : relatedApp.Short_Description_Ar
                       }}
                     </p>
                   </div>
@@ -885,19 +917,19 @@
                       >
                     </div>
                     <span class="related-stat-label">{{
-                      currentLang === "ar" ? "التقييمات" : "Rating"
+                      currentLang === "en" ? "Rating" : "التقييمات"
                     }}</span>
                   </div>
                   <div class="related-stat-item">
                     <span class="related-stat-value">{{ getStoreCount(relatedApp) }}</span>
                     <span class="related-stat-label">{{
-                      currentLang === "ar" ? "متاجر" : "Stores"
+                      currentLang === "en" ? "Stores" : "متاجر"
                     }}</span>
                   </div>
                   <div class="related-stat-item">
                     <span class="related-stat-value">{{ getPlatformLabel(relatedApp.platform) }}</span>
                     <span class="related-stat-label">{{
-                      currentLang === "ar" ? "المنصة" : "Platform"
+                      currentLang === "en" ? "Platform" : "المنصة"
                     }}</span>
                   </div>
                 </div>
@@ -909,7 +941,7 @@
                     (click)="navigateToAppDownloads(relatedApp.id, $event)"
                   >
                     {{
-                      currentLang === "ar" ? "تنزيل التطبيق" : "Download App"
+                      currentLang === "en" ? "Download App" : "تنزيل التطبيق"
                     }}
                   </button>
                   <button
@@ -929,7 +961,7 @@
                       <polyline points="16 6 12 2 8 6" />
                       <line x1="12" x2="12" y1="2" y2="15" />
                     </svg>
-                    {{ currentLang === "ar" ? "مشاركة" : "Share" }}
+                    {{ currentLang === "en" ? "Share" : "مشاركة" }}
                   </button>
                 </div>
               </div>

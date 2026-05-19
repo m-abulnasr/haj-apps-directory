@@ -39,7 +39,7 @@ import {
   CloudUploadOutline,
   LoadingOutline
 } from '@ant-design/icons-angular/icons';
-import { LucideAngularModule, Menu, X, Globe, Home, Info, Mail, Users, PlusCircle, ExternalLink, ChevronRight, Search, Twitter, Linkedin } from 'lucide-angular';
+import { LucideAngularModule, Menu, X, Globe, Home, Info, Mail, Users, PlusCircle, ExternalLink, ChevronRight, ChevronDown, Search, Twitter, Linkedin } from 'lucide-angular';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -63,7 +63,7 @@ export function initializeTranslations(translate: TranslateService, platformId: 
 
     const browserLang = navigator.language;
     const browserDefault = browserLang.startsWith('ar') ? 'ar' : 'ar';
-    initialLang = (urlLang === 'ar' || urlLang === 'en') ? urlLang : browserDefault;
+    initialLang = (['ar', 'en', 'ur'].includes(urlLang)) ? urlLang : browserDefault;
 
     translate.setDefaultLang(initialLang);
 
@@ -138,7 +138,7 @@ export const appConfig: ApplicationConfig = {
         LinkOutline, AppstoreOutline, CodeOutline, PictureOutline, FileTextOutline,
         SendOutline, CloudUploadOutline, LoadingOutline
       ]),
-      LucideAngularModule.pick({ Menu, X, Globe, Home, Info, Mail, Users, PlusCircle, ExternalLink, ChevronRight, Search, Twitter, Linkedin }),
+      LucideAngularModule.pick({ Menu, X, Globe, Home, Info, Mail, Users, PlusCircle, ExternalLink, ChevronRight, ChevronDown, Search, Twitter, Linkedin }),
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,

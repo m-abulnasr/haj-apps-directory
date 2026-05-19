@@ -68,10 +68,11 @@ type AppDetailStatus = 'loading' | 'success' | 'not-found' | 'error';
 export class AppDetailComponent implements OnInit, AfterViewInit {
   @ViewChild("swiperContainer") swiperContainer: any;
   @ViewChild("relatedCarousel") relatedCarousel!: ElementRef<HTMLDivElement>;
+  @ViewChild("categoriesCarousel") categoriesCarousel!: ElementRef<HTMLDivElement>;
 
   app?: QuranApp;
   relevantApps: QuranApp[] = [];
-  currentLang: "en" | "ar" = "ar";
+  currentLang: "en" | "ar" | "ur" = "ar";
   categoriesSet: Array<{ name: string; icon: string }> = categories;
   apiCategories: Category[] = [];
   isExpanded = false;
@@ -110,10 +111,10 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) private platformId: Object,
   ) {
-    this.currentLang = this.translateService.currentLang as "ar" | "en";
+    this.currentLang = this.translateService.currentLang as "ar" | "en" | "ur";
     // Subscribe to language changes
     this.translateService.onLangChange.subscribe((event) => {
-      this.currentLang = event.lang as "en" | "ar";
+      this.currentLang = event.lang as "en" | "ar" | "ur";
       console.log("🌐 DEBUG: Language changed to:", this.currentLang);
       // Reinitialize swiper when language changes (same pattern as data load)
       if (this.swiperContainer) {
@@ -135,10 +136,12 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     });
   }
 
-  private getBrowserLanguage(): "en" | "ar" {
+  private getBrowserLanguage(): "en" | "ar" | "ur" {
     if (!isPlatformBrowser(this.platformId)) return "en";
     const browserLang = navigator.language.toLowerCase().split("-")[0];
-    return browserLang === "ar" ? "ar" : "en";
+    if (browserLang === "ar") return "ar";
+    if (browserLang === "ur") return "ur";
+    return "en";
   }
 
   ngOnInit() {
@@ -151,7 +154,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     const id = this.route.snapshot.params["id"];
 
     if (lang) {
-      this.currentLang = lang as "en" | "ar";
+      this.currentLang = lang as "en" | "ar" | "ur";
     }
 
     // Subscribe to route parameter changes (both lang and id)
@@ -161,7 +164,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
 
       // Update language if changed
       if (newLang && newLang !== this.currentLang) {
-        this.currentLang = newLang as "en" | "ar";
+        this.currentLang = newLang as "en" | "ar" | "ur";
       }
 
       // Load app data when ID changes (or on initial load)
@@ -380,12 +383,12 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     const targetApp = this.relevantApps.find((app) => app.id === lookupId);
     if (!targetApp) return;
 
-    const appName =
-      this.currentLang === "ar" ? targetApp.Name_Ar : targetApp.Name_En;
-    const appDescription =
-      this.currentLang === "ar"
-        ? targetApp.Short_Description_Ar
-        : targetApp.Short_Description_En;
+    const appName = this.currentLang === "en" ? targetApp.Name_En
+      : this.currentLang === "ur" ? (targetApp.Name_Ur || targetApp.Name_Ar)
+      : targetApp.Name_Ar;
+    const appDescription = this.currentLang === "en" ? targetApp.Short_Description_En
+      : this.currentLang === "ur" ? (targetApp.Short_Description_Ur || targetApp.Short_Description_Ar || targetApp.Short_Description_En)
+      : targetApp.Short_Description_Ar;
 
     let slug = targetApp.slug || "";
 
@@ -427,7 +430,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
         // Fallback: copy to clipboard
         await navigator.clipboard.writeText(shareUrl);
         alert(
-          this.currentLang === "ar"
+          (this.currentLang === "ar" || this.currentLang === "ur")
             ? "تم نسخ الرابط إلى الحافظة"
             : "Link copied to clipboard",
         );
@@ -446,7 +449,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     const screenshots =
       this.currentLang === "en"
         ? this.app?.screenshots_en
-        : this.app?.screenshots_ar;
+        : this.app?.screenshots_ar || this.app?.screenshots_en;
     if (!screenshots || screenshots.length === 0) return;
 
     const images = screenshots.map((src, i) => ({
@@ -549,7 +552,11 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
 
   getCategoryName(slug: string): string {
     const cat = this.apiCategories.find((c) => c.slug === slug);
-    if (cat) return this.currentLang === 'ar' ? cat.name_ar : cat.name_en;
+    if (cat) {
+      if (this.currentLang === 'ur') return cat.name_ur || cat.name_ar;
+      if (this.currentLang === 'ar') return cat.name_ar;
+      return cat.name_en;
+    }
     return slug;
   }
 
@@ -590,14 +597,14 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
   private handleNotFoundSEO() {
     this.metaService.updateTag({ name: 'robots', content: 'noindex, nofollow' });
     this.titleService.setTitle(
-      this.currentLang === 'ar' ? 'التطبيق غير موجود - قاصد' : 'App Not Found - Qasid'
+      (this.currentLang === 'ar' || this.currentLang === 'ur') ? 'التطبيق غير موجود - قاصد' : 'App Not Found - Qasid'
     );
   }
 
   private handleGenericErrorSEO() {
     this.metaService.updateTag({ name: 'robots', content: 'noindex, nofollow' });
     this.titleService.setTitle(
-      this.currentLang === 'ar' ? 'خطأ في التحميل - قاصد' : 'Error Loading App - Qasid'
+      (this.currentLang === 'ar' || this.currentLang === 'ur') ? 'خطأ في التحميل - قاصد' : 'Error Loading App - Qasid'
     );
   }
 
@@ -607,20 +614,19 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     // Remove noindex tag if previously set (e.g. from a prior 404 state)
     this.metaService.removeTag("name='robots'");
 
-    const appName =
-      this.currentLang === "ar" ? this.app.Name_Ar : this.app.Name_En;
-    const appDescription =
-      this.currentLang === "ar"
-        ? this.app.Short_Description_Ar
-        : this.app.Short_Description_En;
-    const fullDescription =
-      this.currentLang === "ar"
-        ? this.app.Description_Ar
-        : this.app.Description_En;
+    const appName = this.currentLang === "en" ? this.app.Name_En
+      : this.currentLang === "ur" ? (this.app.Name_Ur || this.app.Name_Ar)
+      : this.app.Name_Ar;
+    const appDescription = this.currentLang === "en" ? this.app.Short_Description_En
+      : this.currentLang === "ur" ? (this.app.Short_Description_Ur || this.app.Short_Description_Ar || this.app.Short_Description_En)
+      : this.app.Short_Description_Ar;
+    const fullDescription = this.currentLang === "en" ? this.app.Description_En
+      : this.currentLang === "ur" ? (this.app.Description_Ur || this.app.Description_Ar)
+      : this.app.Description_Ar;
 
     // Preload first screenshot for LCP optimization
     const screenshots =
-      this.currentLang === "ar"
+      (this.currentLang === "ar" || this.currentLang === "ur")
         ? this.app.screenshots_ar
         : this.app.screenshots_en;
     if (screenshots && screenshots.length > 0) {
@@ -629,7 +635,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
 
     // Update page title and meta tags
     const title =
-      this.currentLang === "ar"
+      (this.currentLang === "ar" || this.currentLang === "ur")
         ? `${appName} - من قاصد`
         : `${appName} - Qasid`;
 
@@ -674,11 +680,11 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
 
     // Add app-specific keywords
     const keywords = [
-      this.currentLang === "ar" ? "تطبيق حج" : "Hajj app",
-      this.currentLang === "ar" ? "تطبيق إسلامي" : "Islamic app",
+      (this.currentLang === "ar" || this.currentLang === "ur") ? "تطبيق حج" : "Hajj app",
+      (this.currentLang === "ar" || this.currentLang === "ur") ? "تطبيق إسلامي" : "Islamic app",
       appName,
       ...this.app.categories.map((cat) =>
-        this.currentLang === "ar" ? `تطبيقات ${cat}` : `${cat} apps`,
+        (this.currentLang === "ar" || this.currentLang === "ur") ? `تطبيقات ${cat}` : `${cat} apps`,
       ),
     ];
     this.metaService.updateTag({
@@ -695,11 +701,11 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     // Add breadcrumb structured data
     const breadcrumbs = [
       {
-        name: this.currentLang === "ar" ? "الرئيسية" : "Home",
+        name: (this.currentLang === "ar" || this.currentLang === "ur") ? "الرئيسية" : "Home",
         url: `https://hajapps.org/${this.currentLang}`,
       },
       {
-        name: this.currentLang === "ar" ? "التطبيقات" : "Apps",
+        name: (this.currentLang === "ar" || this.currentLang === "ur") ? "التطبيقات" : "Apps",
         url: `https://hajapps.org/${this.currentLang}`,
       },
       {
@@ -724,10 +730,10 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
 
   getPlatformLabel(platform: string): string {
     const labels: Record<string, Record<string, string>> = {
-      android: { en: 'Android', ar: 'أندرويد' },
-      ios: { en: 'iOS', ar: 'آي أو إس' },
-      cross_platform: { en: 'All', ar: 'الجميع' },
-      web: { en: 'Web', ar: 'ويب' },
+      android: { en: 'Android', ar: 'أندرويد', ur: 'اینڈرائیڈ' },
+      ios: { en: 'iOS', ar: 'آي أو إس', ur: 'آئی او ایس' },
+      cross_platform: { en: 'All', ar: 'الجميع', ur: 'سب' },
+      web: { en: 'Web', ar: 'ويب', ur: 'ویب' },
     };
     return labels[platform]?.[this.currentLang] || labels['cross_platform'][this.currentLang];
   }
@@ -823,12 +829,12 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
   async shareApp() {
     if (!isPlatformBrowser(this.platformId) || !this.app) return;
 
-    const appName =
-      this.currentLang === "ar" ? this.app.Name_Ar : this.app.Name_En;
-    const appDescription =
-      this.currentLang === "ar"
-        ? this.app.Short_Description_Ar
-        : this.app.Short_Description_En;
+    const appName = this.currentLang === "en" ? this.app.Name_En
+      : this.currentLang === "ur" ? (this.app.Name_Ur || this.app.Name_Ar)
+      : this.app.Name_Ar;
+    const appDescription = this.currentLang === "en" ? this.app.Short_Description_En
+      : this.currentLang === "ur" ? (this.app.Short_Description_Ur || this.app.Short_Description_Ar || this.app.Short_Description_En)
+      : this.app.Short_Description_Ar;
     const shareUrl = window.location.href;
 
     const shareData = {
@@ -851,11 +857,28 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
     }
   }
 
+  // Categories carousel navigation
+  scrollCategoriesLeft() {
+    const el = this.categoriesCarousel?.nativeElement;
+    if (el) {
+      const scrollAmount = (this.currentLang === "ar" || this.currentLang === "ur") ? 200 : -200;
+      el.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  }
+
+  scrollCategoriesRight() {
+    const el = this.categoriesCarousel?.nativeElement;
+    if (el) {
+      const scrollAmount = (this.currentLang === "ar" || this.currentLang === "ur") ? -200 : 200;
+      el.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  }
+
   // Related apps carousel navigation
   scrollRelatedLeft() {
     const el = this.relatedCarousel?.nativeElement;
     if (el) {
-      const scrollAmount = this.currentLang === "ar" ? 320 : -320;
+      const scrollAmount = (this.currentLang === "ar" || this.currentLang === "ur") ? 320 : -320;
       el.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   }
@@ -863,7 +886,7 @@ export class AppDetailComponent implements OnInit, AfterViewInit {
   scrollRelatedRight() {
     const el = this.relatedCarousel?.nativeElement;
     if (el) {
-      const scrollAmount = this.currentLang === "ar" ? -320 : 320;
+      const scrollAmount = (this.currentLang === "ar" || this.currentLang === "ur") ? -320 : 320;
       el.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   }

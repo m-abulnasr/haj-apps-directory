@@ -36,7 +36,7 @@ import { takeUntil } from 'rxjs/operators';
 export class DeveloperComponent implements OnInit, OnDestroy {
   developerApps: QuranApp[] = [];
   developerInfo: any = null;
-  currentLang: 'en' | 'ar' = 'ar';
+  currentLang: 'en' | 'ar' | 'ur' = 'ar';
   loading = true;
   developerName = '';
   developerParam = ''; // Store the full parameter (name_id)
@@ -55,12 +55,12 @@ export class DeveloperComponent implements OnInit, OnDestroy {
     private seoService: SeoService
   ) {
     console.log('🏗️ DeveloperComponent constructor called');
-    this.currentLang = this.translateService.currentLang as 'ar' | 'en';
+    this.currentLang = this.translateService.currentLang as 'ar' | 'en' | 'ur';
     // Subscribe to language changes
     this.translateService.onLangChange
       .pipe(takeUntil(this.destroy$))
       .subscribe((event) => {
-        this.currentLang = event.lang as 'en' | 'ar';
+        this.currentLang = event.lang as 'en' | 'ar' | 'ur';
         this.updatePageTitle();
       });
   }
@@ -75,7 +75,7 @@ export class DeveloperComponent implements OnInit, OnDestroy {
     console.log('📍 Route snapshot params - lang:', lang, 'developer:', developerName);
 
     if (lang) {
-      this.currentLang = lang as 'en' | 'ar';
+      this.currentLang = lang as 'en' | 'ar' | 'ur';
     }
 
     // Subscribe to route parameter changes
@@ -88,7 +88,7 @@ export class DeveloperComponent implements OnInit, OnDestroy {
 
       // Update language if changed
       if (newLang && newLang !== this.currentLang) {
-        this.currentLang = newLang as 'en' | 'ar';
+        this.currentLang = newLang as 'en' | 'ar' | 'ur';
       }
 
       // Load developer data when developer param changes (or on initial load)
@@ -201,10 +201,10 @@ export class DeveloperComponent implements OnInit, OnDestroy {
 
   private updatePageTitle() {
     if (this.developerInfo) {
-      const developerName = this.currentLang === 'en' 
-        ? this.developerInfo.name_en 
+      const developerName = this.currentLang === 'en'
+        ? this.developerInfo.name_en
         : this.developerInfo.name_ar;
-      
+
       const prefix = this.currentLang === 'en' ? 'Apps by' : 'تطبيقات';
       this.titleService.setTitle(`${prefix} ${developerName} - Qasid`);
     }
@@ -252,11 +252,12 @@ export class DeveloperComponent implements OnInit, OnDestroy {
     if (!this.developerInfo) return;
 
     const developerName = this.currentLang === 'en' ? this.developerInfo.name_en : this.developerInfo.name_ar;
-    const title = this.currentLang === 'ar' ?
+    const isRtl = this.currentLang === 'ar' || this.currentLang === 'ur';
+    const title = isRtl ?
       `تطبيقات ${developerName} - قاصد` :
       `${developerName} Apps - Qasid`;
 
-    const description = this.currentLang === 'ar' ?
+    const description = isRtl ?
       `اكتشف ${this.developerApps.length} تطبيق من تطوير ${developerName}. تطبيقات الحج والمناسك المتاحة للتحميل المجاني.` :
       `Discover ${this.developerApps.length} apps developed by ${developerName}. Hajj and Islamic applications available for free download.`;
 
@@ -274,11 +275,11 @@ export class DeveloperComponent implements OnInit, OnDestroy {
     // Add breadcrumb structured data
     const breadcrumbs = [
       {
-        name: this.currentLang === 'ar' ? 'الرئيسية' : 'Home',
+        name: isRtl ? 'الرئيسية' : 'Home',
         url: `https://hajapps.org/${this.currentLang}`
       },
       {
-        name: this.currentLang === 'ar' ? 'المطورون' : 'Developers',
+        name: isRtl ? 'المطورون' : 'Developers',
         url: `https://hajapps.org/${this.currentLang}`
       },
       {

@@ -50,7 +50,8 @@ import { SafeHtmlPipe } from "./pipes/safe-html.pipe";
 export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   public isRtl: boolean;
   public isMobileMenuVisible = false;
-  public currentLang: "en" | "ar" = "en";
+  public currentLang: 'en' | 'ar' | 'ur' = 'en';
+  public isLangDropdownOpen = false;
 
   // Hide header for internal tool pages
   public hideChrome = false;
@@ -63,6 +64,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   public navbarSelectedCategory = 'all';
   public isNavbarSearching = false;
   public isCategoryDropdownOpen = false;
+  public visibleChipsCount = 5;
   private destroy$ = new Subject<void>();
 
   constructor(
@@ -85,9 +87,9 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     // Translations are initialized via APP_INITIALIZER in main.ts (ensures they load before render)
 
     // Get current language from TranslateService (already set by APP_INITIALIZER)
-    const currentLang = this.translate.currentLang || this.translate.getDefaultLang() || 'en';
-    this.currentLang = currentLang as "en" | "ar";
-    this.isRtl = this.currentLang === "ar";
+    const currentLang = this.translate.currentLang || this.translate.getDefaultLang() || 'ar';
+    this.currentLang = currentLang as 'en' | 'ar' | 'ur';
+    this.isRtl = this.currentLang === 'ar' || this.currentLang === 'ur';
   }
 
   getCurrentRouteParams(): any {
@@ -106,14 +108,15 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit() {
     console.log('🚀 AppComponent ngOnInit - listening to router events');
+    this.updateVisibleChipsCount();
 
     // Subscribe to language changes from the single source of truth (LanguageService)
     // This replaces the previous competing onLangChange + NavigationEnd language handlers
     this.languageService.currentLang$
       .pipe(takeUntil(this.destroy$))
       .subscribe((lang) => {
-        this.currentLang = lang as 'en' | 'ar';
-        this.isRtl = lang === 'ar';
+        this.currentLang = lang as 'en' | 'ar' | 'ur';
+        this.isRtl = lang === 'ar' || lang === 'ur';
         this.updateMetaTags();
       });
 
@@ -174,9 +177,26 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
-  toggleLanguage() {
-    const newLang = this.currentLang === 'ar' ? 'en' : 'ar';
-    this.languageService.changeLanguage(newLang);
+  readonly languages = [
+    { code: 'ar', label: 'العربية', flagCode: 'sa' },
+    { code: 'en', label: 'English', flagCode: 'gb' },
+    { code: 'ur', label: 'اردو', flagCode: 'pk' },
+  ];
+
+  get currentLangMeta() {
+    return this.languages.find(l => l.code === this.currentLang) ?? this.languages[0];
+  }
+
+  toggleLangDropdown(event: Event) {
+    event.stopPropagation();
+    this.isLangDropdownOpen = !this.isLangDropdownOpen;
+  }
+
+  selectLanguage(lang: string, event?: Event) {
+    event?.stopPropagation();
+    this.isLangDropdownOpen = false;
+    this.isMobileMenuVisible = false;
+    this.languageService.changeLanguage(lang);
   }
 
   toggleMobileMenu() {
@@ -200,6 +220,21 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   @HostListener('document:click')
   onDocumentClick(): void {
     this.isCategoryDropdownOpen = false;
+    this.isLangDropdownOpen = false;
+  }
+
+  @HostListener('window:resize')
+  onWindowResize(): void {
+    this.updateVisibleChipsCount();
+  }
+
+  private updateVisibleChipsCount(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    const w = window.innerWidth;
+    if (w >= 1500) this.visibleChipsCount = 5;
+    else if (w >= 1300) this.visibleChipsCount = 4;
+    else if (w >= 1100) this.visibleChipsCount = 3;
+    else this.visibleChipsCount = 2;
   }
 
   toggleCategoryDropdown(event: Event): void {
@@ -210,12 +245,13 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   isDropdownCategorySelected(): boolean {
     if (this.navbarSelectedCategory === 'all') return false;
     const index = this.navbarCategories.findIndex(c => c.slug === this.navbarSelectedCategory);
-    return index >= 5;
+    return index >= this.visibleChipsCount;
   }
 
   getSelectedCategoryName(): string {
     const cat = this.navbarCategories.find(c => c.slug === this.navbarSelectedCategory);
     if (!cat) return '';
+    if (this.currentLang === 'ur') return cat.name_ur || cat.name_ar;
     return this.currentLang === 'ar' ? cat.name_ar : cat.name_en;
   }
 

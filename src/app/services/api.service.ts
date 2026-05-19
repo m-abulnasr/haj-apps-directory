@@ -19,14 +19,18 @@ export interface App {
   id: string;
   name_en: string;
   name_ar: string;
+  name_ur?: string;
   slug: string;
   short_description_en: string;
   short_description_ar: string;
+  short_description_ur?: string;
   description_en: string;
   description_ar: string;
+  description_ur?: string;
   application_icon: string;
   main_image_en: string;
   main_image_ar: string;
+  main_image_ur?: string;
   google_play_link: string;
   app_store_link: string;
   app_gallery_link: string;
@@ -72,9 +76,11 @@ export interface Category {
   id: string;
   name_en: string;
   name_ar: string;
+  name_ur?: string;
   slug: string;
   description_en?: string;
   description_ar?: string;
+  description_ur?: string;
   icon?: string;
 }
 
@@ -504,13 +510,17 @@ export class ApiService {
       ...app,
       Name_En: app.name_en,
       Name_Ar: app.name_ar,
+      Name_Ur: app.name_ur || '',
       Short_Description_En: app.short_description_en,
       Short_Description_Ar: app.short_description_ar,
+      Short_Description_Ur: app.short_description_ur || '',
       Description_En: app.description_en,
       Description_Ar: app.description_ar,
+      Description_Ur: app.description_ur || '',
       applicationIcon: app.application_icon,
       mainImage_en: app.main_image_en,
       mainImage_ar: app.main_image_ar,
+      mainImage_ur: (app as any).main_image_ur || '',
       Google_Play_Link: app.google_play_link,
       AppStore_Link: app.app_store_link,
       App_Gallery_Link: app.app_gallery_link,
