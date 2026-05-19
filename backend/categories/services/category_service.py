@@ -142,8 +142,10 @@ class CategoryService(BaseService):
                     'slug': category.slug,
                     'name_en': category.name_en,
                     'name_ar': category.name_ar,
+                    'name_ur': category.name_ur,
                     'description_en': category.description_en,
                     'description_ar': category.description_ar,
+                    'description_ur': category.description_ur,
                     'icon': category.icon,
                     'color': category.color,
                     'sort_order': category.sort_order
@@ -217,6 +219,7 @@ class CategoryService(BaseService):
                 'slug': category.slug,
                 'name_en': category.name_en,
                 'name_ar': category.name_ar,
+                'name_ur': category.name_ur,
                 'icon': category.icon,
                 'color': category.color,
                 'app_count': category.app_count,
@@ -294,8 +297,10 @@ class CategoryService(BaseService):
         ).filter(
             Q(name_en__icontains=query) |
             Q(name_ar__icontains=query) |
+            Q(name_ur__icontains=query) |
             Q(description_en__icontains=query) |
-            Q(description_ar__icontains=query)
+            Q(description_ar__icontains=query) |
+            Q(description_ur__icontains=query)
         ).order_by('sort_order', 'name_en')
 
         # Cache the results
@@ -346,8 +351,10 @@ class CategoryService(BaseService):
                 'slug': category.slug,
                 'name_en': category.name_en,
                 'name_ar': category.name_ar,
+                'name_ur': category.name_ur,
                 'description_en': category.description_en,
                 'description_ar': category.description_ar,
+                'description_ur': category.description_ur,
                 'icon': category.icon,
                 'color': category.color,
                 'sort_order': category.sort_order,
@@ -425,6 +432,7 @@ class CategoryService(BaseService):
                 'slug': category.slug,
                 'name_en': category.name_en,
                 'name_ar': category.name_ar,
+                'name_ur': category.name_ur,
                 'icon': category.icon,
                 'color': category.color,
                 'app_count': category.app_count

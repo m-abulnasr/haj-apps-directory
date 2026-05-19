@@ -14,9 +14,11 @@ class CategorySchema(BaseModel):
     id: int
     name_en: str = Field(..., alias="name_en")
     name_ar: str = Field(..., alias="name_ar")
+    name_ur: Optional[str] = Field(None, alias="name_ur")
     slug: str
     description_en: Optional[str] = Field(None, alias="description_en")
     description_ar: Optional[str] = Field(None, alias="description_ar")
+    description_ur: Optional[str] = Field(None, alias="description_ur")
     icon: Optional[str] = None
 
     class Config:

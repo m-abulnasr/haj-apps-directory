@@ -389,9 +389,11 @@ def get_categories(request):
             "id": cat.id,
             "name_en": cat.name_en,
             "name_ar": cat.name_ar,
+            "name_ur": cat.name_ur or "",
             "slug": cat.slug,
             "description_en": cat.description_en or "",
             "description_ar": cat.description_ar or "",
+            "description_ur": cat.description_ur or "",
             "icon": icon
         })
 
