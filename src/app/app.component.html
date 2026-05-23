@@ -177,7 +177,13 @@
             [innerHTML]="category.icon || '' | safeHtml"
           ></span>
           <span class="compact-chip-text">
-            {{ currentLang === "en" ? category.name_en : (currentLang === "ur" ? (category.name_ur || category.name_ar) : category.name_ar) }}
+            {{
+              currentLang === "en"
+                ? category.name_en
+                : currentLang === "ur"
+                  ? category.name_ur || category.name_ar
+                  : category.name_ar
+            }}
           </span>
         </button>
       }
@@ -247,7 +253,11 @@
                     [innerHTML]="category.icon || '' | safeHtml"
                   ></span>
                   {{
-                    currentLang === "en" ? category.name_en : (currentLang === "ur" ? (category.name_ur || category.name_ar) : category.name_ar)
+                    currentLang === "en"
+                      ? category.name_en
+                      : currentLang === "ur"
+                        ? category.name_ur || category.name_ar
+                        : category.name_ar
                   }}
                 </button>
               }
@@ -409,6 +419,13 @@
             rel="noopener noreferrer"
           >
             <img width="100" src="assets/images/hedya.png" alt="Sponsor logo" />
+          </a>
+          <a href="https://mutahed.org/">
+            <img
+              width="80"
+              src="assets/images/motahed.png"
+              alt="Sponsor logo"
+            />
           </a>
         </div>
       </div>
