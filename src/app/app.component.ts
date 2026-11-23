@@ -1,3 +1,4 @@
+import { SITE_NAMES } from "./services/seo.service";
 import { AfterViewInit, Component, HostListener, Inject, OnInit, OnDestroy, PLATFORM_ID } from "@angular/core";
 import { isPlatformBrowser, CommonModule } from "@angular/common";
 import { RouterOutlet, RouterLink, ActivatedRoute, Router, ActivatedRouteSnapshot, NavigationEnd } from "@angular/router";
@@ -289,28 +290,22 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     const currentUrl = `https://hajapps.org${this.router.url}`;
     
     if (this.currentLang === 'ar') {
-      this.titleService.setTitle("كل ما تحتاجه من تطبيقات الحج… في مكان واحد");
-      this.metaService.updateTag({ name: "title", content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد" });
       this.metaService.updateTag({ name: "description", content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد. اكتشف أفضل تطبيقات الحج والعمرة - تطبيقات التنقل، الأدعية، المشاعر، الإرشاد والخدمات." });
-      this.metaService.updateTag({ name: "keywords", content: "تطبيقات الحج, تطبيقات العمرة, دليل تطبيقات الحج, قاصد, باذل, Hajj Apps, Umrah Apps, Islamic Apps" });
+      this.metaService.updateTag({ name: "keywords", content: "تطبيقات الحج, تطبيقات العمرة, دليل تطبيقات الحج والعمرة, قاصد, باذل, Hajj Apps, Umrah Apps, Islamic Apps" });
       this.metaService.updateTag({ name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" });
       this.metaService.updateTag({ httpEquiv: "Content-Type", content: "text/html; charset=utf-8" });
       this.metaService.updateTag({ name: "language", content: "ar" });
       this.metaService.updateTag({ name: "author", content: "باذل" });
       this.metaService.updateTag({ property: "og:type", content: "website" });
       this.metaService.updateTag({ property: "og:url", content: currentUrl });
-      this.metaService.updateTag({ property: "og:title", content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد" });
       this.metaService.updateTag({ property: "og:description", content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد. اكتشف أفضل تطبيقات الحج والعمرة." });
       this.metaService.updateTag({ property: "og:image", content: "https://hajapps.org/assets/images/preview/preview.png" });
       this.metaService.updateTag({ property: "og:locale", content: "ar_SA" });
       this.metaService.updateTag({ property: "twitter:card", content: "summary_large_image" });
       this.metaService.updateTag({ property: "twitter:url", content: currentUrl });
-      this.metaService.updateTag({ property: "twitter:title", content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد" });
       this.metaService.updateTag({ property: "twitter:description", content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد. اكتشف أفضل تطبيقات الحج والعمرة." });
       this.metaService.updateTag({ property: "twitter:image", content: "https://hajapps.org/assets/images/preview/preview.png" });
     } else {
-      this.titleService.setTitle("Everything You Need in Hajj Apps... In One Place");
-      this.metaService.updateTag({ name: "title", content: "Everything You Need in Hajj Apps... In One Place" });
       this.metaService.updateTag({ name: "description", content: "Everything you need in Hajj apps, in one place. Discover the best Hajj and Umrah apps - navigation, prayers, holy sites guidance, and services." });
       this.metaService.updateTag({ name: "keywords", content: "Hajj Apps, Umrah Apps, Hajj Directory, Qasid, Bathel, Islamic Apps, تطبيقات الحج, تطبيقات العمرة" });
       this.metaService.updateTag({ name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" });
@@ -319,17 +314,26 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       this.metaService.updateTag({ name: "author", content: "Bathel" });
       this.metaService.updateTag({ property: "og:type", content: "website" });
       this.metaService.updateTag({ property: "og:url", content: currentUrl });
-      this.metaService.updateTag({ property: "og:title", content: "Everything You Need in Hajj Apps... In One Place" });
       this.metaService.updateTag({ property: "og:description", content: "Everything you need in Hajj apps, in one place. Discover the best Hajj and Umrah apps." });
       this.metaService.updateTag({ property: "og:image", content: "https://hajapps.org/assets/images/preview/preview.png" });
       this.metaService.updateTag({ property: "og:locale", content: "en_US" });
       this.metaService.updateTag({ property: "twitter:card", content: "summary_large_image" });
       this.metaService.updateTag({ property: "twitter:url", content: currentUrl });
-      this.metaService.updateTag({ property: "twitter:title", content: "Everything You Need in Hajj Apps... In One Place" });
       this.metaService.updateTag({ property: "twitter:description", content: "Everything you need in Hajj apps, in one place. Discover the best Hajj and Umrah apps." });
       this.metaService.updateTag({ property: "twitter:image", content: "https://hajapps.org/assets/images/preview/preview.png" });
     }
     
+    const siteName = SITE_NAMES[this.currentLang];
+    this.titleService.setTitle(siteName);
+    this.metaService.updateTag({ name: "title", content: siteName });
+    this.metaService.updateTag({ property: "og:title", content: siteName });
+    this.metaService.updateTag({ property: "og:site_name", content: siteName });
+    this.metaService.updateTag({ property: "twitter:title", content: siteName });
+    if (this.currentLang === 'ur') {
+      this.metaService.updateTag({ name: "language", content: "ur" });
+      this.metaService.updateTag({ property: "og:locale", content: "ur_PK" });
+    }
+
     // Add canonical URL
     this.linkService.setCanonical(currentUrl);
     

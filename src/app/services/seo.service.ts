@@ -1,6 +1,12 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
+export const SITE_NAMES = {
+  ar: "دليل تطبيقات الحج والعمرة",
+  en: "Hajj and Umrah Apps Directory",
+  ur: "حج اور عمرہ ایپس کی ڈائریکٹری",
+} as const;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -37,7 +43,7 @@ export class SeoService {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": lang === 'ar' ? "قاصد" : "Qasid",
-      "alternateName": lang === 'ar' ? "دليل تطبيقات الحج" : "Hajj Apps Directory",
+      "alternateName": SITE_NAMES[lang],
       "url": "https://hajapps.org/",
       "description": lang === 'ar'
         ? "كل ما تحتاجه من تطبيقات الحج… في مكان واحد"

@@ -34,8 +34,8 @@ export class AboutUsComponent implements OnInit {
 
   private updateSeoData() {
     const title = this.currentLang === 'ar' 
-      ? 'عن قاصد | دليل تطبيقات الحج' 
-      : 'About Qasid | Hajj Apps Directory';
+      ? 'عن قاصد | دليل تطبيقات الحج والعمرة'
+      : 'About Qasid | Hajj and Umrah Apps Directory';
       
     const description = this.currentLang === 'ar'
       ? 'اكتشف قاصد — دليلك الشامل لأفضل تطبيقات الحج. مبادرة من باذل لتسهيل رحلة الحاج الرقمية'

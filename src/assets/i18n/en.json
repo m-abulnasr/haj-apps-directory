@@ -17,7 +17,7 @@
     "loading": "Loading..."
   },
   "header": {
-    "title": "Hajj Apps Directory",
+    "title": "Hajj and Umrah Apps Directory",
     "beta": "Beta",
     "home": "Home",
     "about": "About",
@@ -46,8 +46,8 @@
   },
   "appList": {
     "hero": {
-      "title": "Light in your hands..",
-      "subtitle": "Choose your companion in the Hajj journey"
+      "title": "Hajj and Umrah Apps Directory",
+      "subtitle": "Choose your companion for Hajj and Umrah"
     },
     "search": {
       "placeholder": "Search for: Hafs narration, Mushaf ..",
@@ -66,7 +66,7 @@
     },
     "categories": {
       "all": "Category",
-      "main-title": "Hajj Apps Directory",
+      "main-title": "Hajj and Umrah Apps Directory",
       "title": "Categories",
       "mushaf": "Mushaf",
       "translations": "Translation",
@@ -351,7 +351,7 @@
       "about": "About",
       "contact": "Contact Us",
       "community": "Bathel",
-      "directoryName": "Hajj Apps Directory"
+      "directoryName": "Hajj and Umrah Apps Directory"
     }
   },
   "trackSubmission": {

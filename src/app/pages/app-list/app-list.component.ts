@@ -35,7 +35,7 @@ import {
   switchMap,
   debounceTime,
 } from "rxjs/operators";
-import { SeoService } from "../../services/seo.service";
+import { SeoService, SITE_NAMES } from "../../services/seo.service";
 import { RAMADAN_MODE } from "../../guards/ramadan-redirect.guard";
 import { OptimizedImageComponent } from "../../components/optimized-image/optimized-image.component";
 import { SafeHtmlPipe } from "../../pipes/safe-html.pipe";
@@ -620,14 +620,13 @@ export class AppListComponent implements OnInit, OnDestroy, AfterViewInit {
 
     // Update page title and meta tags
     if (this.selectedCategory === "all") {
+      this.titleService.setTitle(SITE_NAMES[this.currentLang]);
       if ((this.currentLang === "ar" || this.currentLang === "ur")) {
-        this.titleService.setTitle("كل ما تحتاجه من تطبيقات الحج… في مكان واحد");
         this.metaService.updateTag({
           name: "description",
           content: "كل ما تحتاجه من تطبيقات الحج… في مكان واحد. اكتشف أفضل تطبيقات الحج والعمرة - تطبيقات التنقل، الأدعية، المشاعر، الإرشاد والخدمات.",
         });
       } else {
-        this.titleService.setTitle("Everything You Need in Hajj Apps... In One Place");
         this.metaService.updateTag({
           name: "description",
           content: "Everything you need in Hajj apps, in one place. Discover the best Hajj and Umrah apps - navigation, prayers, holy sites guidance, and services.",

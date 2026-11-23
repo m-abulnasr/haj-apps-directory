@@ -33,7 +33,7 @@ const DEFAULT_IMAGE = `${BASE_URL}/assets/images/preview/preview.png`;
 // Types
 interface RouteInfo {
   type: 'home' | 'app' | 'developer' | 'category' | 'other';
-  lang: 'en' | 'ar';
+  lang: 'en' | 'ar' | 'ur';
   slug?: string;
 }
 
@@ -57,7 +57,7 @@ const isCrawler = (userAgent: string): boolean => {
 
 const parseRoute = (pathname: string): RouteInfo => {
   const parts = pathname.split('/').filter(Boolean);
-  const lang = (parts[0] === 'ar' ? 'ar' : 'en') as 'en' | 'ar';
+  const lang = parts[0] === 'ar' || parts[0] === 'ur' ? parts[0] : 'en';
 
   if (parts.length <= 1) return { type: 'home', lang };
   if (parts[1] === 'app' && parts[2]) return { type: 'app', lang, slug: parts[2] };
@@ -129,23 +129,26 @@ const generateOGTags = (route: RouteInfo, data: any): OGTags => {
   }
 
   const isAr = route.lang === 'ar';
-  const SITE_TITLE = isAr
-    ? 'كل ما تحتاجه من تطبيقات الحج… في مكان واحد'
-    : 'Everything you need from Hajj apps… in one place';
+  const siteTitle = {
+    ar: 'دليل تطبيقات الحج والعمرة',
+    en: 'Hajj and Umrah Apps Directory',
+    ur: 'حج اور عمرہ ایپس کی ڈائریکٹری',
+  }[route.lang];
+  const locale = { ar: 'ar_SA', en: 'en_US', ur: 'ur_PK' }[route.lang];
 
   // Developer page
   if (route.type === 'developer' && data) {
     const name = isAr ? (data.name_ar || data.name_en) : (data.name_en || data.name_ar);
     const hasLogo = !!data.logo_url;
     return {
-      title: `${name} - ${SITE_TITLE}`,
-      description: SITE_TITLE,
+      title: `${name} - ${siteTitle}`,
+      description: siteTitle,
       image: data.logo_url || DEFAULT_IMAGE,
       imageWidth: hasLogo ? 512 : 1200,
       imageHeight: hasLogo ? 512 : 630,
       url: `${BASE_URL}/${route.lang}/developer/${data.slug}`,
       type: 'website',
-      locale: isAr ? 'ar_SA' : 'en_US',
+      locale,
     };
   }
 
@@ -153,27 +156,27 @@ const generateOGTags = (route: RouteInfo, data: any): OGTags => {
   if (route.type === 'category' && data) {
     const categoryName = isAr ? data.name_ar : data.name_en;
     return {
-      title: categoryName || SITE_TITLE,
-      description: SITE_TITLE,
+      title: categoryName || siteTitle,
+      description: siteTitle,
       image: DEFAULT_IMAGE,
       imageWidth: 1260,
       imageHeight: 630,
       url: `${BASE_URL}/${route.lang}/${route.slug}`,
       type: 'website',
-      locale: isAr ? 'ar_SA' : 'en_US',
+      locale,
     };
   }
 
   // Default/home page
   return {
-    title: SITE_TITLE,
-    description: SITE_TITLE,
+    title: siteTitle,
+    description: siteTitle,
     image: DEFAULT_IMAGE,
     imageWidth: 1260,
     imageHeight: 630,
     url: `${BASE_URL}/${route.lang}`,
     type: 'website',
-    locale: isAr ? 'ar_SA' : 'en_US',
+    locale,
   };
 };
 
