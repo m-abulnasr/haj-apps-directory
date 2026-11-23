@@ -10,7 +10,7 @@ const APPS_STATE_KEY = makeStateKey<App[]>('apps');
 const CATEGORIES_STATE_KEY = makeStateKey<Category[]>('categories');
 
 // localStorage cache keys
-const CACHE_VERSION = '2';
+const CACHE_VERSION = '3';
 const CACHE_VERSION_KEY = 'qad-cache-version';
 const APPS_CACHE_KEY = 'qad-apps-cache';
 const CATEGORIES_CACHE_KEY = 'qad-categories-cache';
@@ -443,10 +443,6 @@ export class ApiService {
     } catch { /* QuotaExceededError — silently ignore */ }
   }
 
-  private getAppsFingerprint(apps: App[]): string {
-    return `${apps.length}:${apps.map(a => a.id).join(',')}`;
-  }
-
   private getCategoriesFingerprint(categories: Category[]): string {
     return `${categories.length}:${categories.map(c => c.id).join(',')}`;
   }
@@ -454,9 +450,7 @@ export class ApiService {
   private revalidateApps(): void {
     this.http.get<AppListResponse>(`${this.apiUrl}/apps/`).pipe(take(1)).subscribe({
       next: (response) => {
-        const current = this.getAppsFingerprint(this.appsSubject.value);
-        const fresh = this.getAppsFingerprint(response.results);
-        if (current !== fresh) {
+        if (JSON.stringify(this.appsSubject.value) !== JSON.stringify(response.results)) {
           this.appsSubject.next(response.results);
           this.writeCache(APPS_CACHE_KEY, response.results);
         }
